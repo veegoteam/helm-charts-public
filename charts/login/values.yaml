@@ -1,0 +1,37 @@
+global:
+  imagePullSecrets: []
+
+image:
+  registry: 347694409649.dkr.ecr.us-west-2.amazonaws.com
+  repository: veego/login
+  tag: staging
+  pullPolicy: Always
+
+replicaCount: 1
+
+containerPort: 8080
+
+services:
+  - name: login
+    port: 80
+    targetPort: 8080
+    protocol: TCP
+    type: NodePort
+    selector:
+      app: login
+
+ingress:
+  enabled: true
+  ingressClassName: "nginx"
+  hosts:
+    - login.example.domain
+
+configMap:
+  ## AUTH_URL: http://oauth2-proxy:80/oauth2/start
+  AUTH_URL: ""
+  ## APP_COOKIE_DOMAIN: "example.domain"
+  APP_COOKIE_DOMAIN: ""
+  ## LOGSTASH_HOST: "logstash-service:8080"
+  LOGSTASH_HOST: ""
+
+

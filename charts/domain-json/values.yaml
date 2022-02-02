@@ -1,0 +1,28 @@
+global:
+  imagePullSecrets: []
+
+image:
+  registry: 347694409649.dkr.ecr.us-west-2.amazonaws.com
+  repository: veego/domain-json
+  tag: staging
+  pullPolicy: Always
+
+replicaCount: 1
+
+containerPort: 8889
+
+services:
+  - name: domain-json-public
+    annotations:
+      service.beta.kubernetes.io/aws-load-balancer-backend-protocol: http
+    port: 80
+    targetPort: 8889
+    protocol: TCP
+    type: ClusterIP
+    selector:
+      app: domain-json
+
+configMap:
+  BIND: "[::]:80" # for ipv6 support
+  ## LOGSTASH_HOST: "logstash-service:8080"
+  LOGSTASH_HOST: ""

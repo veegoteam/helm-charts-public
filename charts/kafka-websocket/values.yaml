@@ -1,0 +1,36 @@
+global:
+  imagePullSecrets: []
+
+image:
+  registry: 347694409649.dkr.ecr.us-west-2.amazonaws.com
+  repository: veego/kafka-websocket
+  tag: staging
+  pullPolicy: Always
+
+replicaCount: 1
+
+containerPort: 7080
+
+services:
+  - name: kafka-websocket
+    port: 80
+    targetPort: 7080
+    protocol: TCP
+    type: NodePort
+    selector:
+      app: kafka-websocket
+
+ingress:
+  enabled: true
+  ingressClassName: "nginx"
+  hosts:
+    - kafka-proxy.example.domain
+
+
+configMap:
+  ## ZOOKEEPER_CONNECT: "zookeeper-1:2181,1zookeeper-2:2181,zookeeper-3:2181"
+  ZOOKEEPER_CONNECT: ""
+  ## BOOTSTRAP_SERVERS: "kafka-node-1:9092,kafka-node-2:9092,kafka-node-3:9092,kafka-node-4:9092"
+  BOOTSTRAP_SERVERS: ""
+  ## LOGSTASH_HOST: "logstash-service:8080"
+  LOGSTASH_HOST: ""
