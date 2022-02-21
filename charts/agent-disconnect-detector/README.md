@@ -9,7 +9,7 @@ A Helm chart for Kubernetes
 Add the following repo to use the chart:
 
 ```console
-helm repo add grafana https://veegoteam/helm-charts-public
+helm repo add veego https://veegoteam/helm-charts-public
 ```
 
 ## Values
