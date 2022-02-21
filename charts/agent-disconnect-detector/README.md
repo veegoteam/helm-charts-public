@@ -17,8 +17,8 @@ helm repo add veego https://veegoteam.github.io/helm-charts-public
 | Key | Type | Default | Description |
 |-----|------|---------|-------------|
 | configMap.AGENT_DISCONNECT_DETECTION_SCHEDULING | string | `"0 0/10 * * * ?"` |  |
-| configMap.AGENT_MAX_DISCONNECT_TIME_MILLIS | int | `1209600000` |  |
-| configMap.DOXI_SUPPORT | bool | `false` |  |
+| configMap.AGENT_MAX_DISCONNECT_TIME_MILLIS | string | `"1209600000"` |  |
+| configMap.DOXI_SUPPORT | string | `"false"` |  |
 | configMap.LOGSTASH_HOST | string | `""` | The hosts of the LOGSTASH server Example --> LOGSTASH_HOST: "logstash-service:8080" |
 | configMap.VEEGO_KAFKA_CONSUMER_GROUP_ID | string | `"agent-disconnect-detector-main"` |  |
 | configMap.VEEGO_KAFKA_HOSTS | string | `""` | The hosts of the Kafka servers Example --> VEEGO_KAFKA_HOSTS: "kafka-node-1:9092,kafka-node-2:9092,kafka-node-3:9092,kafka-node-4:9092" |

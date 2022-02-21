@@ -19,12 +19,12 @@ helm repo add veego https://veegoteam.github.io/helm-charts-public
 | configMap.AWS_ACCOUNT_ID | string | `""` |  |
 | configMap.AWS_REGION | string | `""` |  |
 | configMap.LOGSTASH_HOST | string | `""` |  |
-| configMap.QUICKSIGHT_ANALYTICS_DASHBOARD_ID | string | `"11c2aa38-4f38-470f-8dc0-950046bce999"` |  |
-| configMap.QUICKSIGHT_MARKETING_DASHBOARD_ID | string | `"d4e521f9-840a-4309-889c-689194045dc6"` |  |
-| configMap.QUICKSIGHT_MY_EXPERIENCE_DASHBOARD_ID | string | `"d3228250-8ebb-48e5-b959-1c176722e5cb"` |  |
-| configMap.QUICKSIGHT_MY_HOME_DASHBOARD_ID | string | `"b24234ff-508e-47f6-b142-ca10d956ac0c"` |  |
-| configMap.QUICKSIGHT_MY_MALFUNCTIONS_DASHBOARD_ID | string | `"06ee0fa6-c2d9-4d15-af33-500111df4734"` |  |
-| configMap.QUICKSIGHT_MY_SERVICES_DASHBOARD_ID | string | `"6ea9e8bc-0a8e-4045-9dfe-b12e08bbbc5f"` |  |
+| configMap.QUICKSIGHT_ANALYTICS_DASHBOARD_ID | string | `""` |  |
+| configMap.QUICKSIGHT_MARKETING_DASHBOARD_ID | string | `""` |  |
+| configMap.QUICKSIGHT_MY_EXPERIENCE_DASHBOARD_ID | string | `""` |  |
+| configMap.QUICKSIGHT_MY_HOME_DASHBOARD_ID | string | `""` |  |
+| configMap.QUICKSIGHT_MY_MALFUNCTIONS_DASHBOARD_ID | string | `""` |  |
+| configMap.QUICKSIGHT_MY_SERVICES_DASHBOARD_ID | string | `""` |  |
 | configMap.VEEGO_KAFKA_HOSTS | string | `""` |  |
 | configMap.VEEGO_REDIS_HOSTS | string | `""` |  |
 | configMap.VEEGO_SERVER_TIME_ZONE | string | `"Asia/Jerusalem"` |  |
@@ -39,7 +39,6 @@ helm repo add veego https://veegoteam.github.io/helm-charts-public
 | image.tag | string | `"staging"` |  |
 | ingress.enabled | bool | `true` |  |
 | ingress.hosts[0] | string | `"api-gateway.example.domain"` |  |
-| ingress.hosts[1] | string | `"dashboard.example.domain"` |  |
 | ingress.ingressClassName | string | `""` |  |
 | replicaCount | int | `1` |  |
 | secret.AWS_ACCESS_KEY_ID | string | `""` |  |
