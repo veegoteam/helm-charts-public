@@ -1,4 +1,6 @@
 global:
+  # -- imagePullSecrets
+  # Example --> imagePullSecrets: [ "secret" ]
   imagePullSecrets: []
 
 image:
@@ -9,20 +11,27 @@ image:
 
 replicaCount: 1
 
+containerPort: 80
+
 configMap:
-  ## VEEGO_KAFKA_HOSTS: "kafka-node-1:9092,kafka-node-2:9092,kafka-node-3:9092,kafka-node-4:9092"
+  # -- The hosts of the Kafka servers
+  # Example --> VEEGO_KAFKA_HOSTS: "kafka-node-1:9092,kafka-node-2:9092,kafka-node-3:9092,kafka-node-4:9092"
   VEEGO_KAFKA_HOSTS: ""
   VEEGO_KAFKA_CONSUMER_GROUP_ID: "agent-disconnect-detector-main"
-  ## VEEGO_REDIS_HOSTS: "redis-node-1:6379,redis-node-2:6379,redis-node-3:6379"
+  # -- The hosts of the Redis servers
+  # Example -->  VEEGO_REDIS_HOSTS: "redis-node-1:6379,redis-node-2:6379,redis-node-3:6379"
   VEEGO_REDIS_HOSTS: ""
-  ## VEEGO_SQL_URL: "jdbc:postgresql://postgresql-master:5424/veegodb"
+  # -- The hosts of the Postgresql server
+  # Example -->  VEEGO_SQL_URL: "jdbc:postgresql://postgresql-master:5424/veegodb"
   VEEGO_SQL_URL: ""
   AGENT_DISCONNECT_DETECTION_SCHEDULING: "0 0/10 * * * ?"
-  DOXI_SUPPORT: "true"
-  AGENT_MAX_DISCONNECT_TIME_MILLIS: "1209600000"
-  ## VEEGO_ZIPKIN_BASE_URL: "http://localhost:9411"
+  DOXI_SUPPORT: false
+  AGENT_MAX_DISCONNECT_TIME_MILLIS: 1209600000
+  # -- The hosts of the ZIPKIN server
+  # Example --> VEEGO_ZIPKIN_BASE_URL: "http://localhost:9411"
   VEEGO_ZIPKIN_BASE_URL: ""
-  ## LOGSTASH_HOST: "logstash-service:8080"
+  # -- The hosts of the LOGSTASH server
+  # Example --> LOGSTASH_HOST: "logstash-service:8080"
   LOGSTASH_HOST: ""
 
 secret:
