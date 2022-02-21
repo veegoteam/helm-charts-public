@@ -18,7 +18,7 @@ configMap:
   ## VEEGO_SQL_URL: "jdbc:postgresql://postgresql-master:5424/veegodb"
   VEEGO_SQL_URL: ""
   AGENT_DISCONNECT_DETECTION_SCHEDULING: "0 0/10 * * * ?"
-  DOXI_SUPPORT: "true"
+  DOXI_SUPPORT: "false"
   AGENT_MAX_DISCONNECT_TIME_MILLIS: "1209600000"
   ## VEEGO_ZIPKIN_BASE_URL: "http://localhost:9411"
   VEEGO_ZIPKIN_BASE_URL: ""
