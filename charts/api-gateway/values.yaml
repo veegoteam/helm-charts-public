@@ -27,7 +27,6 @@ ingress:
     - api-gateway.example.domain
     - dashboard.example.domain
 
-
 configMap:
   VEEGO_SERVER_TIME_ZONE: "Asia/Jerusalem"
   ## VEEGO_KAFKA_HOSTS: "kafka-node-1:9092,kafka-node-2:9092,kafka-node-3:9092,kafka-node-4:9092"
@@ -52,7 +51,6 @@ configMap:
   QUICKSIGHT_MY_MALFUNCTIONS_DASHBOARD_ID: "06ee0fa6-c2d9-4d15-af33-500111df4734"
   ## LOGSTASH_HOST: "logstash-service:8080"
   LOGSTASH_HOST: ""
-
 
 secret:
   VEEGO_KAFKA_USERNAME: ""

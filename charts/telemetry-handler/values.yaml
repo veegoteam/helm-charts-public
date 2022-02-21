@@ -9,7 +9,6 @@ image:
 
 replicaCount: 1
 
-
 configMap:
   ## VEEGO_KAFKA_HOSTS: "kafka-node-1:9092,kafka-node-2:9092,kafka-node-3:9092,kafka-node-4:9092"
   VEEGO_KAFKA_HOSTS: ""
@@ -25,7 +24,6 @@ configMap:
   ## LOGSTASH_HOST: "logstash-service:8080"
   LOGSTASH_HOST: ""
 
-
 secret:
   VEEGO_KAFKA_USERNAME: ""
   VEEGO_KAFKA_PASSWORD: ""
@@ -35,4 +33,3 @@ secret:
   VEEGO_KAFKA_SASL_USERNAME: ""
   VEEGO_KAFKA_SASL_PASSWORD: ""
   VEEGO_KAFKA_SASL_SERVICE_NAME: ""
-

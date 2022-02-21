@@ -33,5 +33,3 @@ configMap:
   APP_COOKIE_DOMAIN: ""
   ## LOGSTASH_HOST: "logstash-service:8080"
   LOGSTASH_HOST: ""
-
-

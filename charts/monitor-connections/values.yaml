@@ -9,7 +9,6 @@ image:
 
 replicaCount: 1
 
-
 configMap:
   APP_LOG_LEVEL: "debug"
   ## KAFKA_BOOTSTRAP_SERVERS: "kafka-node-1:9092,kafka-node-2:9092,kafka-node-3:9092,kafka-node-4:9092"
@@ -21,5 +20,3 @@ configMap:
   INFLUX_AUTH_TOKEN: ""
   ## LOGSTASH_HOST: "logstash-service:8080"
   LOGSTASH_HOST: ""
-
-

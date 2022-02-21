@@ -25,7 +25,6 @@ configMap:
   ## LOGSTASH_HOST: "logstash-service:8080"
   LOGSTASH_HOST: ""
 
-
 secret:
   VEEGO_KAFKA_USERNAME: ""
   VEEGO_KAFKA_PASSWORD: ""
