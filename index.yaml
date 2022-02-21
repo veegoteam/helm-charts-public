@@ -3,6 +3,16 @@ entries:
   agent-disconnect-detector:
   - apiVersion: v2
     appVersion: 1.16.0
+    created: "2022-02-21T22:19:51.07894454Z"
+    description: A Helm chart for Kubernetes
+    digest: 19e0716e6cd64a9d91cb65ea1db7f9279377961738162f30ffc25aeb4c16bde0
+    name: agent-disconnect-detector
+    type: application
+    urls:
+    - https://github.com/veegoteam/helm-charts-public/releases/download/agent-disconnect-detector-0.1.3/agent-disconnect-detector-0.1.3.tgz
+    version: 0.1.3
+  - apiVersion: v2
+    appVersion: 1.16.0
     created: "2022-02-21T20:55:29.032849212Z"
     description: A Helm chart for Kubernetes
     digest: 9ce6fbfcf408f05a71b5b8c3a1c0dc3e7242d5f36f2a99ed14962114151d151f
@@ -956,4 +966,4 @@ entries:
     urls:
     - https://github.com/veegoteam/helm-charts-public/releases/download/wifi-score-handler-0.1.0/wifi-score-handler-0.1.0.tgz
     version: 0.1.0
-generated: "2022-02-21T22:13:22.041565133Z"
+generated: "2022-02-21T22:19:51.079048139Z"
