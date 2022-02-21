@@ -1,5 +1,6 @@
 global:
-  imagePullSecrets: []
+  imagePullSecrets:
+    - imagePullSecrets
 
 image:
   registry: 347694409649.dkr.ecr.us-west-2.amazonaws.com
