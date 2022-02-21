@@ -9,7 +9,6 @@ image:
 
 replicaCount: 1
 
-
 configMap:
   ## VEEGO_REDIS_HOSTS: "redis-node-1:6379,redis-node-2:6379,redis-node-3:6379"
   VEEGO_REDIS_HOSTS: ""
@@ -18,5 +17,3 @@ configMap:
   VEEGO_ZIPKIN_BASE_URL: ""
   ## LOGSTASH_HOST: "logstash-service:8080"
   LOGSTASH_HOST: ""
-
-

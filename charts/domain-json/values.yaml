@@ -23,6 +23,7 @@ services:
       app: domain-json
 
 configMap:
-  BIND: "[::]:80" # for ipv6 support
+  # for ipv6 support
+  BIND: "[::]:80"
   ## LOGSTASH_HOST: "logstash-service:8080"
   LOGSTASH_HOST: ""
