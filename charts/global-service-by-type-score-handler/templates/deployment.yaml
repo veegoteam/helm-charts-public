@@ -27,6 +27,12 @@ spec:
         meta.helm.sh/release-namespace: {{ $release_namespace | quote }}
         release: {{ $release_name }}
     spec:
+    {{- if .Values.global.imagePullSecrets }}
+      imagePullSecrets:
+      {{- range $pullSecret := .Values.global.imagePullSecrets }}
+        - name: {{ $pullSecret }}
+      {{- end }}
+    {{- end }}
       containers:
         - name: {{ $chart_name }}
           image: {{ .Values.image.registry }}/{{ .Values.image.repository }}:{{ .Values.image.tag }}

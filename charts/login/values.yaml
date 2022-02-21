@@ -22,7 +22,7 @@ services:
 
 ingress:
   enabled: true
-  ingressClassName: "nginx"
+  ingressClassName: ""
   hosts:
     - login.example.domain
 

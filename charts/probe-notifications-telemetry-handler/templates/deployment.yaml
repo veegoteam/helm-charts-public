@@ -27,6 +27,12 @@ spec:
         meta.helm.sh/release-namespace: {{ $release_namespace | quote }}
         release: {{ $release_name }}
     spec:
+    {{- if .Values.global.imagePullSecrets }}
+      imagePullSecrets:
+      {{- range $pullSecret := .Values.global.imagePullSecrets }}
+        - name: {{ $pullSecret }}
+      {{- end }}
+    {{- end }}
       containers:
         - name: {{ $chart_name }}
           image: {{ .Values.image.registry }}/{{ .Values.image.repository }}:{{ .Values.image.tag }}
@@ -36,8 +42,12 @@ spec:
               containerPort: {{ .Values.containerPort | default 80 }}
               protocol: TCP
           envFrom:
+          {{- if .Values.configMap }}
           - configMapRef:
               name: {{ $chart_name }}-configmap
+          {{- end }}
+          {{- if .Values.secret }}
           - secretRef:
               name: {{ $chart_name }}-secret
+          {{- end }}
           resources: {}
