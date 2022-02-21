@@ -11,6 +11,8 @@ image:
 
 replicaCount: 1
 
+containerPort: 80
+
 configMap:
   # -- The hosts of the Kafka servers
   # Example --> VEEGO_KAFKA_HOSTS: "kafka-node-1:9092,kafka-node-2:9092,kafka-node-3:9092,kafka-node-4:9092"
@@ -23,8 +25,8 @@ configMap:
   # Example -->  VEEGO_SQL_URL: "jdbc:postgresql://postgresql-master:5424/veegodb"
   VEEGO_SQL_URL: ""
   AGENT_DISCONNECT_DETECTION_SCHEDULING: "0 0/10 * * * ?"
-  DOXI_SUPPORT: "false"
-  AGENT_MAX_DISCONNECT_TIME_MILLIS: "1209600000"
+  DOXI_SUPPORT: false
+  AGENT_MAX_DISCONNECT_TIME_MILLIS: 1209600000
   # -- The hosts of the ZIPKIN server
   # Example --> VEEGO_ZIPKIN_BASE_URL: "http://localhost:9411"
   VEEGO_ZIPKIN_BASE_URL: ""
