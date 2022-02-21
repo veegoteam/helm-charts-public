@@ -12,4 +12,30 @@ Add the following repo to use the chart:
 helm repo add grafana https://veegoteam/helm-charts-public
 ```
 
-## Upgrading
+## Values
+
+| Key | Type | Default | Description |
+|-----|------|---------|-------------|
+| configMap.AGENT_DISCONNECT_DETECTION_SCHEDULING | string | `"0 0/10 * * * ?"` |  |
+| configMap.AGENT_MAX_DISCONNECT_TIME_MILLIS | string | `"1209600000"` |  |
+| configMap.DOXI_SUPPORT | string | `"false"` |  |
+| configMap.LOGSTASH_HOST | string | `""` |  |
+| configMap.VEEGO_KAFKA_CONSUMER_GROUP_ID | string | `"agent-disconnect-detector-main"` |  |
+| configMap.VEEGO_KAFKA_HOSTS | string | `""` |  |
+| configMap.VEEGO_REDIS_HOSTS | string | `""` |  |
+| configMap.VEEGO_SQL_URL | string | `""` |  |
+| configMap.VEEGO_ZIPKIN_BASE_URL | string | `""` |  |
+| global.imagePullSecrets | list | `[]` |  |
+| image.pullPolicy | string | `"Always"` |  |
+| image.registry | string | `"347694409649.dkr.ecr.us-west-2.amazonaws.com"` |  |
+| image.repository | string | `"veego/agent-disconnect-detector"` |  |
+| image.tag | string | `"staging"` |  |
+| replicaCount | int | `1` |  |
+| secret.VEEGO_KAFKA_PASSWORD | string | `""` |  |
+| secret.VEEGO_KAFKA_SASL_PASSWORD | string | `""` |  |
+| secret.VEEGO_KAFKA_SASL_SERVICE_NAME | string | `""` |  |
+| secret.VEEGO_KAFKA_SASL_USERNAME | string | `""` |  |
+| secret.VEEGO_KAFKA_USERNAME | string | `""` |  |
+| secret.VEEGO_REDIS_PASSWORD | string | `""` |  |
+| secret.VEEGO_SQL_PASSWORD | string | `""` |  |
+| secret.VEEGO_SQL_USERNAME | string | `""` |  |
