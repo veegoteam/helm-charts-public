@@ -25,7 +25,6 @@ ingress:
   ingressClassName: ""
   hosts:
     - api-gateway.example.domain
-    - dashboard.example.domain
 
 configMap:
   VEEGO_SERVER_TIME_ZONE: "Asia/Jerusalem"
@@ -43,12 +42,12 @@ configMap:
   VEEGO_ZIPKIN_BASE_URL: ""
   ##   VEEGO_SIGN_OUT_URL: "https://keycloak.example.domain/auth/realms/veego/protocol/openid-connect/logout?redirect_uri=https://dashboard.example.domain/oauth2/sign_out"
   VEEGO_SIGN_OUT_URL: ""
-  QUICKSIGHT_ANALYTICS_DASHBOARD_ID: "11c2aa38-4f38-470f-8dc0-950046bce999"
-  QUICKSIGHT_MARKETING_DASHBOARD_ID: "d4e521f9-840a-4309-889c-689194045dc6"
-  QUICKSIGHT_MY_HOME_DASHBOARD_ID: "b24234ff-508e-47f6-b142-ca10d956ac0c"
-  QUICKSIGHT_MY_EXPERIENCE_DASHBOARD_ID: "d3228250-8ebb-48e5-b959-1c176722e5cb"
-  QUICKSIGHT_MY_SERVICES_DASHBOARD_ID: "6ea9e8bc-0a8e-4045-9dfe-b12e08bbbc5f"
-  QUICKSIGHT_MY_MALFUNCTIONS_DASHBOARD_ID: "06ee0fa6-c2d9-4d15-af33-500111df4734"
+  QUICKSIGHT_ANALYTICS_DASHBOARD_ID: ""
+  QUICKSIGHT_MARKETING_DASHBOARD_ID: ""
+  QUICKSIGHT_MY_HOME_DASHBOARD_ID: ""
+  QUICKSIGHT_MY_EXPERIENCE_DASHBOARD_ID: ""
+  QUICKSIGHT_MY_SERVICES_DASHBOARD_ID: ""
+  QUICKSIGHT_MY_MALFUNCTIONS_DASHBOARD_ID: ""
   ## LOGSTASH_HOST: "logstash-service:8080"
   LOGSTASH_HOST: ""
 
