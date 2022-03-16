@@ -1,0 +1,35 @@
+global:
+  imagePullSecrets: []
+
+image:
+  registry: 347694409649.dkr.ecr.us-west-2.amazonaws.com
+
+  repository: veego/veeng
+  tag: staging
+  pullPolicy: Always
+
+replicaCount: 1
+
+services:
+  - name: veeng
+    port: 80
+    targetPort: 8080
+    protocol: TCP
+    type: NodePort
+    selector:
+      app: veeng
+
+ingress:
+  enabled: true
+  ingressClassName: ""
+  hosts:
+    - veeng.example.domain
+
+configMap:
+  APP_LOG_LEVEL: debug
+  APP_FING_API: https://service.fing.io/2/devrecog
+  APP_MONGO_DB: veeng
+  SLACK_HOOK: ""
+
+secret:
+  APP_FING_KEY: ""
