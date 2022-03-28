@@ -25,7 +25,7 @@ services:
       app: kafka-websocket
 
 ingress:
-  enabled: true
+  enabled: false
   ingressClassName: ""
   hosts:
     - kafka-proxy.example.domain

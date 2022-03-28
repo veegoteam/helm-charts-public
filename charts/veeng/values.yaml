@@ -24,7 +24,7 @@ services:
       app: veeng
 
 ingress:
-  enabled: true
+  enabled: false
   ingressClassName: ""
   hosts:
     - veeng.example.domain
