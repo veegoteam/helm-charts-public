@@ -3,16 +3,6 @@ entries:
   agent-disconnect-detector:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-03-28T14:47:32.401505436Z"
-    description: A Helm chart for Kubernetes
-    digest: 023f9889e031e360b533906a0256bce29c3e0d2fcd66c98661fab7c02ff065c0
-    name: agent-disconnect-detector
-    type: application
-    urls:
-    - https://github.com/veegoteam/helm-charts-public/releases/download/agent-disconnect-detector-0.1.5/agent-disconnect-detector-0.1.5.tgz
-    version: 0.1.5
-  - apiVersion: v2
-    appVersion: 1.16.0
     created: "2022-03-16T08:24:16.049163697Z"
     description: A Helm chart for Kubernetes
     digest: 4cddd044327133e36adc1f174863b954235aca5f3c9b5bd88d077c7e92aff3f6
@@ -44,16 +34,6 @@ entries:
   agent-event-hooks-handler:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-03-28T14:47:32.570336756Z"
-    description: A Helm chart for Kubernetes
-    digest: 2579904b0b8d31293861b7578ddea95aae97deaa5f3a250220354d4636335421
-    name: agent-event-hooks-handler
-    type: application
-    urls:
-    - https://github.com/veegoteam/helm-charts-public/releases/download/agent-event-hooks-handler-0.1.5/agent-event-hooks-handler-0.1.5.tgz
-    version: 0.1.5
-  - apiVersion: v2
-    appVersion: 1.16.0
     created: "2022-02-21T22:13:14.19377083Z"
     description: A Helm chart for Kubernetes
     digest: 03a7d8f38e03c3506c54c8893f9bcb32327cda1769b432ef941622e87d391ff9
@@ -73,16 +53,6 @@ entries:
     - https://github.com/veegoteam/helm-charts-public/releases/download/agent-event-hooks-handler-0.1.0/agent-event-hooks-handler-0.1.0.tgz
     version: 0.1.0
   agent-registration-handler:
-  - apiVersion: v2
-    appVersion: 1.16.0
-    created: "2022-03-28T14:47:32.703168777Z"
-    description: A Helm chart for Kubernetes
-    digest: 940a114bceeaa0c626a2069541e32dbbb4db1a383f9ec18aa25657e72bc3664c
-    name: agent-registration-handler
-    type: application
-    urls:
-    - https://github.com/veegoteam/helm-charts-public/releases/download/agent-registration-handler-0.1.5/agent-registration-handler-0.1.5.tgz
-    version: 0.1.5
   - apiVersion: v2
     appVersion: 1.16.0
     created: "2022-02-21T22:13:14.390500137Z"
@@ -106,16 +76,6 @@ entries:
   agent-statistics-handler:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-03-28T14:47:32.929229569Z"
-    description: A Helm chart for Kubernetes
-    digest: 98dba32ae2feb3f0b1a145a90f2790395da4a6eaf20d2f87754f44dc88f95bbc
-    name: agent-statistics-handler
-    type: application
-    urls:
-    - https://github.com/veegoteam/helm-charts-public/releases/download/agent-statistics-handler-0.1.5/agent-statistics-handler-0.1.5.tgz
-    version: 0.1.5
-  - apiVersion: v2
-    appVersion: 1.16.0
     created: "2022-02-21T22:13:14.580104605Z"
     description: A Helm chart for Kubernetes
     digest: 7f715fdc9bf63a99a1cb86b560353a49a3c327a8c705a184bc3488b227160e27
@@ -135,16 +95,6 @@ entries:
     - https://github.com/veegoteam/helm-charts-public/releases/download/agent-statistics-handler-0.1.0/agent-statistics-handler-0.1.0.tgz
     version: 0.1.0
   agents-dispatcher:
-  - apiVersion: v2
-    appVersion: 1.16.0
-    created: "2022-03-28T14:47:33.050338777Z"
-    description: A Helm chart for Kubernetes
-    digest: 8d4044dab95c42015265a4cb08e6f8d05ef43e48a09c367fd71de5d194f7553a
-    name: agents-dispatcher
-    type: application
-    urls:
-    - https://github.com/veegoteam/helm-charts-public/releases/download/agents-dispatcher-0.1.5/agents-dispatcher-0.1.5.tgz
-    version: 0.1.5
   - apiVersion: v2
     appVersion: 1.16.0
     created: "2022-02-21T22:13:14.75973437Z"
@@ -168,16 +118,6 @@ entries:
   aggregated-telemetry-handler:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-03-28T14:47:33.168886406Z"
-    description: A Helm chart for Kubernetes
-    digest: b2a928057085c83142ded21f03c731091f870bf7ac384088a569018c5ae97ac8
-    name: aggregated-telemetry-handler
-    type: application
-    urls:
-    - https://github.com/veegoteam/helm-charts-public/releases/download/aggregated-telemetry-handler-0.1.5/aggregated-telemetry-handler-0.1.5.tgz
-    version: 0.1.5
-  - apiVersion: v2
-    appVersion: 1.16.0
     created: "2022-02-21T22:13:14.937724351Z"
     description: A Helm chart for Kubernetes
     digest: 183b957f16d2e6e9d022f78aaeaa5ca1f8b7a5a0fcc15a7c3be3f885af3f9ff7
@@ -199,16 +139,6 @@ entries:
   aggregation-ignitor:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-03-28T14:47:33.333671345Z"
-    description: A Helm chart for Kubernetes
-    digest: 1d15b80d48d699f4c6562e042f2adf6770a1eb10689d8b08070cdeb227eea5c4
-    name: aggregation-ignitor
-    type: application
-    urls:
-    - https://github.com/veegoteam/helm-charts-public/releases/download/aggregation-ignitor-0.1.5/aggregation-ignitor-0.1.5.tgz
-    version: 0.1.5
-  - apiVersion: v2
-    appVersion: 1.16.0
     created: "2022-02-21T22:13:15.108711099Z"
     description: A Helm chart for Kubernetes
     digest: a189ced4fa828b803d2a497789ad6fbd292faaf8d3dc14c5fcea4b3495b88948
@@ -228,16 +158,6 @@ entries:
     - https://github.com/veegoteam/helm-charts-public/releases/download/aggregation-ignitor-0.1.0/aggregation-ignitor-0.1.0.tgz
     version: 0.1.0
   api-gateway:
-  - apiVersion: v2
-    appVersion: 1.16.0
-    created: "2022-03-28T14:47:33.477957161Z"
-    description: A Helm chart for Kubernetes
-    digest: d299e583c6f51664cf05c0b999eef529e783476986911c7231cd6076892b028a
-    name: api-gateway
-    type: application
-    urls:
-    - https://github.com/veegoteam/helm-charts-public/releases/download/api-gateway-0.1.5/api-gateway-0.1.5.tgz
-    version: 0.1.5
   - apiVersion: v2
     appVersion: 1.16.0
     created: "2022-03-16T08:24:16.229170973Z"
@@ -271,16 +191,6 @@ entries:
   charter-veego-agents-handler:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-03-28T14:47:33.632573194Z"
-    description: A Helm chart for Kubernetes
-    digest: d0e40b4caaf1165d8a23424aa22540e4eabb9179311729572cd78bd53840164d
-    name: charter-veego-agents-handler
-    type: application
-    urls:
-    - https://github.com/veegoteam/helm-charts-public/releases/download/charter-veego-agents-handler-0.1.5/charter-veego-agents-handler-0.1.5.tgz
-    version: 0.1.5
-  - apiVersion: v2
-    appVersion: 1.16.0
     created: "2022-02-21T22:13:15.458886217Z"
     description: A Helm chart for Kubernetes
     digest: e747040580da242f36c24d6a5c4cc4740e7b43894ab936b52cc92ffaff4ce981
@@ -300,16 +210,6 @@ entries:
     - https://github.com/veegoteam/helm-charts-public/releases/download/charter-veego-agents-handler-0.1.0/charter-veego-agents-handler-0.1.0.tgz
     version: 0.1.0
   command-result-handler:
-  - apiVersion: v2
-    appVersion: 1.16.0
-    created: "2022-03-28T14:47:33.816310248Z"
-    description: A Helm chart for Kubernetes
-    digest: 37112286e058629f333039773cf98c9ed8596e1a3f3e72cf3fe04c803ec803fa
-    name: command-result-handler
-    type: application
-    urls:
-    - https://github.com/veegoteam/helm-charts-public/releases/download/command-result-handler-0.1.5/command-result-handler-0.1.5.tgz
-    version: 0.1.5
   - apiVersion: v2
     appVersion: 1.16.0
     created: "2022-02-21T22:13:15.644174927Z"
@@ -333,16 +233,6 @@ entries:
   command-topic-creator:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-03-28T14:47:33.953416266Z"
-    description: A Helm chart for Kubernetes
-    digest: 76b2feb8532773515a03b45b93b61f8269e9aaa9ecb4158580c5b2c79e8a7c72
-    name: command-topic-creator
-    type: application
-    urls:
-    - https://github.com/veegoteam/helm-charts-public/releases/download/command-topic-creator-0.1.5/command-topic-creator-0.1.5.tgz
-    version: 0.1.5
-  - apiVersion: v2
-    appVersion: 1.16.0
     created: "2022-02-21T22:13:15.821297316Z"
     description: A Helm chart for Kubernetes
     digest: fdbae9584180de6854b286dd9001a010ae34102c4a1afb81ac8003f71a5a1c30
@@ -361,27 +251,7 @@ entries:
     urls:
     - https://github.com/veegoteam/helm-charts-public/releases/download/command-topic-creator-0.1.0/command-topic-creator-0.1.0.tgz
     version: 0.1.0
-  cp-schema-registry:
-  - apiVersion: v1
-    appVersion: "1.0"
-    created: "2022-03-28T14:47:34.083575201Z"
-    description: A Helm chart for Confluent Schema Registry on Kubernetes
-    digest: 90582638f83af4dcccda8bbec11250c2a9f4e74872150aad548558628eeabec3
-    name: cp-schema-registry
-    urls:
-    - https://github.com/veegoteam/helm-charts-public/releases/download/cp-schema-registry-0.1.5/cp-schema-registry-0.1.5.tgz
-    version: 0.1.5
   device-collector:
-  - apiVersion: v2
-    appVersion: 1.16.0
-    created: "2022-03-28T14:47:34.616829119Z"
-    description: A Helm chart for Kubernetes
-    digest: 610a5436df7acc100e01f646d9e6a9ced9e445ccf49d0c80d9ae11030c775356
-    name: device-collector
-    type: application
-    urls:
-    - https://github.com/veegoteam/helm-charts-public/releases/download/device-collector-0.1.5/device-collector-0.1.5.tgz
-    version: 0.1.5
   - apiVersion: v2
     appVersion: 1.16.0
     created: "2022-02-21T22:13:16.020011697Z"
@@ -405,16 +275,6 @@ entries:
   device-uptime-handler:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-03-28T14:47:34.787618474Z"
-    description: A Helm chart for Kubernetes
-    digest: 3e53846d56e335dfa687499d7decff3bd10b8028d8d7a27573e2298a16860df9
-    name: device-uptime-handler
-    type: application
-    urls:
-    - https://github.com/veegoteam/helm-charts-public/releases/download/device-uptime-handler-0.1.5/device-uptime-handler-0.1.5.tgz
-    version: 0.1.5
-  - apiVersion: v2
-    appVersion: 1.16.0
     created: "2022-02-21T22:13:16.212383139Z"
     description: A Helm chart for Kubernetes
     digest: d56c520e68a7ed47922dbd0f49bbb740e90e768acc727f406374f67f9d249cd9
@@ -434,16 +294,6 @@ entries:
     - https://github.com/veegoteam/helm-charts-public/releases/download/device-uptime-handler-0.1.0/device-uptime-handler-0.1.0.tgz
     version: 0.1.0
   domain-json:
-  - apiVersion: v2
-    appVersion: 1.16.0
-    created: "2022-03-28T14:47:34.922280922Z"
-    description: A Helm chart for Kubernetes
-    digest: e537b51fe4087fbc0529e558e4ae16d9af890bece354097d6e8248022857ac2a
-    name: domain-json
-    type: application
-    urls:
-    - https://github.com/veegoteam/helm-charts-public/releases/download/domain-json-0.1.5/domain-json-0.1.5.tgz
-    version: 0.1.5
   - apiVersion: v2
     appVersion: 1.16.0
     created: "2022-02-21T22:13:16.393737787Z"
@@ -467,16 +317,6 @@ entries:
   doxi-veego-agents-disconnect-detector:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-03-28T14:47:35.044800212Z"
-    description: A Helm chart for Kubernetes
-    digest: 37bd17fad1b4af84c31e7a9e4d46f2e3287300d8751ce463a1cbae78558cff89
-    name: doxi-veego-agents-disconnect-detector
-    type: application
-    urls:
-    - https://github.com/veegoteam/helm-charts-public/releases/download/doxi-veego-agents-disconnect-detector-0.1.5/doxi-veego-agents-disconnect-detector-0.1.5.tgz
-    version: 0.1.5
-  - apiVersion: v2
-    appVersion: 1.16.0
     created: "2022-02-21T22:13:16.578316304Z"
     description: A Helm chart for Kubernetes
     digest: 2e38095fdd0f4a898e2befef03a617d2bb925b0c4b15472ba7b17fca7b063ac8
@@ -496,16 +336,6 @@ entries:
     - https://github.com/veegoteam/helm-charts-public/releases/download/doxi-veego-agents-disconnect-detector-0.1.0/doxi-veego-agents-disconnect-detector-0.1.0.tgz
     version: 0.1.0
   doxi-veego-agents-handler:
-  - apiVersion: v2
-    appVersion: 1.16.0
-    created: "2022-03-28T14:47:35.189754517Z"
-    description: A Helm chart for Kubernetes
-    digest: 6bec05b7cb023188fb188151234cc47895eb2d4bfb110c3da1b794ada58f2023
-    name: doxi-veego-agents-handler
-    type: application
-    urls:
-    - https://github.com/veegoteam/helm-charts-public/releases/download/doxi-veego-agents-handler-0.1.5/doxi-veego-agents-handler-0.1.5.tgz
-    version: 0.1.5
   - apiVersion: v2
     appVersion: 1.16.0
     created: "2022-02-21T22:13:16.743805005Z"
@@ -529,16 +359,6 @@ entries:
   doxi-veego-devices-handler:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-03-28T14:47:35.317685424Z"
-    description: A Helm chart for Kubernetes
-    digest: 464f2c3f1ea746f0bef1462784eb419b3e3c721a29577e069326b4633bf3ba13
-    name: doxi-veego-devices-handler
-    type: application
-    urls:
-    - https://github.com/veegoteam/helm-charts-public/releases/download/doxi-veego-devices-handler-0.1.5/doxi-veego-devices-handler-0.1.5.tgz
-    version: 0.1.5
-  - apiVersion: v2
-    appVersion: 1.16.0
     created: "2022-02-21T22:13:16.907448525Z"
     description: A Helm chart for Kubernetes
     digest: b82b64b6a7c7338ddc3109b2ae15a25362a800ed9e22d6375ddb61b7d9b5bcfe
@@ -558,16 +378,6 @@ entries:
     - https://github.com/veegoteam/helm-charts-public/releases/download/doxi-veego-devices-handler-0.1.0/doxi-veego-devices-handler-0.1.0.tgz
     version: 0.1.0
   doxi-veego-notifications-handler:
-  - apiVersion: v2
-    appVersion: 1.16.0
-    created: "2022-03-28T14:47:35.44078069Z"
-    description: A Helm chart for Kubernetes
-    digest: 8c305cbad99aa618ed976c3d847c44950b7318a8fde2d80acf8ebe9bd0dd630e
-    name: doxi-veego-notifications-handler
-    type: application
-    urls:
-    - https://github.com/veegoteam/helm-charts-public/releases/download/doxi-veego-notifications-handler-0.1.5/doxi-veego-notifications-handler-0.1.5.tgz
-    version: 0.1.5
   - apiVersion: v2
     appVersion: 1.16.0
     created: "2022-02-21T22:13:17.080314755Z"
@@ -591,16 +401,6 @@ entries:
   doxi-veego-service-status-handler:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-03-28T14:47:35.574660716Z"
-    description: A Helm chart for Kubernetes
-    digest: cd03558c1f6cd61baaf145c655abda916167dbd36e44c3deb3ef613f0af54835
-    name: doxi-veego-service-status-handler
-    type: application
-    urls:
-    - https://github.com/veegoteam/helm-charts-public/releases/download/doxi-veego-service-status-handler-0.1.5/doxi-veego-service-status-handler-0.1.5.tgz
-    version: 0.1.5
-  - apiVersion: v2
-    appVersion: 1.16.0
     created: "2022-02-21T22:13:17.265934962Z"
     description: A Helm chart for Kubernetes
     digest: d9494edeaeabafcafae2e2ed9f25fbf07348eef47b01529d7c38c3c9f364cfc3
@@ -620,16 +420,6 @@ entries:
     - https://github.com/veegoteam/helm-charts-public/releases/download/doxi-veego-service-status-handler-0.1.0/doxi-veego-service-status-handler-0.1.0.tgz
     version: 0.1.0
   doxi-veego-service-usages:
-  - apiVersion: v2
-    appVersion: 1.16.0
-    created: "2022-03-28T14:47:35.700068845Z"
-    description: A Helm chart for Kubernetes
-    digest: b42cf45aa3012e46b11bf126d6be1b4cd2476a0915682b3bc212f61203378605
-    name: doxi-veego-service-usages
-    type: application
-    urls:
-    - https://github.com/veegoteam/helm-charts-public/releases/download/doxi-veego-service-usages-0.1.5/doxi-veego-service-usages-0.1.5.tgz
-    version: 0.1.5
   - apiVersion: v2
     appVersion: 1.16.0
     created: "2022-02-21T22:13:17.447210711Z"
@@ -653,16 +443,6 @@ entries:
   doxi-veego-services-handler:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-03-28T14:47:35.839733979Z"
-    description: A Helm chart for Kubernetes
-    digest: 7dd265e923f48556f3ae2d631d0e9d9a9f7fa3dc00e0e105597ba45617bd563c
-    name: doxi-veego-services-handler
-    type: application
-    urls:
-    - https://github.com/veegoteam/helm-charts-public/releases/download/doxi-veego-services-handler-0.1.5/doxi-veego-services-handler-0.1.5.tgz
-    version: 0.1.5
-  - apiVersion: v2
-    appVersion: 1.16.0
     created: "2022-02-21T22:13:17.627974265Z"
     description: A Helm chart for Kubernetes
     digest: e913b180dc64b8f142d9b86148442211cf33a471e0e582da84e5eb3c0fb9224a
@@ -682,16 +462,6 @@ entries:
     - https://github.com/veegoteam/helm-charts-public/releases/download/doxi-veego-services-handler-0.1.0/doxi-veego-services-handler-0.1.0.tgz
     version: 0.1.0
   doxi-veego-telemetry-aggregations:
-  - apiVersion: v2
-    appVersion: 1.16.0
-    created: "2022-03-28T14:47:35.985519442Z"
-    description: A Helm chart for Kubernetes
-    digest: 9ee69973e43e0f358a656ba048b280e405d53392ff8a43c9547f27974a2b781b
-    name: doxi-veego-telemetry-aggregations
-    type: application
-    urls:
-    - https://github.com/veegoteam/helm-charts-public/releases/download/doxi-veego-telemetry-aggregations-0.1.5/doxi-veego-telemetry-aggregations-0.1.5.tgz
-    version: 0.1.5
   - apiVersion: v2
     appVersion: 1.16.0
     created: "2022-02-21T22:13:17.832504089Z"
@@ -715,16 +485,6 @@ entries:
   global-service-by-type-data-collector:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-03-28T14:47:36.117317122Z"
-    description: A Helm chart for Kubernetes
-    digest: ad6365a2879c95614e7be096db69f3c4bad96c2893d5f9c6a0557bdc0933da08
-    name: global-service-by-type-data-collector
-    type: application
-    urls:
-    - https://github.com/veegoteam/helm-charts-public/releases/download/global-service-by-type-data-collector-0.1.5/global-service-by-type-data-collector-0.1.5.tgz
-    version: 0.1.5
-  - apiVersion: v2
-    appVersion: 1.16.0
     created: "2022-02-21T22:13:18.017108806Z"
     description: A Helm chart for Kubernetes
     digest: ffecd446735cd2ca7e3914feb123c068f44aa95cd3006bd37ecb8e2fffdbd098
@@ -744,16 +504,6 @@ entries:
     - https://github.com/veegoteam/helm-charts-public/releases/download/global-service-by-type-data-collector-0.1.0/global-service-by-type-data-collector-0.1.0.tgz
     version: 0.1.0
   global-service-by-type-score-handler:
-  - apiVersion: v2
-    appVersion: 1.16.0
-    created: "2022-03-28T14:47:36.253337298Z"
-    description: A Helm chart for Kubernetes
-    digest: 2f1dbd1bc2db0977e97a7363ae3be80fbdd9f6885e21ded7106bef70628615e9
-    name: global-service-by-type-score-handler
-    type: application
-    urls:
-    - https://github.com/veegoteam/helm-charts-public/releases/download/global-service-by-type-score-handler-0.1.5/global-service-by-type-score-handler-0.1.5.tgz
-    version: 0.1.5
   - apiVersion: v2
     appVersion: 1.16.0
     created: "2022-02-21T22:13:18.207470367Z"
@@ -777,16 +527,6 @@ entries:
   home-score-devices-data-handler:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-03-28T14:47:36.414469642Z"
-    description: A Helm chart for Kubernetes
-    digest: d5b18c53de3ce8f066313b531a6b30924c330a2441db36f64b5b5f03a704aa10
-    name: home-score-devices-data-handler
-    type: application
-    urls:
-    - https://github.com/veegoteam/helm-charts-public/releases/download/home-score-devices-data-handler-0.1.5/home-score-devices-data-handler-0.1.5.tgz
-    version: 0.1.5
-  - apiVersion: v2
-    appVersion: 1.16.0
     created: "2022-02-21T22:13:18.388440519Z"
     description: A Helm chart for Kubernetes
     digest: fee17136f8c994b818698f9f5e25b11aa1486d8803b1ceb7a316b1ed217e2231
@@ -806,16 +546,6 @@ entries:
     - https://github.com/veegoteam/helm-charts-public/releases/download/home-score-devices-data-handler-0.1.0/home-score-devices-data-handler-0.1.0.tgz
     version: 0.1.0
   home-score-handler:
-  - apiVersion: v2
-    appVersion: 1.16.0
-    created: "2022-03-28T14:47:36.573779559Z"
-    description: A Helm chart for Kubernetes
-    digest: 095dd7cae0b76e2a876612305196d70def8aa6f6b4c3226e1d5b633a34fccc70
-    name: home-score-handler
-    type: application
-    urls:
-    - https://github.com/veegoteam/helm-charts-public/releases/download/home-score-handler-0.1.5/home-score-handler-0.1.5.tgz
-    version: 0.1.5
   - apiVersion: v2
     appVersion: 1.16.0
     created: "2022-02-21T22:13:18.568070684Z"
@@ -839,16 +569,6 @@ entries:
   kafka-websocket:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-03-28T14:47:36.711281339Z"
-    description: A Helm chart for Kubernetes
-    digest: 82d2d52462a0889c66bf2e4159bf1444b1e70e2e9ac05db417b1178c572e3f65
-    name: kafka-websocket
-    type: application
-    urls:
-    - https://github.com/veegoteam/helm-charts-public/releases/download/kafka-websocket-0.1.5/kafka-websocket-0.1.5.tgz
-    version: 0.1.5
-  - apiVersion: v2
-    appVersion: 1.16.0
     created: "2022-02-21T22:13:18.80559049Z"
     description: A Helm chart for Kubernetes
     digest: 0b97ada3df9fe1b3d01c073204cc9602f0c4955de8a095acd4f54f5824fad3c4
@@ -868,16 +588,6 @@ entries:
     - https://github.com/veegoteam/helm-charts-public/releases/download/kafka-websocket-0.1.0/kafka-websocket-0.1.0.tgz
     version: 0.1.0
   login:
-  - apiVersion: v2
-    appVersion: 1.16.0
-    created: "2022-03-28T14:47:36.829920992Z"
-    description: A Helm chart for Kubernetes
-    digest: b867213bf34cc671d34968be143896a0c18d5d43990562e146579ffdd8a430b7
-    name: login
-    type: application
-    urls:
-    - https://github.com/veegoteam/helm-charts-public/releases/download/login-0.1.5/login-0.1.5.tgz
-    version: 0.1.5
   - apiVersion: v2
     appVersion: 1.16.0
     created: "2022-02-21T22:13:18.961171987Z"
@@ -901,16 +611,6 @@ entries:
   malfunctions-counters-cleaner:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-03-28T14:47:36.93883906Z"
-    description: A Helm chart for Kubernetes
-    digest: ff228ed5c1812836b5a54f85c79dee714912ae25d9057fd43fd95d2e14719201
-    name: malfunctions-counters-cleaner
-    type: application
-    urls:
-    - https://github.com/veegoteam/helm-charts-public/releases/download/malfunctions-counters-cleaner-0.1.5/malfunctions-counters-cleaner-0.1.5.tgz
-    version: 0.1.5
-  - apiVersion: v2
-    appVersion: 1.16.0
     created: "2022-02-21T22:13:19.12134174Z"
     description: A Helm chart for Kubernetes
     digest: 0a988712f19f3f5a7eca96609c978b475c68ddd5a552b5607e6b2c94a4692b6b
@@ -930,16 +630,6 @@ entries:
     - https://github.com/veegoteam/helm-charts-public/releases/download/malfunctions-counters-cleaner-0.1.0/malfunctions-counters-cleaner-0.1.0.tgz
     version: 0.1.0
   mobile-api:
-  - apiVersion: v2
-    appVersion: 1.16.0
-    created: "2022-03-28T14:47:37.049863077Z"
-    description: A Helm chart for Kubernetes
-    digest: 8ce913b08879fa3b496d1fa9b84490623702ac408cf5918bbef6e52bff7afb32
-    name: mobile-api
-    type: application
-    urls:
-    - https://github.com/veegoteam/helm-charts-public/releases/download/mobile-api-0.1.5/mobile-api-0.1.5.tgz
-    version: 0.1.5
   - apiVersion: v2
     appVersion: 1.16.0
     created: "2022-02-21T22:13:19.30355858Z"
@@ -963,16 +653,6 @@ entries:
   monitor-connections:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-03-28T14:47:37.174314739Z"
-    description: A Helm chart for Kubernetes
-    digest: d57f748c1ea22117f463d875e396296a3694c3193e1d3a76c18e92e636fa9ca0
-    name: monitor-connections
-    type: application
-    urls:
-    - https://github.com/veegoteam/helm-charts-public/releases/download/monitor-connections-0.1.5/monitor-connections-0.1.5.tgz
-    version: 0.1.5
-  - apiVersion: v2
-    appVersion: 1.16.0
     created: "2022-02-21T22:13:19.472974244Z"
     description: A Helm chart for Kubernetes
     digest: 9b6c306847e8b3279681de7c0c0cf76c9a33a0c934858f7868ba17be67262a5c
@@ -992,16 +672,6 @@ entries:
     - https://github.com/veegoteam/helm-charts-public/releases/download/monitor-connections-0.1.0/monitor-connections-0.1.0.tgz
     version: 0.1.0
   notifications-handler:
-  - apiVersion: v2
-    appVersion: 1.16.0
-    created: "2022-03-28T14:47:37.293444326Z"
-    description: A Helm chart for Kubernetes
-    digest: ac27f1ffa37fbdeeb7fdec40ec994ecaedd538c49a39044c18963aa61a0b8a61
-    name: notifications-handler
-    type: application
-    urls:
-    - https://github.com/veegoteam/helm-charts-public/releases/download/notifications-handler-0.1.5/notifications-handler-0.1.5.tgz
-    version: 0.1.5
   - apiVersion: v2
     appVersion: 1.16.0
     created: "2022-02-21T22:13:19.634345885Z"
@@ -1025,16 +695,6 @@ entries:
   notifications-telemetry-collector:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-03-28T14:47:37.396993616Z"
-    description: A Helm chart for Kubernetes
-    digest: 2a6374982d1f101384f75a56f2be5acfe867741d25adddd5902461a82c895e6c
-    name: notifications-telemetry-collector
-    type: application
-    urls:
-    - https://github.com/veegoteam/helm-charts-public/releases/download/notifications-telemetry-collector-0.1.5/notifications-telemetry-collector-0.1.5.tgz
-    version: 0.1.5
-  - apiVersion: v2
-    appVersion: 1.16.0
     created: "2022-02-21T22:13:19.795858525Z"
     description: A Helm chart for Kubernetes
     digest: dc30cb0f7f055fd080c87e7408ea038ad1a30eccdec02669ae1d029590644db7
@@ -1054,16 +714,6 @@ entries:
     - https://github.com/veegoteam/helm-charts-public/releases/download/notifications-telemetry-collector-0.1.0/notifications-telemetry-collector-0.1.0.tgz
     version: 0.1.0
   notifications-telemetry-collector-ignitor:
-  - apiVersion: v2
-    appVersion: 1.16.0
-    created: "2022-03-28T14:47:37.58155061Z"
-    description: A Helm chart for Kubernetes
-    digest: a74ea153cbdbcb3600fbb3b1e89da4df84a7cf9e9d5b510852e81311d2a9d991
-    name: notifications-telemetry-collector-ignitor
-    type: application
-    urls:
-    - https://github.com/veegoteam/helm-charts-public/releases/download/notifications-telemetry-collector-ignitor-0.1.5/notifications-telemetry-collector-ignitor-0.1.5.tgz
-    version: 0.1.5
   - apiVersion: v2
     appVersion: 1.16.0
     created: "2022-02-21T22:13:19.958324455Z"
@@ -1087,16 +737,6 @@ entries:
   probe-notifications-telemetry-handler:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-03-28T14:47:37.710181766Z"
-    description: A Helm chart for Kubernetes
-    digest: 6ae0eff462f296f88e6065f90a76c442a67d7b2e4898fbdbf1db6418a1303aa5
-    name: probe-notifications-telemetry-handler
-    type: application
-    urls:
-    - https://github.com/veegoteam/helm-charts-public/releases/download/probe-notifications-telemetry-handler-0.1.5/probe-notifications-telemetry-handler-0.1.5.tgz
-    version: 0.1.5
-  - apiVersion: v2
-    appVersion: 1.16.0
     created: "2022-02-21T22:13:20.116419628Z"
     description: A Helm chart for Kubernetes
     digest: f4a80be14dd696f38ad1e620d1cfabb71b39582f21829eb70c4c7afbfd6ba8de
@@ -1116,16 +756,6 @@ entries:
     - https://github.com/veegoteam/helm-charts-public/releases/download/probe-notifications-telemetry-handler-0.1.0/probe-notifications-telemetry-handler-0.1.0.tgz
     version: 0.1.0
   probe-telemetry-handler:
-  - apiVersion: v2
-    appVersion: 1.16.0
-    created: "2022-03-28T14:47:37.835864515Z"
-    description: A Helm chart for Kubernetes
-    digest: 815b24e5177812d91aee7900535503a0b8d8b3b1937ad74d17dd6624fdb522a9
-    name: probe-telemetry-handler
-    type: application
-    urls:
-    - https://github.com/veegoteam/helm-charts-public/releases/download/probe-telemetry-handler-0.1.5/probe-telemetry-handler-0.1.5.tgz
-    version: 0.1.5
   - apiVersion: v2
     appVersion: 1.16.0
     created: "2022-02-21T22:13:20.294380109Z"
@@ -1149,16 +779,6 @@ entries:
   services-name-resolver-api-gateway:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-03-28T14:47:37.964473369Z"
-    description: A Helm chart for Kubernetes
-    digest: f8137c00e5f1278c2a21c85f10ab0495307fa0b4de927fefdb479e60f6e4d6fb
-    name: services-name-resolver-api-gateway
-    type: application
-    urls:
-    - https://github.com/veegoteam/helm-charts-public/releases/download/services-name-resolver-api-gateway-0.1.5/services-name-resolver-api-gateway-0.1.5.tgz
-    version: 0.1.5
-  - apiVersion: v2
-    appVersion: 1.16.0
     created: "2022-02-21T22:13:20.460541204Z"
     description: A Helm chart for Kubernetes
     digest: 177f656505fd342fd1a664a77f73f5cb2fe1daf97bef5632ae0c9711f4e7ed8a
@@ -1178,16 +798,6 @@ entries:
     - https://github.com/veegoteam/helm-charts-public/releases/download/services-name-resolver-api-gateway-0.1.0/services-name-resolver-api-gateway-0.1.0.tgz
     version: 0.1.0
   services-name-resolver-cert-resolver:
-  - apiVersion: v2
-    appVersion: 1.16.0
-    created: "2022-03-28T14:47:38.074473414Z"
-    description: A Helm chart for Kubernetes
-    digest: 64eac4b1411642fa0e3cc59f2c1a9abebcdd7032e54f68788070cede9cecb45c
-    name: services-name-resolver-cert-resolver
-    type: application
-    urls:
-    - https://github.com/veegoteam/helm-charts-public/releases/download/services-name-resolver-cert-resolver-0.1.5/services-name-resolver-cert-resolver-0.1.5.tgz
-    version: 0.1.5
   - apiVersion: v2
     appVersion: 1.16.0
     created: "2022-02-21T22:13:20.620089263Z"
@@ -1211,16 +821,6 @@ entries:
   services-name-resolver-rdns-resolver:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-03-28T14:47:38.207599687Z"
-    description: A Helm chart for Kubernetes
-    digest: 3ec2810dbe26e154fa46a096eacdc90ba1580a1af52a17e05bfcb82ecf7c4b80
-    name: services-name-resolver-rdns-resolver
-    type: application
-    urls:
-    - https://github.com/veegoteam/helm-charts-public/releases/download/services-name-resolver-rdns-resolver-0.1.5/services-name-resolver-rdns-resolver-0.1.5.tgz
-    version: 0.1.5
-  - apiVersion: v2
-    appVersion: 1.16.0
     created: "2022-02-21T22:13:20.794149682Z"
     description: A Helm chart for Kubernetes
     digest: dad921a2440bdf8d71f6ee44a7fb3217f7752ecf48800fdbaec3546d139d66a0
@@ -1240,16 +840,6 @@ entries:
     - https://github.com/veegoteam/helm-charts-public/releases/download/services-name-resolver-rdns-resolver-0.1.0/services-name-resolver-rdns-resolver-0.1.0.tgz
     version: 0.1.0
   speedtest-handler:
-  - apiVersion: v2
-    appVersion: 1.16.0
-    created: "2022-03-28T14:47:38.347206115Z"
-    description: A Helm chart for Kubernetes
-    digest: eb8a3f62340e4a229b7d1e2ff20fe75746bae4cf1f4f1664c508d61bc4cc867a
-    name: speedtest-handler
-    type: application
-    urls:
-    - https://github.com/veegoteam/helm-charts-public/releases/download/speedtest-handler-0.1.5/speedtest-handler-0.1.5.tgz
-    version: 0.1.5
   - apiVersion: v2
     appVersion: 1.16.0
     created: "2022-02-21T22:13:20.976415121Z"
@@ -1273,16 +863,6 @@ entries:
   telemetry-aggregator:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-03-28T14:47:38.466401707Z"
-    description: A Helm chart for Kubernetes
-    digest: ab61c1f23684efa57eecc4238310d2cb371ac6085585ee3686fc3360d4ea4e3c
-    name: telemetry-aggregator
-    type: application
-    urls:
-    - https://github.com/veegoteam/helm-charts-public/releases/download/telemetry-aggregator-0.1.5/telemetry-aggregator-0.1.5.tgz
-    version: 0.1.5
-  - apiVersion: v2
-    appVersion: 1.16.0
     created: "2022-02-21T22:13:21.149790647Z"
     description: A Helm chart for Kubernetes
     digest: d2334e3d57af3b6b10f024b47b37b319a0452d2471c60086079200bec01b7dd8
@@ -1302,16 +882,6 @@ entries:
     - https://github.com/veegoteam/helm-charts-public/releases/download/telemetry-aggregator-0.1.0/telemetry-aggregator-0.1.0.tgz
     version: 0.1.0
   telemetry-handler:
-  - apiVersion: v2
-    appVersion: 1.16.0
-    created: "2022-03-28T14:47:38.597076807Z"
-    description: A Helm chart for Kubernetes
-    digest: 989fd481c5c90d9ed302739f6af3c3c84f6a9236a53551b9d9e16cb97e4f762c
-    name: telemetry-handler
-    type: application
-    urls:
-    - https://github.com/veegoteam/helm-charts-public/releases/download/telemetry-handler-0.1.5/telemetry-handler-0.1.5.tgz
-    version: 0.1.5
   - apiVersion: v2
     appVersion: 1.16.0
     created: "2022-02-21T22:13:21.334165366Z"
@@ -1335,7 +905,7 @@ entries:
   veego-stack:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-03-28T14:47:38.760976247Z"
+    created: "2022-03-28T15:12:17.785161034Z"
     dependencies:
     - name: agent-disconnect-detector
       repository: file://../agent-disconnect-detector
@@ -1473,23 +1043,13 @@ entries:
       repository: file://../wifi-score-handler
       version: 0.X.X
     description: A Helm chart for Kubernetes
-    digest: 59ab718dc156a8d427825774970297cb98583b2a712d4ad3c90948e00096db6f
+    digest: 032c907acb2b701662f039da25df632455881f2865ae94ba9d41542c87eced0f
     name: veego-stack
     type: application
     urls:
-    - https://github.com/veegoteam/helm-charts-public/releases/download/veego-stack-0.0.1/veego-stack-0.0.1.tgz
-    version: 0.0.1
+    - https://github.com/veegoteam/helm-charts-public/releases/download/veego-stack-0.0.2/veego-stack-0.0.2.tgz
+    version: 0.0.2
   veeng:
-  - apiVersion: v2
-    appVersion: 1.16.0
-    created: "2022-03-28T14:47:38.98060881Z"
-    description: A Helm chart for Kubernetes
-    digest: 85a983bf4523c19f31c2d7ea67cd615c7f2d3f2cd547116e76faa3a7e445f0ed
-    name: veeng
-    type: application
-    urls:
-    - https://github.com/veegoteam/helm-charts-public/releases/download/veeng-0.1.5/veeng-0.1.5.tgz
-    version: 0.1.5
   - apiVersion: v2
     appVersion: 1.16.0
     created: "2022-03-16T08:24:16.426942387Z"
@@ -1501,16 +1061,6 @@ entries:
     - https://github.com/veegoteam/helm-charts-public/releases/download/veeng-0.1.2/veeng-0.1.2.tgz
     version: 0.1.2
   wifi-global-malfunctions-statistics-builder:
-  - apiVersion: v2
-    appVersion: 1.16.0
-    created: "2022-03-28T14:47:39.108764932Z"
-    description: A Helm chart for Kubernetes
-    digest: e0fc9ddec619ab72f51294329657bacd54bb9a565244588868d41ec86400d1de
-    name: wifi-global-malfunctions-statistics-builder
-    type: application
-    urls:
-    - https://github.com/veegoteam/helm-charts-public/releases/download/wifi-global-malfunctions-statistics-builder-0.1.5/wifi-global-malfunctions-statistics-builder-0.1.5.tgz
-    version: 0.1.5
   - apiVersion: v2
     appVersion: 1.16.0
     created: "2022-02-21T22:13:21.500251561Z"
@@ -1534,16 +1084,6 @@ entries:
   wifi-malfunctions-counters-cleaner:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-03-28T14:47:39.221356459Z"
-    description: A Helm chart for Kubernetes
-    digest: 3cfca7cecb9c2f1f468826faa1fba14b60a66fcfd6a1e93ba0b2c21e066481b8
-    name: wifi-malfunctions-counters-cleaner
-    type: application
-    urls:
-    - https://github.com/veegoteam/helm-charts-public/releases/download/wifi-malfunctions-counters-cleaner-0.1.5/wifi-malfunctions-counters-cleaner-0.1.5.tgz
-    version: 0.1.5
-  - apiVersion: v2
-    appVersion: 1.16.0
     created: "2022-02-21T22:13:21.714219595Z"
     description: A Helm chart for Kubernetes
     digest: 1c176dc80a4018bd4c90307514d0e8ee627b64264152019e8256e8e1b8b92fa8
@@ -1563,16 +1103,6 @@ entries:
     - https://github.com/veegoteam/helm-charts-public/releases/download/wifi-malfunctions-counters-cleaner-0.1.0/wifi-malfunctions-counters-cleaner-0.1.0.tgz
     version: 0.1.0
   wifi-malfunctions-data-collector:
-  - apiVersion: v2
-    appVersion: 1.16.0
-    created: "2022-03-28T14:47:39.336932496Z"
-    description: A Helm chart for Kubernetes
-    digest: 60bc89b5cccd50e10a8b188816d5512db906afb39c2d71328601b5674e786538
-    name: wifi-malfunctions-data-collector
-    type: application
-    urls:
-    - https://github.com/veegoteam/helm-charts-public/releases/download/wifi-malfunctions-data-collector-0.1.5/wifi-malfunctions-data-collector-0.1.5.tgz
-    version: 0.1.5
   - apiVersion: v2
     appVersion: 1.16.0
     created: "2022-02-21T22:13:21.875671235Z"
@@ -1596,16 +1126,6 @@ entries:
   wifi-score-handler:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-03-28T14:47:39.465062517Z"
-    description: A Helm chart for Kubernetes
-    digest: ea336fe4d7ef5d84037511772fb5e485dfa8b5d3765e639150f4d818f3a60abb
-    name: wifi-score-handler
-    type: application
-    urls:
-    - https://github.com/veegoteam/helm-charts-public/releases/download/wifi-score-handler-0.1.5/wifi-score-handler-0.1.5.tgz
-    version: 0.1.5
-  - apiVersion: v2
-    appVersion: 1.16.0
     created: "2022-02-21T22:13:22.041454934Z"
     description: A Helm chart for Kubernetes
     digest: 066c4ec71b7531c95425630de0fb3a41009e80fdd2d4bd968de0b142e767202b
@@ -1624,4 +1144,4 @@ entries:
     urls:
     - https://github.com/veegoteam/helm-charts-public/releases/download/wifi-score-handler-0.1.0/wifi-score-handler-0.1.0.tgz
     version: 0.1.0
-generated: "2022-03-28T14:47:39.46538384Z"
+generated: "2022-03-28T15:12:17.785413232Z"
