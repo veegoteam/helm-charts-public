@@ -39,9 +39,9 @@ dependencies:
   - name: command-topic-creator
     version: 0.X.X
     repository: file://../command-topic-creator
-  - name: cp-schema-registry
-    version: 0.X.X
-    repository: file://../cp-schema-registry
+#  - name: cp-schema-registry
+#    version: 0.X.X
+#    repository: file://../cp-schema-registry
   - name: device-collector
     version: 0.X.X
     repository: file://../device-collector
@@ -87,9 +87,9 @@ dependencies:
   - name: home-score-handler
     version: 0.X.X
     repository: file://../home-score-handler
-  - name: kafka-websocket
-    version: 0.X.X
-    repository: file://../kafka-websocket
+#  - name: kafka-websocket
+#    version: 0.X.X
+#    repository: file://../kafka-websocket
   - name: login
     version: 0.X.X
     repository: file://../login
@@ -135,9 +135,9 @@ dependencies:
   - name: telemetry-handler
     version: 0.X.X
     repository: file://../telemetry-handler
-  - name: veeng
-    version: 0.X.X
-    repository: file://../veeng
+#  - name: veeng
+#    version: 0.X.X
+#    repository: file://../veeng
   - name: wifi-global-malfunctions-statistics-builder
     version: 0.X.X
     repository: file://../wifi-global-malfunctions-statistics-builder
