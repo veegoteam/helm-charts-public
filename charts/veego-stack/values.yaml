@@ -2,36 +2,40 @@ global:
   # -- imagePullSecrets
   # Example --> imagePullSecrets: [ "secret" ]
   imagePullSecrets: []
-  registry: ""
+  registry: "347694409649.dkr.ecr.us-west-2.amazonaws.com"
   pullPolicy: Always
 
 configMap:
-  VEEGO_SERVER_TIME_ZONE: "Asia/Jerusalem"
-  AWS_ACCOUNT_ID: "347694409649"
-  AWS_REGION: "us-west-2"
-  VEEGO_SIGN_OUT_URL: "https://keycloak.stage.veego.io/auth/realms/veego/protocol/openid-connect/logout?redirect_uri=https://api-gateway.stage.veego.io/oauth2/sign_out"
-  VEEGO_KAFKA_HOSTS: "192.169.93.238:9092,192.169.65.156:9092,192.169.65.86:9092"
-  VEEGO_KAFKA_SCHEMA_REGISTRY_URL: "http://schema-registry.dev.veego.io:8081"
-  VEEGO_REDIS_HOSTS: "192.169.93.238:6379,192.169.65.156:6379,192.169.65.86:6379"
-  VEEGO_SQL_URL: "jdbc:postgresql://veegodb.cel7sbdxnefc.us-west-2.rds.amazonaws.com:5424/veegodb"
-  VEEGO_ZIPKIN_BASE_URL: "http://localhost:9411"
-  LOGSTASH_HOST: "logstash-service:8080"
-  VEEGO_MONGO_DB_NAME: "veeng"
+  VEEGO_SERVER_TIME_ZONE: ""
+  AWS_ACCOUNT_ID: ""
+  AWS_REGION: ""
+  VEEGO_SIGN_OUT_URL: ""
+  VEEGO_KAFKA_HOSTS: ""
+  VEEGO_KAFKA_SCHEMA_REGISTRY_URL: ""
+  VEEGO_REDIS_HOSTS: ""
+  VEEGO_SQL_URL: ""
+  VEEGO_ZIPKIN_BASE_URL: ""
+  LOGSTASH_HOST: ""
+  VEEGO_MONGO_DB_NAME: ""
 
 secret:
   VEEGO_KAFKA_USERNAME: ""
   VEEGO_KAFKA_PASSWORD: ""
-  VEEGO_REDIS_PASSWORD: "eHRodHBwZixqaA=="
-  VEEGO_SQL_USERNAME: "dmVlZ29kYg=="
-  VEEGO_SQL_PASSWORD: "Y0FjUmxGN2lmaWRy"
-  VEEGO_KAFKA_SASL_USERNAME: "Y2xpZW50"
-  VEEGO_KAFKA_SASL_PASSWORD: "cDdyQWM3eGFiMnA4b3ppMjI3aWZldGxzV29jcnVEZWo="
-  VEEGO_KAFKA_SASL_SERVICE_NAME: "a2Fma2E="
-  AWS_ACCESS_KEY_ID: "QUtJQVZCNUJUVTZZWFFTRFVCNFc="
-  AWS_SECRET_ACCESS_KEY: "WCsvWXlCOGlLTzNNa2twRUdiNUtLUWF0S1FZK2NvSERLVXlEZHZ1RA=="
+  VEEGO_REDIS_PASSWORD: ""
+  VEEGO_SQL_USERNAME: ""
+  VEEGO_SQL_PASSWORD: ""
+  VEEGO_KAFKA_SASL_USERNAME: ""
+  VEEGO_KAFKA_SASL_PASSWORD: ""
+  VEEGO_KAFKA_SASL_SERVICE_NAME: ""
+  AWS_ACCESS_KEY_ID: ""
+  AWS_SECRET_ACCESS_KEY: ""
 
 agent-disconnect-detector:
   replicaCount: 1
+
+  image:
+    repository: veego/agent-disconnect-detector
+    tag: dev
 
   extraConfigMap:
     - veego-stack
@@ -47,6 +51,10 @@ agent-disconnect-detector:
 agent-event-hooks-handler:
   replicaCount: 1
 
+  image:
+    repository: veego/agent-event-hooks-handler
+    tag: dev
+
   extraConfigMap:
     - veego-stack
   extraSecret:
@@ -58,6 +66,10 @@ agent-event-hooks-handler:
 
 agent-registration-handler:
   replicaCount: 1
+
+  image:
+    repository: veego/agent-registration-handler
+    tag: dev
 
   extraConfigMap:
     - veego-stack
@@ -74,6 +86,10 @@ agent-registration-handler:
 agent-statistics-handler:
   replicaCount: 1
 
+  image:
+    repository: veego/agent-statistics-handler
+    tag: dev
+
   extraConfigMap:
     - veego-stack
   extraSecret:
@@ -86,6 +102,10 @@ agent-statistics-handler:
 agents-dispatcher:
   replicaCount: 1
 
+  image:
+    repository: veego/agents-dispatcher
+    tag: dev
+
   extraConfigMap:
     - veego-stack
   extraSecret:
@@ -94,15 +114,19 @@ agents-dispatcher:
   configMap:
     APP_LOG_LEVEL: "debug"
     REDIS_DATABASE: "0"
-    KAFKA_BOOTSTRAP_SERVERS: "192.168.21.139:9092,192.168.21.64:9092,192.168.1.36:9092,192.168.8.246:9092"
+    KAFKA_BOOTSTRAP_SERVERS: ""
     KAFKA_CONSUMER_GROUP_ID: "agents_dispatcher"
     KAFKA_CONSUME_TOPIC: "raw_metrics"
     SERVER_AGENT_BINARY_PATH: "/dispatcher/agent/deviceagentrun"
     AGENT_CONFIG_FILE_PATH: "/dispatcher/agent/agent.config.json"
-    AGENTS_BLACK_LIST: "TZ3CJLD52RD,TZT05G4NK2U,TZ7WP2AWHUC, TZJH27C1D0J" # Gleb-office, Gleb-home, Emil , Gleb-russia
+    AGENTS_BLACK_LIST: ""
 
 aggregated-telemetry-handler:
   replicaCount: 1
+
+  image:
+    repository: veego/aggregated-telemetry-handler
+    tag: dev
 
   extraConfigMap:
     - veego-stack
@@ -119,6 +143,10 @@ aggregated-telemetry-handler:
 aggregation-ignitor:
   replicaCount: 1
 
+  image:
+    repository: veego/aggregation-ignitor
+    tag: dev
+
   extraConfigMap:
     - veego-stack
   extraSecret:
@@ -129,6 +157,10 @@ aggregation-ignitor:
 
 api-gateway:
   replicaCount: 1
+
+  image:
+    repository: veego/api-gateway
+    tag: dev
 
   extraConfigMap:
     - veego-stack
@@ -161,6 +193,10 @@ api-gateway:
 charter-veego-agents-handler:
   replicaCount: 1
 
+  image:
+    repository: veego/charter-veego-agents-handler
+    tag: dev
+
   extraConfigMap:
     - veego-stack
   extraSecret:
@@ -175,6 +211,10 @@ charter-veego-agents-handler:
 command-result-handler:
   replicaCount: 1
 
+  image:
+    repository: veego/command-result-handler
+    tag: dev
+
   extraConfigMap:
     - veego-stack
   extraSecret:
@@ -186,6 +226,10 @@ command-result-handler:
 
 command-topic-creator:
   replicaCount: 1
+
+  image:
+    repository: veego/command-topic-creator
+    tag: dev
 
   extraConfigMap:
     - veego-stack
@@ -208,6 +252,10 @@ cp-schema-registry:
 device-collector:
   replicaCount: 1
 
+  image:
+    repository: veego/device-collector
+    tag: dev
+
   extraConfigMap:
     - veego-stack
   extraSecret:
@@ -219,6 +267,10 @@ device-collector:
 
 device-uptime-handler:
   replicaCount: 1
+
+  image:
+    repository: veego/device-uptime-handler
+    tag: dev
 
   extraConfigMap:
     - veego-stack
@@ -232,11 +284,19 @@ device-uptime-handler:
 domain-json:
   replicaCount: 1
 
-  configMap:
+  image:
+    repository: veego/domain-json
+    tag: dev
+
+  extraConfigMap:
     BIND: "[::]:80" # for ipv6 support
 
 doxi-veego-agents-disconnect-detector:
   replicaCount: 1
+
+  image:
+    repository: veego/doxi-veego-agents-disconnect-detector
+    tag: dev
 
   extraConfigMap:
     - veego-stack
@@ -250,6 +310,10 @@ doxi-veego-agents-disconnect-detector:
 
 doxi-veego-agents-handler:
   replicaCount: 1
+
+  image:
+    repository: veego/doxi-veego-agents-handler
+    tag: dev
 
   extraConfigMap:
     - veego-stack
@@ -265,6 +329,10 @@ doxi-veego-agents-handler:
 doxi-veego-devices-handler:
   replicaCount: 1
 
+  image:
+    repository: veego/doxi-veego-devices-handler
+    tag: dev
+
   extraConfigMap:
     - veego-stack
   extraSecret:
@@ -278,6 +346,10 @@ doxi-veego-devices-handler:
 
 doxi-veego-notifications-handler:
   replicaCount: 1
+
+  image:
+    repository: veego/doxi-veego-notifications-handler
+    tag: dev
 
   extraConfigMap:
     - veego-stack
@@ -293,6 +365,10 @@ doxi-veego-notifications-handler:
 doxi-veego-service-status-handler:
   replicaCount: 1
 
+  image:
+    repository: veego/doxi-veego-service-status-handler
+    tag: dev
+
   extraConfigMap:
     - veego-stack
   extraSecret:
@@ -306,6 +382,10 @@ doxi-veego-service-status-handler:
 
 doxi-veego-service-usages:
   replicaCount: 1
+
+  image:
+    repository: veego/doxi-veego-service-usages
+    tag: dev
 
   extraConfigMap:
     - veego-stack
@@ -321,6 +401,10 @@ doxi-veego-service-usages:
 doxi-veego-services-handler:
   replicaCount: 1
 
+  image:
+    repository: veego/doxi-veego-services-handler
+    tag: dev
+
   extraConfigMap:
     - veego-stack
   extraSecret:
@@ -335,6 +419,10 @@ doxi-veego-services-handler:
 doxi-veego-telemetry-aggregations:
   replicaCount: 1
 
+  image:
+    repository: veego/doxi-veego-telemetry-aggregations
+    tag: dev
+
   extraConfigMap:
     - veego-stack
   extraSecret:
@@ -346,6 +434,10 @@ doxi-veego-telemetry-aggregations:
 
 global-service-by-type-data-collector:
   replicaCount: 1
+
+  image:
+    repository: veego/global-service-by-type-data-collector
+    tag: dev
 
   extraConfigMap:
     - veego-stack
@@ -359,6 +451,10 @@ global-service-by-type-data-collector:
 global-service-by-type-score-handler:
   replicaCount: 1
 
+  image:
+    repository: veego/global-service-by-type-score-handler
+    tag: dev
+
   extraConfigMap:
     - veego-stack
 
@@ -367,6 +463,10 @@ global-service-by-type-score-handler:
 
 home-score-devices-data-handler:
   replicaCount: 1
+
+  image:
+    repository: veego/home-score-devices-data-handler
+    tag: dev
 
   extraConfigMap:
     - veego-stack
@@ -380,6 +480,10 @@ home-score-devices-data-handler:
 home-score-handler:
   replicaCount: 1
 
+  image:
+    repository: veego/home-score-handler
+    tag: dev
+
   extraConfigMap:
     - veego-stack
   extraSecret:
@@ -391,8 +495,16 @@ home-score-handler:
 kafka-websocket:
   replicaCount: 1
 
+  image:
+    repository: veego/kafka-websocket
+    tag: dev
+
 login:
   replicaCount: 1
+
+  image:
+    repository: veego/login
+    tag: dev
 
   extraConfigMap:
     - veego-stack
@@ -402,48 +514,56 @@ login:
 malfunctions-counters-cleaner:
   replicaCount: 1
 
+  image:
+    repository: veego/malfunctions-counters-cleaner
+    tag: dev
+
   extraConfigMap:
     - veego-stack
   extraSecret:
     - veego-stack
 
   configMap:
-    VEEGO_REDIS_HOSTS: "192.169.93.238:6379,192.169.65.156:6379,192.169.65.86:6379"
     AGENT_MALFUNCTIONS_CLEANER_SCHEDULING: "0 0/10 * * * ?"
 
 mobile-api:
   replicaCount: 1
 
+  image:
+    repository: veego/mobile-api
+    tag: dev
+
   extraConfigMap:
     - veego-stack
   extraSecret:
     - veego-stack
 
   configMap:
-    VEEGO_SMTP_USERNAME: "it@veego.io"
+    VEEGO_SMTP_USERNAME: ""
     VEEGO_SMTP_SMTP_PORT: "587"
     VEEGO_SMTP_SMTP_DEBUG: "false"
     VEEGO_SMTP_HOST: "smtp.gmail.com"
     VEEGO_JWT_EXPIRATION: "360000000"
-    VEEGO_SMTP_REGISTRATION_SENDER: "it@veego.io"
-    VEEGO_SMTP_REGISTRATION_SUBJECT: "Veego registration"
+    VEEGO_SMTP_REGISTRATION_SENDER: ""
+    VEEGO_SMTP_REGISTRATION_SUBJECT: ""
     VEEGO_DEV_AGENT_PREFIX: "D"
     VEEGO_STAGING_AGENT_PREFIX: "S"
     VEEGO_CELLCOM_AGENT_PREFIX: "C"
     VEEGO_RAKUTEN_AGENT_PREFIX: "R"
-    VEEGO_LOGIN_URL_DEV: "https://mobile-api.stage.veego.io/"
-    VEEGO_LOGIN_URL_STAGING: "https://mobile-api.staging.veego.io/"
-    VEEGO_LOGIN_URL_CELLCOM: "https://mobile-api.cellcom.veego.io/"
-    VEEGO_LOGIN_URL_RAKUTEN: "https://mobile-api.rakuten.veego.io/"
+    VEEGO_LOGIN_URL_DEV: ""
     VEEGO_CURRENT_ENV: "S"
     VEEGO_IGNORED_MAC_ADDRESSES: "22:48:7c"
 
   secret:
-    VEEGO_SMTP_PASSWORD: "a2Z3NzZ3cnFTQA=="
-    VEEGO_JWT_SECRET: "dmVlZ28="
+    VEEGO_SMTP_PASSWORD: ""
+    VEEGO_JWT_SECRET: ""
 
 monitor-connections:
   replicaCount: 1
+
+  image:
+    repository: veego/monitor-connections
+    tag: dev
 
   extraConfigMap:
     - veego-stack
@@ -459,6 +579,10 @@ monitor-connections:
 notifications-handler:
   replicaCount: 1
 
+  image:
+    repository: veego/notifications-handler
+    tag: dev
+
   extraConfigMap:
     - veego-stack
   extraSecret:
@@ -471,6 +595,10 @@ notifications-handler:
 
 notifications-telemetry-collector:
   replicaCount: 1
+
+  image:
+    repository: veego/notifications-telemetry-collector
+    tag: dev
 
   extraConfigMap:
     - veego-stack
@@ -486,6 +614,10 @@ notifications-telemetry-collector:
 notifications-telemetry-collector-ignitor:
   replicaCount: 1
 
+  image:
+    repository: veego/notifications-telemetry-collector-ignitor
+    tag: dev
+
   extraConfigMap:
     - veego-stack
   extraSecret:
@@ -499,6 +631,10 @@ notifications-telemetry-collector-ignitor:
 probe-notifications-telemetry-handler:
   replicaCount: 1
 
+  image:
+    repository: veego/probe-notifications-telemetry-handler
+    tag: dev
+
   extraConfigMap:
     - veego-stack
   extraSecret:
@@ -510,6 +646,10 @@ probe-notifications-telemetry-handler:
 
 probe-telemetry-handler:
   replicaCount: 1
+
+  image:
+    repository: veego/probe-telemetry-handler
+    tag: dev
 
   extraConfigMap:
     - veego-stack
@@ -523,6 +663,10 @@ probe-telemetry-handler:
 services-name-resolver-api-gateway:
   replicaCount: 1
 
+  image:
+    repository: veego/services-name-resolver-api-gateway
+    tag: dev
+
   extraConfigMap:
     - veego-stack
   extraSecret:
@@ -530,6 +674,10 @@ services-name-resolver-api-gateway:
 
 services-name-resolver-cert-resolver:
   replicaCount: 1
+
+  image:
+    repository: veego/services-name-resolver-cert-resolver
+    tag: dev
 
   extraConfigMap:
     - veego-stack
@@ -539,6 +687,10 @@ services-name-resolver-cert-resolver:
 services-name-resolver-rdns-resolver:
   replicaCount: 1
 
+  image:
+    repository: veego/services-name-resolver-rdns-resolver
+    tag: dev
+
   extraConfigMap:
     - veego-stack
   extraSecret:
@@ -546,6 +698,10 @@ services-name-resolver-rdns-resolver:
 
 speedtest-handler:
   replicaCount: 1
+
+  image:
+    repository: veego/speedtest-handler
+    tag: dev
 
   extraConfigMap:
     - veego-stack
@@ -558,6 +714,10 @@ speedtest-handler:
 
 telemetry-aggregator:
   replicaCount: 1
+
+  image:
+    repository: veego/telemetry-aggregator
+    tag: dev
 
   extraConfigMap:
     - veego-stack
@@ -572,6 +732,10 @@ telemetry-aggregator:
 telemetry-handler:
   replicaCount: 1
 
+  image:
+    repository: veego/telemetry-handler
+    tag: dev
+
   extraConfigMap:
     - veego-stack
   extraSecret:
@@ -584,6 +748,10 @@ telemetry-handler:
 
 veeng:
   replicaCount: 1
+
+  image:
+    repository: veego/veeng
+    tag: dev
 
   extraConfigMap:
     - veego-stack
@@ -603,6 +771,10 @@ veeng:
 wifi-global-malfunctions-statistics-builder:
   replicaCount: 1
 
+  image:
+    repository: veego/wifi-global-malfunctions-statistics-builder
+    tag: dev
+
   extraConfigMap:
     - veego-stack
   extraSecret:
@@ -613,6 +785,10 @@ wifi-global-malfunctions-statistics-builder:
 
 wifi-malfunctions-counters-cleaner:
   replicaCount: 1
+
+  image:
+    repository: veego/wifi-malfunctions-counters-cleaner
+    tag: dev
 
   extraConfigMap:
     - veego-stack
@@ -625,6 +801,10 @@ wifi-malfunctions-counters-cleaner:
 wifi-malfunctions-data-collector:
   replicaCount: 1
 
+  image:
+    repository: veego/wifi-malfunctions-data-collector
+    tag: dev
+
   extraConfigMap:
     - veego-stack
   extraSecret:
@@ -636,6 +816,10 @@ wifi-malfunctions-data-collector:
 
 wifi-score-handler:
   replicaCount: 1
+
+  image:
+    repository: veego/wifi-score-handler
+    tag: dev
 
   extraConfigMap:
     - veego-stack
