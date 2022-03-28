@@ -33,4 +33,4 @@ configMap:
   # for ipv6 support
   BIND: "[::]:80"
   ## LOGSTASH_HOST: "logstash-service:8080"
-  LOGSTASH_HOST: ""
+  # LOGSTASH_HOST: ""

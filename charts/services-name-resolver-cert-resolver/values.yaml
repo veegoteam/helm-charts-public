@@ -20,7 +20,7 @@ extraSecret: []
 
 configMap:
   # REDIS_HOST: ""
-  # LOGSTASH_HOST: ""
+  # # LOGSTASH_HOST: ""
 
 secret:
   # REDIS_PASSWORD: ""
