@@ -1,8 +1,58 @@
-# veeng
+# veego-stack
 
-![Version: 0.1.2](https://img.shields.io/badge/Version-0.1.2-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 1.16.0](https://img.shields.io/badge/AppVersion-1.16.0-informational?style=flat-square)
+![Version: 0.0.1](https://img.shields.io/badge/Version-0.0.1-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 1.16.0](https://img.shields.io/badge/AppVersion-1.16.0-informational?style=flat-square)
 
 A Helm chart for Kubernetes
+
+## Requirements
+
+| Repository | Name | Version |
+|------------|------|---------|
+| file://../agent-disconnect-detector | agent-disconnect-detector | 0.X.X |
+| file://../agent-event-hooks-handler | agent-event-hooks-handler | 0.X.X |
+| file://../agent-registration-handler | agent-registration-handler | 0.X.X |
+| file://../agent-statistics-handler | agent-statistics-handler | 0.X.X |
+| file://../agents-dispatcher | agents-dispatcher | 0.X.X |
+| file://../aggregated-telemetry-handler | aggregated-telemetry-handler | 0.X.X |
+| file://../aggregation-ignitor | aggregation-ignitor | 0.X.X |
+| file://../api-gateway | api-gateway | 0.X.X |
+| file://../charter-veego-agents-handler | charter-veego-agents-handler | 0.X.X |
+| file://../command-result-handler | command-result-handler | 0.X.X |
+| file://../command-topic-creator | command-topic-creator | 0.X.X |
+| file://../device-collector | device-collector | 0.X.X |
+| file://../device-uptime-handler | device-uptime-handler | 0.X.X |
+| file://../domain-json | domain-json | 0.X.X |
+| file://../doxi-veego-agents-disconnect-detector | doxi-veego-agents-disconnect-detector | 0.X.X |
+| file://../doxi-veego-agents-handler | doxi-veego-agents-handler | 0.X.X |
+| file://../doxi-veego-devices-handler | doxi-veego-devices-handler | 0.X.X |
+| file://../doxi-veego-notifications-handler | doxi-veego-notifications-handler | 0.X.X |
+| file://../doxi-veego-service-status-handler | doxi-veego-service-status-handler | 0.X.X |
+| file://../doxi-veego-service-usages | doxi-veego-service-usages | 0.X.X |
+| file://../doxi-veego-services-handler | doxi-veego-services-handler | 0.X.X |
+| file://../doxi-veego-telemetry-aggregations | doxi-veego-telemetry-aggregations | 0.X.X |
+| file://../global-service-by-type-data-collector | global-service-by-type-data-collector | 0.X.X |
+| file://../global-service-by-type-score-handler | global-service-by-type-score-handler | 0.X.X |
+| file://../home-score-devices-data-handler | home-score-devices-data-handler | 0.X.X |
+| file://../home-score-handler | home-score-handler | 0.X.X |
+| file://../login | login | 0.X.X |
+| file://../malfunctions-counters-cleaner | malfunctions-counters-cleaner | 0.X.X |
+| file://../mobile-api | mobile-api | 0.X.X |
+| file://../monitor-connections | monitor-connections | 0.X.X |
+| file://../notifications-handler | notifications-handler | 0.X.X |
+| file://../notifications-telemetry-collector-ignitor | notifications-telemetry-collector-ignitor | 0.X.X |
+| file://../notifications-telemetry-collector | notifications-telemetry-collector | 0.X.X |
+| file://../probe-notifications-telemetry-handler | probe-notifications-telemetry-handler | 0.X.X |
+| file://../probe-telemetry-handler | probe-telemetry-handler | 0.X.X |
+| file://../services-name-resolver-api-gateway | services-name-resolver-api-gateway | 0.X.X |
+| file://../services-name-resolver-cert-resolver | services-name-resolver-cert-resolver | 0.X.X |
+| file://../services-name-resolver-rdns-resolver | services-name-resolver-rdns-resolver | 0.X.X |
+| file://../speedtest-handler | speedtest-handler | 0.X.X |
+| file://../telemetry-aggregator | telemetry-aggregator | 0.X.X |
+| file://../telemetry-handler | telemetry-handler | 0.X.X |
+| file://../wifi-global-malfunctions-statistics-builder | wifi-global-malfunctions-statistics-builder | 0.X.X |
+| file://../wifi-malfunctions-counters-cleaner | wifi-malfunctions-counters-cleaner | 0.X.X |
+| file://../wifi-malfunctions-data-collector | wifi-malfunctions-data-collector | 0.X.X |
+| file://../wifi-score-handler | wifi-score-handler | 0.X.X |
 
 ## Chart Repo
 
@@ -16,23 +66,322 @@ helm repo add veego https://veegoteam.github.io/helm-charts-public
 
 | Key | Type | Default | Description |
 |-----|------|---------|-------------|
-| configMap.APP_FING_API | string | `"https://service.fing.io/2/devrecog"` |  |
-| configMap.APP_LOG_LEVEL | string | `"debug"` |  |
-| configMap.APP_MONGO_DB | string | `"veeng"` |  |
-| configMap.SLACK_HOOK | string | `""` |  |
-| global.imagePullSecrets | list | `[]` |  |
-| image.pullPolicy | string | `"Always"` |  |
-| image.registry | string | `"347694409649.dkr.ecr.us-west-2.amazonaws.com"` |  |
-| image.repository | string | `"veego/veeng"` |  |
-| image.tag | string | `"staging"` |  |
-| ingress.enabled | bool | `true` |  |
-| ingress.hosts[0] | string | `"veeng.example.domain"` |  |
-| ingress.ingressClassName | string | `""` |  |
-| replicaCount | int | `1` |  |
-| secret.APP_FING_KEY | string | `""` |  |
-| services[0].name | string | `"veeng"` |  |
-| services[0].port | int | `80` |  |
-| services[0].protocol | string | `"TCP"` |  |
-| services[0].selector.app | string | `"veeng"` |  |
-| services[0].targetPort | int | `8080` |  |
-| services[0].type | string | `"NodePort"` |  |
+| agent-disconnect-detector.configMap.AGENT_DISCONNECT_DETECTION_SCHEDULING | string | `"0 0/10 * * * ?"` |  |
+| agent-disconnect-detector.configMap.AGENT_MAX_DISCONNECT_TIME_MILLIS | string | `"1209600000"` |  |
+| agent-disconnect-detector.configMap.DOXI_SUPPORT | string | `"true"` |  |
+| agent-disconnect-detector.configMap.VEEGO_KAFKA_CONSUMER_GROUP_ID | string | `"agent-disconnect-detector-main"` |  |
+| agent-disconnect-detector.extraConfigMap[0] | string | `"veego-stack"` |  |
+| agent-disconnect-detector.extraSecret[0] | string | `"veego-stack"` |  |
+| agent-disconnect-detector.replicaCount | int | `1` |  |
+| agent-event-hooks-handler.configMap.VEEGO_KAFKA_CONSUMER_GROUP_ID | string | `"agent-event-hooks-main"` |  |
+| agent-event-hooks-handler.configMap.VEEGO_KAFKA_TOPIC | string | `"agent_event_hooks"` |  |
+| agent-event-hooks-handler.extraConfigMap[0] | string | `"veego-stack"` |  |
+| agent-event-hooks-handler.extraSecret[0] | string | `"veego-stack"` |  |
+| agent-event-hooks-handler.replicaCount | int | `1` |  |
+| agent-registration-handler.configMap.VEEGO_KAFKA_COMMAND_TOPIC_CREATOR_TOPIC | string | `"command_topic_creator"` |  |
+| agent-registration-handler.configMap.VEEGO_KAFKA_CONSUMER_GROUP_ID | string | `"agent-registration-main"` |  |
+| agent-registration-handler.configMap.VEEGO_KAFKA_EVENT_HOOKS_TOPIC | string | `"agent_event_hooks"` |  |
+| agent-registration-handler.configMap.VEEGO_KAFKA_NOTIFICATIONS_TOPIC | string | `"notifications"` |  |
+| agent-registration-handler.configMap.VEEGO_KAFKA_TOPIC | string | `"agent_registration"` |  |
+| agent-registration-handler.extraConfigMap[0] | string | `"veego-stack"` |  |
+| agent-registration-handler.extraSecret[0] | string | `"veego-stack"` |  |
+| agent-registration-handler.replicaCount | int | `1` |  |
+| agent-statistics-handler.configMap.VEEGO_KAFKA_CONSUMER_GROUP_ID | string | `"agent-statistics-main"` |  |
+| agent-statistics-handler.configMap.VEEGO_KAFKA_TOPIC | string | `"statistics"` |  |
+| agent-statistics-handler.extraConfigMap[0] | string | `"veego-stack"` |  |
+| agent-statistics-handler.extraSecret[0] | string | `"veego-stack"` |  |
+| agent-statistics-handler.replicaCount | int | `1` |  |
+| agents-dispatcher.configMap.AGENTS_BLACK_LIST | string | `"TZ3CJLD52RD,TZT05G4NK2U,TZ7WP2AWHUC, TZJH27C1D0J"` |  |
+| agents-dispatcher.configMap.AGENT_CONFIG_FILE_PATH | string | `"/dispatcher/agent/agent.config.json"` |  |
+| agents-dispatcher.configMap.APP_LOG_LEVEL | string | `"debug"` |  |
+| agents-dispatcher.configMap.KAFKA_BOOTSTRAP_SERVERS | string | `"192.168.21.139:9092,192.168.21.64:9092,192.168.1.36:9092,192.168.8.246:9092"` |  |
+| agents-dispatcher.configMap.KAFKA_CONSUMER_GROUP_ID | string | `"agents_dispatcher"` |  |
+| agents-dispatcher.configMap.KAFKA_CONSUME_TOPIC | string | `"raw_metrics"` |  |
+| agents-dispatcher.configMap.REDIS_DATABASE | string | `"0"` |  |
+| agents-dispatcher.configMap.SERVER_AGENT_BINARY_PATH | string | `"/dispatcher/agent/deviceagentrun"` |  |
+| agents-dispatcher.extraConfigMap[0] | string | `"veego-stack"` |  |
+| agents-dispatcher.extraSecret[0] | string | `"veego-stack"` |  |
+| agents-dispatcher.replicaCount | int | `1` |  |
+| aggregated-telemetry-handler.configMap.IS_APP_NAME_ANONYMIZATION_ON | string | `"false"` |  |
+| aggregated-telemetry-handler.configMap.VEEGO_KAFKA_AGGREGATOR_CONSUMER_GROUP_ID | string | `"aggregated-telemetry-aggregator;"` |  |
+| aggregated-telemetry-handler.configMap.VEEGO_KAFKA_AGGREGATOR_TOPIC | string | `"aggregation_ignitor"` |  |
+| aggregated-telemetry-handler.configMap.VEEGO_KAFKA_CONSUMER_GROUP_ID | string | `"aggregated-telemetry-handler-main"` |  |
+| aggregated-telemetry-handler.configMap.VEEGO_KAFKA_TOPIC | string | `"telemetry_aggregation"` |  |
+| aggregated-telemetry-handler.extraConfigMap[0] | string | `"veego-stack"` |  |
+| aggregated-telemetry-handler.extraSecret[0] | string | `"veego-stack"` |  |
+| aggregated-telemetry-handler.replicaCount | int | `1` |  |
+| aggregation-ignitor.configMap.VEEGO_AGGREGATOR_TOPIC | string | `"aggregation_ignitor"` |  |
+| aggregation-ignitor.extraConfigMap[0] | string | `"veego-stack"` |  |
+| aggregation-ignitor.extraSecret[0] | string | `"veego-stack"` |  |
+| aggregation-ignitor.replicaCount | int | `1` |  |
+| api-gateway.configMap.QUICKSIGHT_ANALYTICS_DASHBOARD_ID | string | `"4528f4b2-8572-48d9-9b4c-39cb260a42ff"` |  |
+| api-gateway.configMap.QUICKSIGHT_EXTENDER_DASHBOARD_ID | string | `"a19c43d3-5f95-4bbd-a2e6-97dde48aa3e1"` |  |
+| api-gateway.configMap.QUICKSIGHT_GAMERS_DASHBOARD_ID | string | `"03361e8d-1dc9-439f-a6d9-ed9d8a4dc718"` |  |
+| api-gateway.configMap.QUICKSIGHT_IOS_FANS_DASHBOARD_ID | string | `"f7b2d939-111d-43dd-b88f-bf9ada619a0d"` |  |
+| api-gateway.configMap.QUICKSIGHT_MARKETING_DASHBOARD_ID | string | `"d55d71f0-afdd-4756-81c7-4755c1856c04"` |  |
+| api-gateway.configMap.QUICKSIGHT_MY_EXPERIENCE_DASHBOARD_ID | string | `"fa1d6820-9b74-4813-8588-82cc4272850f"` |  |
+| api-gateway.configMap.QUICKSIGHT_MY_HOME_DASHBOARD_ID | string | `"9ab49ef1-8a43-4210-bf03-adfd6b7233ae"` |  |
+| api-gateway.configMap.QUICKSIGHT_MY_MALFUNCTIONS_DASHBOARD_ID | string | `"70db539c-735f-45f8-b161-c1024bd76c00"` |  |
+| api-gateway.configMap.QUICKSIGHT_MY_SERVICES_DASHBOARD_ID | string | `"37ab9085-56d8-4bc6-b284-54d5962fb080"` |  |
+| api-gateway.configMap.QUICKSIGHT_NEW_DEVICE_DASHBOARD_ID | string | `"8cdc7cc8-536b-4eea-b312-3cc3f6513785"` |  |
+| api-gateway.configMap.QUICKSIGHT_NEW_EXTENDER_DASHBOARD_ID | string | `"9b675a48-6cd5-42c1-9b40-882a0bed23ad"` |  |
+| api-gateway.configMap.QUICKSIGHT_NEW_ROUTER_DASHBOARD_ID | string | `"f8765825-346f-402c-813e-dd9dd0371c72"` |  |
+| api-gateway.configMap.QUICKSIGHT_OVERVIEW_DASHBOARD_ID | string | `"ce7722e1-762c-4648-9103-81c3fadb99ec"` |  |
+| api-gateway.configMap.QUICKSIGHT_SMART_HOME_DASHBOARD_ID | string | `"dc9d3a64-ed81-4858-97c7-7ebd53ec9dd2"` |  |
+| api-gateway.configMap.QUICKSIGHT_STREAMING_SERVICE_DASHBOARD_ID | string | `"8a6e7077-7b0f-4312-a879-e434a95d9f60"` |  |
+| api-gateway.configMap.QUICKSIGHT_SUFFERING_HOMES_DASHBOARD_ID | string | `"8bcb665b-5279-4caf-8492-516b35e4c7bc"` |  |
+| api-gateway.configMap.QUICKSIGHT_UPGRADE_BROADBAND_PLAN_DASHBOARD_ID | string | `"7802bfd6-fbd1-4296-8617-8f96ba4d573a"` |  |
+| api-gateway.configMap.QUICKSIGHT_UPGRADE_DEVICE_DASHBOARD_ID | string | `"ff61e9bc-222a-4dbd-8859-072f96e774fb"` |  |
+| api-gateway.configMap.QUICKSIGHT_WFH_DASHBOARD_ID | string | `"04e89bdd-efbd-46ee-a157-f890a4852ee7"` |  |
+| api-gateway.configMap.VEEGO_HIDE_SV02_RECOMMENDATION_FLAG_ON | string | `"true"` |  |
+| api-gateway.configMap.VEEGO_SHOW_ANALYTICS | string | `"true"` |  |
+| api-gateway.extraConfigMap[0] | string | `"veego-stack"` |  |
+| api-gateway.extraSecret[0] | string | `"veego-stack"` |  |
+| api-gateway.replicaCount | int | `1` |  |
+| charter-veego-agents-handler.configMap.VEEGO_CHARTER_AGENTS_FOR_FILTERING | string | `"TZ2J8JPV1L9"` |  |
+| charter-veego-agents-handler.configMap.VEEGO_KAFKA_CHARTER_VEEGO_AGENTS_TOPIC | string | `"charter-telemetry"` |  |
+| charter-veego-agents-handler.configMap.VEEGO_KAFKA_CONSUMER_GROUP_ID | string | `"charter-handler-main2"` |  |
+| charter-veego-agents-handler.configMap.VEEGO_KAFKA_TOPIC | string | `"telemetry"` |  |
+| charter-veego-agents-handler.extraConfigMap[0] | string | `"veego-stack"` |  |
+| charter-veego-agents-handler.extraSecret[0] | string | `"veego-stack"` |  |
+| charter-veego-agents-handler.replicaCount | int | `1` |  |
+| command-result-handler.configMap.VEEGO_KAFKA_CONSUMER_GROUP_ID | string | `"command-result-main"` |  |
+| command-result-handler.configMap.VEEGO_KAFKA_TOPIC | string | `"command_result"` |  |
+| command-result-handler.extraConfigMap[0] | string | `"veego-stack"` |  |
+| command-result-handler.extraSecret[0] | string | `"veego-stack"` |  |
+| command-result-handler.replicaCount | int | `1` |  |
+| command-topic-creator.configMap.VEEGO_KAFKA_CONSUMER_GROUP_ID | string | `"command-topic-creator-main"` |  |
+| command-topic-creator.configMap.VEEGO_KAFKA_EVENT_HOOKS_TOPIC | string | `"agent_event_hooks"` |  |
+| command-topic-creator.configMap.VEEGO_KAFKA_TOPIC | string | `"command_topic_creator"` |  |
+| command-topic-creator.extraConfigMap[0] | string | `"veego-stack"` |  |
+| command-topic-creator.extraSecret[0] | string | `"veego-stack"` |  |
+| command-topic-creator.replicaCount | int | `1` |  |
+| configMap.AWS_ACCOUNT_ID | string | `"347694409649"` |  |
+| configMap.AWS_REGION | string | `"us-west-2"` |  |
+| configMap.LOGSTASH_HOST | string | `"logstash-service:8080"` |  |
+| configMap.VEEGO_KAFKA_HOSTS | string | `"192.169.93.238:9092,192.169.65.156:9092,192.169.65.86:9092"` |  |
+| configMap.VEEGO_KAFKA_SCHEMA_REGISTRY_URL | string | `"http://schema-registry.dev.veego.io:8081"` |  |
+| configMap.VEEGO_MONGO_DB_NAME | string | `"veeng"` |  |
+| configMap.VEEGO_REDIS_HOSTS | string | `"192.169.93.238:6379,192.169.65.156:6379,192.169.65.86:6379"` |  |
+| configMap.VEEGO_SERVER_TIME_ZONE | string | `"Asia/Jerusalem"` |  |
+| configMap.VEEGO_SIGN_OUT_URL | string | `"https://keycloak.stage.veego.io/auth/realms/veego/protocol/openid-connect/logout?redirect_uri=https://api-gateway.stage.veego.io/oauth2/sign_out"` |  |
+| configMap.VEEGO_SQL_URL | string | `"jdbc:postgresql://veegodb.cel7sbdxnefc.us-west-2.rds.amazonaws.com:5424/veegodb"` |  |
+| configMap.VEEGO_ZIPKIN_BASE_URL | string | `"http://localhost:9411"` |  |
+| cp-schema-registry.extraConfigMap[0] | string | `"veego-stack"` |  |
+| cp-schema-registry.extraSecret[0] | string | `"veego-stack"` |  |
+| cp-schema-registry.replicaCount | int | `1` |  |
+| device-collector.configMap.VEEGO_KAFKA_CONSUMER_GROUP_ID | string | `"device_collector"` |  |
+| device-collector.configMap.VEEGO_KAFKA_TOPIC | string | `"device_collector"` |  |
+| device-collector.extraConfigMap[0] | string | `"veego-stack"` |  |
+| device-collector.extraSecret[0] | string | `"veego-stack"` |  |
+| device-collector.replicaCount | int | `1` |  |
+| device-uptime-handler.configMap.VEEGO_KAFKA_CONSUMER_GROUP_ID | string | `"device-uptime-main"` |  |
+| device-uptime-handler.configMap.VEEGO_KAFKA_NOTIFICATIONS_TOPIC | string | `"notifications"` |  |
+| device-uptime-handler.extraConfigMap[0] | string | `"veego-stack"` |  |
+| device-uptime-handler.extraSecret[0] | string | `"veego-stack"` |  |
+| device-uptime-handler.replicaCount | int | `1` |  |
+| domain-json.configMap.BIND | string | `"[::]:80"` |  |
+| domain-json.replicaCount | int | `1` |  |
+| doxi-veego-agents-disconnect-detector.configMap.AGENT_DISCONNECT_DETECTION_SCHEDULING | string | `"0 * * * * *"` |  |
+| doxi-veego-agents-disconnect-detector.configMap.VEEGO_AGENTS_FOR_FILTERING | string | `"6401T02599828,6401T02599831,64601T0000000,64601T0065342,64601T0065342,64601T0259834,64601T0259847,64601T0259870,64601T0259883,64601T0259885,64601T0259888,64601T0259894,64601T0259901,64601T0259903,64601T0259916,64601T0259919,64601T0259933,64601T0259941,64601T0259943,64601T0259943,64601T0259944,64601T0259945,64601T0259946,64601T0259947,64601T0259948,64601T0259950,64601T0259952,64601T0259954,64601T0259955,64601T0259958,64601T0259959,64601T0259962,64601T0259962,64601T0259963,64601T0259964,64601T0259967,64601T0259969,64601T0259973,64601T0259977,64601T0259978,64601T0259980,64601T0259981,64601T0259982,64601T0259984,64601T0259987,64601T0259990,64601T0259991,64601T0259992,64601T0259996,64601T0259997,64601T0259998,64601T0260000,64601T0260002,64601T0260003,64601T0260005,64601T0260006,64601T0260008,64601T0260010,64601T0260011,64601T0260021,64601T0260024,64601T0260025,64601T0260031,64601T0260031,64601T0260036,64601T0260038,64601T0260041,64601T0260042,64601T0260044,64601T0260044,64601T0260049,64601T0260052,64601T0260056,64601T0260062,64601T0260087,64601T0260095,64601T0260095,64601T0261536,64601T0261560,64601T0261614,64601T0261620,64601T0261799,64601T0261817,72601T0000060,72601T0000126,72601T0000126,72601T0000129,72601T0000129,72601T0000142,72601T0000149,72601T0000150,72601T0000150,72601T0000152,72601T0000156,72601T0000156,72601T0000158,72601T0000158,72601T0000165,72601T0000169,72601T0000176,72601T0000176,72601T0000177,72601T0000180,72601T0000208,72601T0000208,72601T0000209,72601T0000217,72601T0000236,72601T0000239,72601T0000317,72601T0000361,72601T0000362,72601T0000363"` |  |
+| doxi-veego-agents-disconnect-detector.configMap.VEEGO_KAFKA_DOXI_VEEGO_AGENTS_TOPIC | string | `"doxi_veego_agents"` |  |
+| doxi-veego-agents-disconnect-detector.extraConfigMap[0] | string | `"veego-stack"` |  |
+| doxi-veego-agents-disconnect-detector.extraSecret[0] | string | `"veego-stack"` |  |
+| doxi-veego-agents-disconnect-detector.replicaCount | int | `1` |  |
+| doxi-veego-agents-handler.configMap.VEEGO_AGENTS_FOR_FILTERING | string | `"6401T02599828,6401T02599831,64601T0000000,64601T0065342,64601T0065342,64601T0259834,64601T0259847,64601T0259870,64601T0259883,64601T0259885,64601T0259888,64601T0259894,64601T0259901,64601T0259903,64601T0259916,64601T0259919,64601T0259933,64601T0259941,64601T0259943,64601T0259943,64601T0259944,64601T0259945,64601T0259946,64601T0259947,64601T0259948,64601T0259950,64601T0259952,64601T0259954,64601T0259955,64601T0259958,64601T0259959,64601T0259962,64601T0259962,64601T0259963,64601T0259964,64601T0259967,64601T0259969,64601T0259973,64601T0259977,64601T0259978,64601T0259980,64601T0259981,64601T0259982,64601T0259984,64601T0259987,64601T0259990,64601T0259991,64601T0259992,64601T0259996,64601T0259997,64601T0259998,64601T0260000,64601T0260002,64601T0260003,64601T0260005,64601T0260006,64601T0260008,64601T0260010,64601T0260011,64601T0260021,64601T0260024,64601T0260025,64601T0260031,64601T0260031,64601T0260036,64601T0260038,64601T0260041,64601T0260042,64601T0260044,64601T0260044,64601T0260049,64601T0260052,64601T0260056,64601T0260062,64601T0260087,64601T0260095,64601T0260095,64601T0261536,64601T0261560,64601T0261614,64601T0261620,64601T0261799,64601T0261817,72601T0000060,72601T0000126,72601T0000126,72601T0000129,72601T0000129,72601T0000142,72601T0000149,72601T0000150,72601T0000150,72601T0000152,72601T0000156,72601T0000156,72601T0000158,72601T0000158,72601T0000165,72601T0000169,72601T0000176,72601T0000176,72601T0000177,72601T0000180,72601T0000208,72601T0000208,72601T0000209,72601T0000217,72601T0000236,72601T0000239,72601T0000317,72601T0000361,72601T0000362,72601T0000363"` |  |
+| doxi-veego-agents-handler.configMap.VEEGO_KAFKA_CONSUMER_GROUP_ID | string | `"doxi-veego-agents-handler"` |  |
+| doxi-veego-agents-handler.configMap.VEEGO_KAFKA_DOXI_VEEGO_AGENTS_TOPIC | string | `"doxi_veego_agents"` |  |
+| doxi-veego-agents-handler.configMap.VEEGO_KAFKA_TOPIC | string | `"agent_registration"` |  |
+| doxi-veego-agents-handler.extraConfigMap[0] | string | `"veego-stack"` |  |
+| doxi-veego-agents-handler.extraSecret[0] | string | `"veego-stack"` |  |
+| doxi-veego-agents-handler.replicaCount | int | `1` |  |
+| doxi-veego-devices-handler.configMap.VEEGO_AGENTS_FOR_FILTERING | string | `"6401T02599828,6401T02599831,64601T0000000,64601T0065342,64601T0065342,64601T0259834,64601T0259847,64601T0259870,64601T0259883,64601T0259885,64601T0259888,64601T0259894,64601T0259901,64601T0259903,64601T0259916,64601T0259919,64601T0259933,64601T0259941,64601T0259943,64601T0259943,64601T0259944,64601T0259945,64601T0259946,64601T0259947,64601T0259948,64601T0259950,64601T0259952,64601T0259954,64601T0259955,64601T0259958,64601T0259959,64601T0259962,64601T0259962,64601T0259963,64601T0259964,64601T0259967,64601T0259969,64601T0259973,64601T0259977,64601T0259978,64601T0259980,64601T0259981,64601T0259982,64601T0259984,64601T0259987,64601T0259990,64601T0259991,64601T0259992,64601T0259996,64601T0259997,64601T0259998,64601T0260000,64601T0260002,64601T0260003,64601T0260005,64601T0260006,64601T0260008,64601T0260010,64601T0260011,64601T0260021,64601T0260024,64601T0260025,64601T0260031,64601T0260031,64601T0260036,64601T0260038,64601T0260041,64601T0260042,64601T0260044,64601T0260044,64601T0260049,64601T0260052,64601T0260056,64601T0260062,64601T0260087,64601T0260095,64601T0260095,64601T0261536,64601T0261560,64601T0261614,64601T0261620,64601T0261799,64601T0261817,72601T0000060,72601T0000126,72601T0000126,72601T0000129,72601T0000129,72601T0000142,72601T0000149,72601T0000150,72601T0000150,72601T0000152,72601T0000156,72601T0000156,72601T0000158,72601T0000158,72601T0000165,72601T0000169,72601T0000176,72601T0000176,72601T0000177,72601T0000180,72601T0000208,72601T0000208,72601T0000209,72601T0000217,72601T0000236,72601T0000239,72601T0000317,72601T0000361,72601T0000362,72601T0000363"` |  |
+| doxi-veego-devices-handler.configMap.VEEGO_KAFKA_CONSUMER_GROUP_ID | string | `"doxi-veego-devices-main"` |  |
+| doxi-veego-devices-handler.configMap.VEEGO_KAFKA_DOXI_VEEGO_DEVICES_TOPIC | string | `"doxi_veego_devices"` |  |
+| doxi-veego-devices-handler.configMap.VEEGO_KAFKA_TOPIC | string | `"notifications"` |  |
+| doxi-veego-devices-handler.extraConfigMap[0] | string | `"veego-stack"` |  |
+| doxi-veego-devices-handler.extraSecret[0] | string | `"veego-stack"` |  |
+| doxi-veego-devices-handler.replicaCount | int | `1` |  |
+| doxi-veego-notifications-handler.configMap.VEEGO_AGENTS_FOR_FILTERING | string | `"6401T02599828,6401T02599831,64601T0000000,64601T0065342,64601T0065342,64601T0259834,64601T0259847,64601T0259870,64601T0259883,64601T0259885,64601T0259888,64601T0259894,64601T0259901,64601T0259903,64601T0259916,64601T0259919,64601T0259933,64601T0259941,64601T0259943,64601T0259943,64601T0259944,64601T0259945,64601T0259946,64601T0259947,64601T0259948,64601T0259950,64601T0259952,64601T0259954,64601T0259955,64601T0259958,64601T0259959,64601T0259962,64601T0259962,64601T0259963,64601T0259964,64601T0259967,64601T0259969,64601T0259973,64601T0259977,64601T0259978,64601T0259980,64601T0259981,64601T0259982,64601T0259984,64601T0259987,64601T0259990,64601T0259991,64601T0259992,64601T0259996,64601T0259997,64601T0259998,64601T0260000,64601T0260002,64601T0260003,64601T0260005,64601T0260006,64601T0260008,64601T0260010,64601T0260011,64601T0260021,64601T0260024,64601T0260025,64601T0260031,64601T0260031,64601T0260036,64601T0260038,64601T0260041,64601T0260042,64601T0260044,64601T0260044,64601T0260049,64601T0260052,64601T0260056,64601T0260062,64601T0260087,64601T0260095,64601T0260095,64601T0261536,64601T0261560,64601T0261614,64601T0261620,64601T0261799,64601T0261817,72601T0000060,72601T0000126,72601T0000126,72601T0000129,72601T0000129,72601T0000142,72601T0000149,72601T0000150,72601T0000150,72601T0000152,72601T0000156,72601T0000156,72601T0000158,72601T0000158,72601T0000165,72601T0000169,72601T0000176,72601T0000176,72601T0000177,72601T0000180,72601T0000208,72601T0000208,72601T0000209,72601T0000217,72601T0000236,72601T0000239,72601T0000317,72601T0000361,72601T0000362,72601T0000363"` |  |
+| doxi-veego-notifications-handler.configMap.VEEGO_KAFKA_CONSUMER_GROUP_ID | string | `"doxi-veego-notifications-main"` |  |
+| doxi-veego-notifications-handler.configMap.VEEGO_KAFKA_DOXI_VEEGO_NOTIFICATIONS_TOPIC | string | `"doxi_veego_notifications"` |  |
+| doxi-veego-notifications-handler.configMap.VEEGO_KAFKA_TOPIC | string | `"notifications"` |  |
+| doxi-veego-notifications-handler.extraConfigMap[0] | string | `"veego-stack"` |  |
+| doxi-veego-notifications-handler.extraSecret[0] | string | `"veego-stack"` |  |
+| doxi-veego-notifications-handler.replicaCount | int | `1` |  |
+| doxi-veego-service-status-handler.configMap.VEEGO_AGENTS_FOR_FILTERING | string | `"6401T02599828,6401T02599831,64601T0000000,64601T0065342,64601T0065342,64601T0259834,64601T0259847,64601T0259870,64601T0259883,64601T0259885,64601T0259888,64601T0259894,64601T0259901,64601T0259903,64601T0259916,64601T0259919,64601T0259933,64601T0259941,64601T0259943,64601T0259943,64601T0259944,64601T0259945,64601T0259946,64601T0259947,64601T0259948,64601T0259950,64601T0259952,64601T0259954,64601T0259955,64601T0259958,64601T0259959,64601T0259962,64601T0259962,64601T0259963,64601T0259964,64601T0259967,64601T0259969,64601T0259973,64601T0259977,64601T0259978,64601T0259980,64601T0259981,64601T0259982,64601T0259984,64601T0259987,64601T0259990,64601T0259991,64601T0259992,64601T0259996,64601T0259997,64601T0259998,64601T0260000,64601T0260002,64601T0260003,64601T0260005,64601T0260006,64601T0260008,64601T0260010,64601T0260011,64601T0260021,64601T0260024,64601T0260025,64601T0260031,64601T0260031,64601T0260036,64601T0260038,64601T0260041,64601T0260042,64601T0260044,64601T0260044,64601T0260049,64601T0260052,64601T0260056,64601T0260062,64601T0260087,64601T0260095,64601T0260095,64601T0261536,64601T0261560,64601T0261614,64601T0261620,64601T0261799,64601T0261817,72601T0000060,72601T0000126,72601T0000126,72601T0000129,72601T0000129,72601T0000142,72601T0000149,72601T0000150,72601T0000150,72601T0000152,72601T0000156,72601T0000156,72601T0000158,72601T0000158,72601T0000165,72601T0000169,72601T0000176,72601T0000176,72601T0000177,72601T0000180,72601T0000208,72601T0000208,72601T0000209,72601T0000217,72601T0000236,72601T0000239,72601T0000317,72601T0000361,72601T0000362,72601T0000363"` |  |
+| doxi-veego-service-status-handler.configMap.VEEGO_KAFKA_CONSUMER_GROUP_ID | string | `"doxi-veego-service-status-main"` |  |
+| doxi-veego-service-status-handler.configMap.VEEGO_KAFKA_DOXI_VEEGO_SERVICES_TOPIC | string | `"doxi_veego_services"` |  |
+| doxi-veego-service-status-handler.configMap.VEEGO_KAFKA_TOPIC | string | `"notifications"` |  |
+| doxi-veego-service-status-handler.extraConfigMap[0] | string | `"veego-stack"` |  |
+| doxi-veego-service-status-handler.extraSecret[0] | string | `"veego-stack"` |  |
+| doxi-veego-service-status-handler.replicaCount | int | `1` |  |
+| doxi-veego-service-usages.configMap.VEEGO_AGENTS_FOR_FILTERING | string | `"6401T02599828,6401T02599831,64601T0000000,64601T0065342,64601T0065342,64601T0259834,64601T0259847,64601T0259870,64601T0259883,64601T0259885,64601T0259888,64601T0259894,64601T0259901,64601T0259903,64601T0259916,64601T0259919,64601T0259933,64601T0259941,64601T0259943,64601T0259943,64601T0259944,64601T0259945,64601T0259946,64601T0259947,64601T0259948,64601T0259950,64601T0259952,64601T0259954,64601T0259955,64601T0259958,64601T0259959,64601T0259962,64601T0259962,64601T0259963,64601T0259964,64601T0259967,64601T0259969,64601T0259973,64601T0259977,64601T0259978,64601T0259980,64601T0259981,64601T0259982,64601T0259984,64601T0259987,64601T0259990,64601T0259991,64601T0259992,64601T0259996,64601T0259997,64601T0259998,64601T0260000,64601T0260002,64601T0260003,64601T0260005,64601T0260006,64601T0260008,64601T0260010,64601T0260011,64601T0260021,64601T0260024,64601T0260025,64601T0260031,64601T0260031,64601T0260036,64601T0260038,64601T0260041,64601T0260042,64601T0260044,64601T0260044,64601T0260049,64601T0260052,64601T0260056,64601T0260062,64601T0260087,64601T0260095,64601T0260095,64601T0261536,64601T0261560,64601T0261614,64601T0261620,64601T0261799,64601T0261817,72601T0000060,72601T0000126,72601T0000126,72601T0000129,72601T0000129,72601T0000142,72601T0000149,72601T0000150,72601T0000150,72601T0000152,72601T0000156,72601T0000156,72601T0000158,72601T0000158,72601T0000165,72601T0000169,72601T0000176,72601T0000176,72601T0000177,72601T0000180,72601T0000208,72601T0000208,72601T0000209,72601T0000217,72601T0000236,72601T0000239,72601T0000317,72601T0000361,72601T0000362,72601T0000363"` |  |
+| doxi-veego-service-usages.configMap.VEEGO_KAFKA_CONSUMER_GROUP_ID | string | `"doxi-veego-service-usages-main"` |  |
+| doxi-veego-service-usages.configMap.VEEGO_KAFKA_DOXI_VEEGO_SERVICE_USAGES_TOPIC | string | `"doxi_veego_service_usages"` |  |
+| doxi-veego-service-usages.configMap.VEEGO_KAFKA_TOPIC | string | `"aggregation_ignitor"` |  |
+| doxi-veego-service-usages.extraConfigMap[0] | string | `"veego-stack"` |  |
+| doxi-veego-service-usages.extraSecret[0] | string | `"veego-stack"` |  |
+| doxi-veego-service-usages.replicaCount | int | `1` |  |
+| doxi-veego-services-handler.configMap.VEEGO_AGENTS_FOR_FILTERING | string | `"6401T02599828,6401T02599831,64601T0000000,64601T0065342,64601T0065342,64601T0259834,64601T0259847,64601T0259870,64601T0259883,64601T0259885,64601T0259888,64601T0259894,64601T0259901,64601T0259903,64601T0259916,64601T0259919,64601T0259933,64601T0259941,64601T0259943,64601T0259943,64601T0259944,64601T0259945,64601T0259946,64601T0259947,64601T0259948,64601T0259950,64601T0259952,64601T0259954,64601T0259955,64601T0259958,64601T0259959,64601T0259962,64601T0259962,64601T0259963,64601T0259964,64601T0259967,64601T0259969,64601T0259973,64601T0259977,64601T0259978,64601T0259980,64601T0259981,64601T0259982,64601T0259984,64601T0259987,64601T0259990,64601T0259991,64601T0259992,64601T0259996,64601T0259997,64601T0259998,64601T0260000,64601T0260002,64601T0260003,64601T0260005,64601T0260006,64601T0260008,64601T0260010,64601T0260011,64601T0260021,64601T0260024,64601T0260025,64601T0260031,64601T0260031,64601T0260036,64601T0260038,64601T0260041,64601T0260042,64601T0260044,64601T0260044,64601T0260049,64601T0260052,64601T0260056,64601T0260062,64601T0260087,64601T0260095,64601T0260095,64601T0261536,64601T0261560,64601T0261614,64601T0261620,64601T0261799,64601T0261817,72601T0000060,72601T0000126,72601T0000126,72601T0000129,72601T0000129,72601T0000142,72601T0000149,72601T0000150,72601T0000150,72601T0000152,72601T0000156,72601T0000156,72601T0000158,72601T0000158,72601T0000165,72601T0000169,72601T0000176,72601T0000176,72601T0000177,72601T0000180,72601T0000208,72601T0000208,72601T0000209,72601T0000217,72601T0000236,72601T0000239,72601T0000317,72601T0000361,72601T0000362,72601T0000363"` |  |
+| doxi-veego-services-handler.configMap.VEEGO_KAFKA_CONSUMER_GROUP_ID | string | `"doxi_veego_services-main"` |  |
+| doxi-veego-services-handler.configMap.VEEGO_KAFKA_DOXI_VEEGO_SERVICES_TOPIC | string | `"doxi_veego_services"` |  |
+| doxi-veego-services-handler.configMap.VEEGO_KAFKA_TOPIC | string | `"telemetry"` |  |
+| doxi-veego-services-handler.extraConfigMap[0] | string | `"veego-stack"` |  |
+| doxi-veego-services-handler.extraSecret[0] | string | `"veego-stack"` |  |
+| doxi-veego-services-handler.replicaCount | int | `1` |  |
+| doxi-veego-telemetry-aggregations.configMap.VEEGO_AGENTS_FOR_FILTERING | string | `"6401T02599828,6401T02599831,64601T0000000,64601T0065342,64601T0065342,64601T0259834,64601T0259847,64601T0259870,64601T0259883,64601T0259885,64601T0259888,64601T0259894,64601T0259901,64601T0259903,64601T0259916,64601T0259919,64601T0259933,64601T0259941,64601T0259943,64601T0259943,64601T0259944,64601T0259945,64601T0259946,64601T0259947,64601T0259948,64601T0259950,64601T0259952,64601T0259954,64601T0259955,64601T0259958,64601T0259959,64601T0259962,64601T0259962,64601T0259963,64601T0259964,64601T0259967,64601T0259969,64601T0259973,64601T0259977,64601T0259978,64601T0259980,64601T0259981,64601T0259982,64601T0259984,64601T0259987,64601T0259990,64601T0259991,64601T0259992,64601T0259996,64601T0259997,64601T0259998,64601T0260000,64601T0260002,64601T0260003,64601T0260005,64601T0260006,64601T0260008,64601T0260010,64601T0260011,64601T0260021,64601T0260024,64601T0260025,64601T0260031,64601T0260031,64601T0260036,64601T0260038,64601T0260041,64601T0260042,64601T0260044,64601T0260044,64601T0260049,64601T0260052,64601T0260056,64601T0260062,64601T0260087,64601T0260095,64601T0260095,64601T0261536,64601T0261560,64601T0261614,64601T0261620,64601T0261799,64601T0261817,72601T0000060,72601T0000126,72601T0000126,72601T0000129,72601T0000129,72601T0000142,72601T0000149,72601T0000150,72601T0000150,72601T0000152,72601T0000156,72601T0000156,72601T0000158,72601T0000158,72601T0000165,72601T0000169,72601T0000176,72601T0000176,72601T0000177,72601T0000180,72601T0000208,72601T0000208,72601T0000209,72601T0000217,72601T0000236,72601T0000239,72601T0000317,72601T0000361,72601T0000362,72601T0000363"` |  |
+| doxi-veego-telemetry-aggregations.configMap.VEEGO_KAFKA_DOXI_VEEGO_TELEMETRY_AGGREGATIONS_TOPIC | string | `"doxi_veego_telemetry_aggregations"` |  |
+| doxi-veego-telemetry-aggregations.extraConfigMap[0] | string | `"veego-stack"` |  |
+| doxi-veego-telemetry-aggregations.extraSecret[0] | string | `"veego-stack"` |  |
+| doxi-veego-telemetry-aggregations.replicaCount | int | `1` |  |
+| global-service-by-type-data-collector.configMap.VEEGO_KAFKA_CONSUMER_GROUP_ID | string | `"global-service-by-type-data-collector-main"` |  |
+| global-service-by-type-data-collector.configMap.VEEGO_KAFKA_TOPIC | string | `"telemetry"` |  |
+| global-service-by-type-data-collector.extraConfigMap[0] | string | `"veego-stack"` |  |
+| global-service-by-type-data-collector.extraSecret[0] | string | `"veego-stack"` |  |
+| global-service-by-type-data-collector.replicaCount | int | `1` |  |
+| global-service-by-type-score-handler.configMap.GLOBAL_SERVICE_SCORE_SCHEDULING | string | `"0 0/5 * * * ?"` |  |
+| global-service-by-type-score-handler.extraConfigMap[0] | string | `"veego-stack"` |  |
+| global-service-by-type-score-handler.replicaCount | int | `1` |  |
+| global.imagePullSecrets | list | `[]` | imagePullSecrets Example --> imagePullSecrets: [ "secret" ] |
+| global.pullPolicy | string | `"Always"` |  |
+| global.registry | string | `""` |  |
+| home-score-devices-data-handler.configMap.VEEGO_KAFKA_CONSUMER_GROUP_ID | string | `"home-score-devices-data-handler"` |  |
+| home-score-devices-data-handler.configMap.VEEGO_KAFKA_TOPIC | string | `"aggregation_ignitor"` |  |
+| home-score-devices-data-handler.extraConfigMap[0] | string | `"veego-stack"` |  |
+| home-score-devices-data-handler.extraSecret[0] | string | `"veego-stack"` |  |
+| home-score-devices-data-handler.replicaCount | int | `1` |  |
+| home-score-handler.configMap.AGENT_HOME_SCORE_SCHEDULING | string | `"0 0 0 * * ?"` |  |
+| home-score-handler.extraConfigMap[0] | string | `"veego-stack"` |  |
+| home-score-handler.extraSecret[0] | string | `"veego-stack"` |  |
+| home-score-handler.replicaCount | int | `1` |  |
+| kafka-websocket.replicaCount | int | `1` |  |
+| login.extraConfigMap[0] | string | `"veego-stack"` |  |
+| login.extraSecret[0] | string | `"veego-stack"` |  |
+| login.replicaCount | int | `1` |  |
+| malfunctions-counters-cleaner.configMap.AGENT_MALFUNCTIONS_CLEANER_SCHEDULING | string | `"0 0/10 * * * ?"` |  |
+| malfunctions-counters-cleaner.configMap.VEEGO_REDIS_HOSTS | string | `"192.169.93.238:6379,192.169.65.156:6379,192.169.65.86:6379"` |  |
+| malfunctions-counters-cleaner.extraConfigMap[0] | string | `"veego-stack"` |  |
+| malfunctions-counters-cleaner.extraSecret[0] | string | `"veego-stack"` |  |
+| malfunctions-counters-cleaner.replicaCount | int | `1` |  |
+| mobile-api.configMap.VEEGO_CELLCOM_AGENT_PREFIX | string | `"C"` |  |
+| mobile-api.configMap.VEEGO_CURRENT_ENV | string | `"S"` |  |
+| mobile-api.configMap.VEEGO_DEV_AGENT_PREFIX | string | `"D"` |  |
+| mobile-api.configMap.VEEGO_IGNORED_MAC_ADDRESSES | string | `"22:48:7c"` |  |
+| mobile-api.configMap.VEEGO_JWT_EXPIRATION | string | `"360000000"` |  |
+| mobile-api.configMap.VEEGO_LOGIN_URL_CELLCOM | string | `"https://mobile-api.cellcom.veego.io/"` |  |
+| mobile-api.configMap.VEEGO_LOGIN_URL_DEV | string | `"https://mobile-api.stage.veego.io/"` |  |
+| mobile-api.configMap.VEEGO_LOGIN_URL_RAKUTEN | string | `"https://mobile-api.rakuten.veego.io/"` |  |
+| mobile-api.configMap.VEEGO_LOGIN_URL_STAGING | string | `"https://mobile-api.staging.veego.io/"` |  |
+| mobile-api.configMap.VEEGO_RAKUTEN_AGENT_PREFIX | string | `"R"` |  |
+| mobile-api.configMap.VEEGO_SMTP_HOST | string | `"smtp.gmail.com"` |  |
+| mobile-api.configMap.VEEGO_SMTP_REGISTRATION_SENDER | string | `"it@veego.io"` |  |
+| mobile-api.configMap.VEEGO_SMTP_REGISTRATION_SUBJECT | string | `"Veego registration"` |  |
+| mobile-api.configMap.VEEGO_SMTP_SMTP_DEBUG | string | `"false"` |  |
+| mobile-api.configMap.VEEGO_SMTP_SMTP_PORT | string | `"587"` |  |
+| mobile-api.configMap.VEEGO_SMTP_USERNAME | string | `"it@veego.io"` |  |
+| mobile-api.configMap.VEEGO_STAGING_AGENT_PREFIX | string | `"S"` |  |
+| mobile-api.extraConfigMap[0] | string | `"veego-stack"` |  |
+| mobile-api.extraSecret[0] | string | `"veego-stack"` |  |
+| mobile-api.replicaCount | int | `1` |  |
+| mobile-api.secret.VEEGO_JWT_SECRET | string | `"dmVlZ28="` |  |
+| mobile-api.secret.VEEGO_SMTP_PASSWORD | string | `"a2Z3NzZ3cnFTQA=="` |  |
+| monitor-connections.configMap.APP_LOG_LEVEL | string | `"debug"` |  |
+| monitor-connections.configMap.INFLUX_AUTH_TOKEN | string | `""` |  |
+| monitor-connections.configMap.INFLUX_SERVER | string | `"http://influxdb.default:8086"` |  |
+| monitor-connections.configMap.KAFKA_CONNTRACK_TOPIC | string | `"conntrack"` |  |
+| monitor-connections.configMap.KAFKA_CONSUMER_GROUP_ID | string | `"monitor_conntrack"` |  |
+| monitor-connections.configMap.KAFKA_TELEMETRY_SERVICES_TOPIC | string | `"telemetry_services"` |  |
+| monitor-connections.extraConfigMap[0] | string | `"veego-stack"` |  |
+| monitor-connections.replicaCount | int | `1` |  |
+| notifications-handler.configMap.VEEGO_KAFKA_NOTIFICATIONS_CONSUMER_GROUP_ID | string | `"notifications-main"` |  |
+| notifications-handler.configMap.VEEGO_KAFKA_NOTIFICATIONS_TOPIC | string | `"notifications"` |  |
+| notifications-handler.configMap.VEEGO_KAFKA_SSL | string | `"false"` |  |
+| notifications-handler.extraConfigMap[0] | string | `"veego-stack"` |  |
+| notifications-handler.extraSecret[0] | string | `"veego-stack"` |  |
+| notifications-handler.replicaCount | int | `1` |  |
+| notifications-telemetry-collector-ignitor.configMap.NOTIFICATIONS_TELEMETRY_DELAY_MIN | string | `"3"` |  |
+| notifications-telemetry-collector-ignitor.configMap.VEEGO_KAFKA_CONSUMER_GROUP_ID | string | `"notifications_telemetry_ignitor"` |  |
+| notifications-telemetry-collector-ignitor.configMap.VEEGO_KAFKA_TOPIC | string | `"notifications_telemetry_ignitor"` |  |
+| notifications-telemetry-collector-ignitor.extraConfigMap[0] | string | `"veego-stack"` |  |
+| notifications-telemetry-collector-ignitor.extraSecret[0] | string | `"veego-stack"` |  |
+| notifications-telemetry-collector-ignitor.replicaCount | int | `1` |  |
+| notifications-telemetry-collector.configMap.VEEGO_KAFKA_CONSUMER_GROUP_ID | string | `"notifications-telemetry-collector"` |  |
+| notifications-telemetry-collector.configMap.VEEGO_KAFKA_PROBE_COLLECTOR_TOPIC | string | `"probe_telemetry_collector"` |  |
+| notifications-telemetry-collector.configMap.VEEGO_KAFKA_TOPIC | string | `"notifications_telemetry_ignitor"` |  |
+| notifications-telemetry-collector.configMap.VEEGO_TELEMETRY_SEND_TO_PROBE | string | `"true"` |  |
+| notifications-telemetry-collector.extraConfigMap[0] | string | `"veego-stack"` |  |
+| notifications-telemetry-collector.extraSecret[0] | string | `"veego-stack"` |  |
+| notifications-telemetry-collector.replicaCount | int | `1` |  |
+| probe-notifications-telemetry-handler.configMap.VEEGO_KAFKA_CONSUMER_GROUP_ID | string | `"probe-notifications-telemetry-handler"` |  |
+| probe-notifications-telemetry-handler.configMap.VEEGO_KAFKA_TOPIC | string | `"probe_telemetry_collector"` |  |
+| probe-notifications-telemetry-handler.extraConfigMap[0] | string | `"veego-stack"` |  |
+| probe-notifications-telemetry-handler.extraSecret[0] | string | `"veego-stack"` |  |
+| probe-notifications-telemetry-handler.replicaCount | int | `1` |  |
+| probe-telemetry-handler.configMap.VEEGO_KAFKA_CONSUMER_GROUP_ID | string | `"probe-telemetry-handler"` |  |
+| probe-telemetry-handler.configMap.VEEGO_KAFKA_TOPIC | string | `"telemetry"` |  |
+| probe-telemetry-handler.extraConfigMap[0] | string | `"veego-stack"` |  |
+| probe-telemetry-handler.extraSecret[0] | string | `"veego-stack"` |  |
+| probe-telemetry-handler.replicaCount | int | `1` |  |
+| secret.AWS_ACCESS_KEY_ID | string | `"QUtJQVZCNUJUVTZZWFFTRFVCNFc="` |  |
+| secret.AWS_SECRET_ACCESS_KEY | string | `"WCsvWXlCOGlLTzNNa2twRUdiNUtLUWF0S1FZK2NvSERLVXlEZHZ1RA=="` |  |
+| secret.VEEGO_KAFKA_PASSWORD | string | `""` |  |
+| secret.VEEGO_KAFKA_SASL_PASSWORD | string | `"cDdyQWM3eGFiMnA4b3ppMjI3aWZldGxzV29jcnVEZWo="` |  |
+| secret.VEEGO_KAFKA_SASL_SERVICE_NAME | string | `"a2Fma2E="` |  |
+| secret.VEEGO_KAFKA_SASL_USERNAME | string | `"Y2xpZW50"` |  |
+| secret.VEEGO_KAFKA_USERNAME | string | `""` |  |
+| secret.VEEGO_REDIS_PASSWORD | string | `"eHRodHBwZixqaA=="` |  |
+| secret.VEEGO_SQL_PASSWORD | string | `"Y0FjUmxGN2lmaWRy"` |  |
+| secret.VEEGO_SQL_USERNAME | string | `"dmVlZ29kYg=="` |  |
+| services-name-resolver-api-gateway.extraConfigMap[0] | string | `"veego-stack"` |  |
+| services-name-resolver-api-gateway.extraSecret[0] | string | `"veego-stack"` |  |
+| services-name-resolver-api-gateway.replicaCount | int | `1` |  |
+| services-name-resolver-cert-resolver.extraConfigMap[0] | string | `"veego-stack"` |  |
+| services-name-resolver-cert-resolver.extraSecret[0] | string | `"veego-stack"` |  |
+| services-name-resolver-cert-resolver.replicaCount | int | `1` |  |
+| services-name-resolver-rdns-resolver.extraConfigMap[0] | string | `"veego-stack"` |  |
+| services-name-resolver-rdns-resolver.extraSecret[0] | string | `"veego-stack"` |  |
+| services-name-resolver-rdns-resolver.replicaCount | int | `1` |  |
+| speedtest-handler.configMap.VEEGO_KAFKA_CONSUMER_GROUP_ID | string | `"speedtest-handler-main"` |  |
+| speedtest-handler.configMap.VEEGO_KAFKA_TOPIC | string | `"speedtest"` |  |
+| speedtest-handler.extraConfigMap[0] | string | `"veego-stack"` |  |
+| speedtest-handler.extraSecret[0] | string | `"veego-stack"` |  |
+| speedtest-handler.replicaCount | int | `1` |  |
+| telemetry-aggregator.configMap.IS_APP_NAME_ANONYMIZATION_ON | string | `"false"` |  |
+| telemetry-aggregator.configMap.VEEGO_KAFKA_AGGREGATOR_CONSUMER_GROUP_ID | string | `"telemetry-aggregator"` |  |
+| telemetry-aggregator.configMap.VEEGO_KAFKA_AGGREGATOR_TOPIC | string | `"aggregation_ignitor"` |  |
+| telemetry-aggregator.extraConfigMap[0] | string | `"veego-stack"` |  |
+| telemetry-aggregator.extraSecret[0] | string | `"veego-stack"` |  |
+| telemetry-aggregator.replicaCount | int | `1` |  |
+| telemetry-handler.configMap.VEEGO_KAFKA_CONSUMER_GROUP_ID | string | `"telemetry-handler"` |  |
+| telemetry-handler.configMap.VEEGO_KAFKA_DEVICE_COLLECTOR_TOPIC | string | `"device_collector"` |  |
+| telemetry-handler.configMap.VEEGO_KAFKA_TOPIC | string | `"telemetry"` |  |
+| telemetry-handler.extraConfigMap[0] | string | `"veego-stack"` |  |
+| telemetry-handler.extraSecret[0] | string | `"veego-stack"` |  |
+| telemetry-handler.replicaCount | int | `1` |  |
+| veeng.configMap.APP_FING_API | string | `"https://service.fing.io/2/devrecog"` |  |
+| veeng.configMap.APP_LOG_LEVEL | string | `"debug"` |  |
+| veeng.configMap.APP_MONGO_DB | string | `"veeng"` |  |
+| veeng.configMap.APP_MONGO_URI | string | `"veeng"` |  |
+| veeng.configMap.SLACK_HOOK | string | `""` |  |
+| veeng.extraConfigMap[0] | string | `"veego-stack"` |  |
+| veeng.extraSecret[0] | string | `"veego-stack"` |  |
+| veeng.replicaCount | int | `1` |  |
+| veeng.secret.APP_FING_KEY | string | `""` |  |
+| wifi-global-malfunctions-statistics-builder.configMap.WIFI_GLOBAL_MF_STATISTICS_SCHEDULING | string | `"0 0/10 * * * ?"` |  |
+| wifi-global-malfunctions-statistics-builder.extraConfigMap[0] | string | `"veego-stack"` |  |
+| wifi-global-malfunctions-statistics-builder.extraSecret[0] | string | `"veego-stack"` |  |
+| wifi-global-malfunctions-statistics-builder.replicaCount | int | `1` |  |
+| wifi-malfunctions-counters-cleaner.configMap.WIFI_MALFUNCTIONS_CLEANER_SCHEDULING | string | `"0 0 1 * * MON"` |  |
+| wifi-malfunctions-counters-cleaner.extraConfigMap[0] | string | `"veego-stack"` |  |
+| wifi-malfunctions-counters-cleaner.extraSecret[0] | string | `"veego-stack"` |  |
+| wifi-malfunctions-counters-cleaner.replicaCount | int | `1` |  |
+| wifi-malfunctions-data-collector.configMap.VEEGO_KAFKA_CONSUMER_GROUP_ID | string | `"wifi-malfunctions-collector-main"` |  |
+| wifi-malfunctions-data-collector.configMap.VEEGO_KAFKA_TOPIC | string | `"notifications"` |  |
+| wifi-malfunctions-data-collector.extraConfigMap[0] | string | `"veego-stack"` |  |
+| wifi-malfunctions-data-collector.extraSecret[0] | string | `"veego-stack"` |  |
+| wifi-malfunctions-data-collector.replicaCount | int | `1` |  |
+| wifi-score-handler.configMap.AGENT_WIFI_SCORE_SCHEDULING | string | `"0 0 0 * * ?"` |  |
+| wifi-score-handler.extraConfigMap[0] | string | `"veego-stack"` |  |
+| wifi-score-handler.extraSecret[0] | string | `"veego-stack"` |  |
+| wifi-score-handler.replicaCount | int | `1` |  |

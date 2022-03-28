@@ -1,147 +1,138 @@
 dependencies:
 - name: agent-disconnect-detector
   repository: file://../agent-disconnect-detector
-  version: 0.1.4
+  version: 0.1.5
 - name: agent-event-hooks-handler
   repository: file://../agent-event-hooks-handler
-  version: 0.1.2
+  version: 0.1.5
 - name: agent-registration-handler
   repository: file://../agent-registration-handler
-  version: 0.1.2
+  version: 0.1.5
 - name: agent-statistics-handler
   repository: file://../agent-statistics-handler
-  version: 0.1.2
+  version: 0.1.5
 - name: agents-dispatcher
   repository: file://../agents-dispatcher
-  version: 0.1.2
+  version: 0.1.5
 - name: aggregated-telemetry-handler
   repository: file://../aggregated-telemetry-handler
-  version: 0.1.2
+  version: 0.1.5
 - name: aggregation-ignitor
   repository: file://../aggregation-ignitor
-  version: 0.1.2
+  version: 0.1.5
 - name: api-gateway
   repository: file://../api-gateway
-  version: 0.1.3
+  version: 0.1.5
 - name: charter-veego-agents-handler
   repository: file://../charter-veego-agents-handler
-  version: 0.1.2
+  version: 0.1.5
 - name: command-result-handler
   repository: file://../command-result-handler
-  version: 0.1.2
+  version: 0.1.5
 - name: command-topic-creator
   repository: file://../command-topic-creator
-  version: 0.1.2
-- name: cp-schema-registry
-  repository: file://../cp-schema-registry
-  version: 0.1.1
+  version: 0.1.5
 - name: device-collector
   repository: file://../device-collector
-  version: 0.1.2
+  version: 0.1.5
 - name: device-uptime-handler
   repository: file://../device-uptime-handler
-  version: 0.1.2
+  version: 0.1.5
 - name: domain-json
   repository: file://../domain-json
-  version: 0.1.2
+  version: 0.1.5
 - name: doxi-veego-agents-disconnect-detector
   repository: file://../doxi-veego-agents-disconnect-detector
-  version: 0.1.2
+  version: 0.1.5
 - name: doxi-veego-agents-handler
   repository: file://../doxi-veego-agents-handler
-  version: 0.1.2
+  version: 0.1.5
 - name: doxi-veego-devices-handler
   repository: file://../doxi-veego-devices-handler
-  version: 0.1.2
+  version: 0.1.5
 - name: doxi-veego-notifications-handler
   repository: file://../doxi-veego-notifications-handler
-  version: 0.1.2
+  version: 0.1.5
 - name: doxi-veego-service-status-handler
   repository: file://../doxi-veego-service-status-handler
-  version: 0.1.2
+  version: 0.1.5
 - name: doxi-veego-service-usages
   repository: file://../doxi-veego-service-usages
-  version: 0.1.2
+  version: 0.1.5
 - name: doxi-veego-services-handler
   repository: file://../doxi-veego-services-handler
-  version: 0.1.2
+  version: 0.1.5
 - name: doxi-veego-telemetry-aggregations
   repository: file://../doxi-veego-telemetry-aggregations
-  version: 0.1.2
+  version: 0.1.5
 - name: global-service-by-type-data-collector
   repository: file://../global-service-by-type-data-collector
-  version: 0.1.2
+  version: 0.1.5
 - name: global-service-by-type-score-handler
   repository: file://../global-service-by-type-score-handler
-  version: 0.1.2
+  version: 0.1.5
 - name: home-score-devices-data-handler
   repository: file://../home-score-devices-data-handler
-  version: 0.1.2
+  version: 0.1.5
 - name: home-score-handler
   repository: file://../home-score-handler
-  version: 0.1.2
-- name: kafka-websocket
-  repository: file://../kafka-websocket
-  version: 0.1.2
+  version: 0.1.5
 - name: login
   repository: file://../login
-  version: 0.1.2
+  version: 0.1.5
 - name: malfunctions-counters-cleaner
   repository: file://../malfunctions-counters-cleaner
-  version: 0.1.2
+  version: 0.1.5
 - name: mobile-api
   repository: file://../mobile-api
-  version: 0.1.2
+  version: 0.1.5
 - name: monitor-connections
   repository: file://../monitor-connections
-  version: 0.1.2
+  version: 0.1.5
 - name: notifications-handler
   repository: file://../notifications-handler
-  version: 0.1.2
+  version: 0.1.5
 - name: notifications-telemetry-collector
   repository: file://../notifications-telemetry-collector
-  version: 0.1.2
+  version: 0.1.5
 - name: notifications-telemetry-collector-ignitor
   repository: file://../notifications-telemetry-collector-ignitor
-  version: 0.1.2
+  version: 0.1.5
 - name: probe-notifications-telemetry-handler
   repository: file://../probe-notifications-telemetry-handler
-  version: 0.1.2
+  version: 0.1.5
 - name: probe-telemetry-handler
   repository: file://../probe-telemetry-handler
-  version: 0.1.2
+  version: 0.1.5
 - name: services-name-resolver-api-gateway
   repository: file://../services-name-resolver-api-gateway
-  version: 0.1.2
+  version: 0.1.5
 - name: services-name-resolver-cert-resolver
   repository: file://../services-name-resolver-cert-resolver
-  version: 0.1.2
+  version: 0.1.5
 - name: services-name-resolver-rdns-resolver
   repository: file://../services-name-resolver-rdns-resolver
-  version: 0.1.2
+  version: 0.1.5
 - name: speedtest-handler
   repository: file://../speedtest-handler
-  version: 0.1.2
+  version: 0.1.5
 - name: telemetry-aggregator
   repository: file://../telemetry-aggregator
-  version: 0.1.2
+  version: 0.1.5
 - name: telemetry-handler
   repository: file://../telemetry-handler
-  version: 0.1.2
-- name: veeng
-  repository: file://../veeng
-  version: 0.1.2
+  version: 0.1.5
 - name: wifi-global-malfunctions-statistics-builder
   repository: file://../wifi-global-malfunctions-statistics-builder
-  version: 0.1.2
+  version: 0.1.5
 - name: wifi-malfunctions-counters-cleaner
   repository: file://../wifi-malfunctions-counters-cleaner
-  version: 0.1.2
+  version: 0.1.5
 - name: wifi-malfunctions-data-collector
   repository: file://../wifi-malfunctions-data-collector
-  version: 0.1.2
+  version: 0.1.5
 - name: wifi-score-handler
   repository: file://../wifi-score-handler
-  version: 0.1.2
-digest: sha256:dbdd6407fbbe699ee81c02b481fd3f16667de90cf18db087606b8d7c12af1fb6
-generated: "2022-03-28T15:56:03.1176+02:00"
+  version: 0.1.5
+digest: sha256:2d6077d3e50d78e87ce5d17b71f221bad4311c418beab3c19218c59a1dd72804
+generated: "2022-03-28T16:12:12.523652+02:00"
