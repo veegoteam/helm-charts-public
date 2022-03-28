@@ -42,26 +42,24 @@ spec:
               containerPort: {{ .Values.containerPort | default 80 }}
               protocol: TCP
           envFrom:
-          {{- if ( or .Values.configMap .Values.extraConfigMap ) }}
+          {{- if .Values.configMap }}
           - configMapRef:
-              {{- if .Values.configMap }}
-              name: {{ $chart_name }}-configmap
-              {{- end }}
-              {{- if .Values.extraConfigMap }}
-              {{- range $name := .Values.extraConfigMap }}
-              name: {{ $name }}
-              {{- end }}
-              {{- end }}
+            name: {{ $chart_name }}-configmap
           {{- end }}
-          {{- if ( or .Values.secret .Values.extraSecret ) }}
+          {{- if .Values.extraConfigMap }}
+          {{- range $name := .Values.extraConfigMap }}
+          - configMapRef:
+            name: {{ $name }}
+          {{- end }}
+          {{- end }}
+          {{- if .Values.secret }}
           - secretRef:
-              {{- if .Values.secret }}
-              name: {{ $chart_name }}-secret
-              {{- end }}
-              {{- if .Values.extraSecret }}
-              {{- range $name := .Values.extraSecret }}
-              name: {{ $name }}
-              {{- end }}
-              {{- end }}
+            name: {{ $chart_name }}-secret
+          {{- end }}
+          {{- if .Values.extraSecret }}
+          {{- range $name := .Values.extraSecret }}
+          - secretRef:
+            name: {{ $name }}
+          {{- end }}
           {{- end }}
           resources: {}
