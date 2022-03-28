@@ -144,4 +144,4 @@ dependencies:
   repository: file://../wifi-score-handler
   version: 0.1.2
 digest: sha256:dbdd6407fbbe699ee81c02b481fd3f16667de90cf18db087606b8d7c12af1fb6
-generated: "2022-03-28T14:26:39.524133+02:00"
+generated: "2022-03-28T15:56:03.1176+02:00"

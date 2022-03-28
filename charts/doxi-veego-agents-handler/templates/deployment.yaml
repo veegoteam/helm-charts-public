@@ -44,22 +44,22 @@ spec:
           envFrom:
           {{- if .Values.configMap }}
           - configMapRef:
-            name: {{ $chart_name }}-configmap
+              name: {{ $chart_name }}-configmap
           {{- end }}
           {{- if .Values.extraConfigMap }}
           {{- range $name := .Values.extraConfigMap }}
           - configMapRef:
-            name: {{ $name }}
+              name: {{ $name }}
           {{- end }}
           {{- end }}
           {{- if .Values.secret }}
           - secretRef:
-            name: {{ $chart_name }}-secret
+              name: {{ $chart_name }}-secret
           {{- end }}
           {{- if .Values.extraSecret }}
           {{- range $name := .Values.extraSecret }}
           - secretRef:
-            name: {{ $name }}
+              name: {{ $name }}
           {{- end }}
           {{- end }}
           resources: {}

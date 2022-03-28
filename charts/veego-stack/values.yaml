@@ -16,6 +16,7 @@ configMap:
   VEEGO_SQL_URL: "jdbc:postgresql://veegodb.cel7sbdxnefc.us-west-2.rds.amazonaws.com:5424/veegodb"
   VEEGO_ZIPKIN_BASE_URL: "http://localhost:9411"
   LOGSTASH_HOST: "logstash-service:8080"
+  VEEGO_MONGO_DB_NAME: "veeng"
 
 secret:
   VEEGO_KAFKA_USERNAME: ""
@@ -593,6 +594,7 @@ veeng:
     APP_LOG_LEVEL: debug
     APP_FING_API: https://service.fing.io/2/devrecog
     APP_MONGO_DB: veeng
+    APP_MONGO_URI: "veeng"
     SLACK_HOOK: ""
 
   secret:
