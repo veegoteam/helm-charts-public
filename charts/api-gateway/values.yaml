@@ -1,5 +1,9 @@
 global:
+  # -- imagePullSecrets
+  # Example --> imagePullSecrets: [ "secret" ]
   imagePullSecrets: []
+  registry: ""
+  pullPolicy: ""
 
 image:
   registry: 347694409649.dkr.ecr.us-west-2.amazonaws.com
@@ -21,25 +25,28 @@ services:
       app: api-gateway
 
 ingress:
-  enabled: true
+  enabled: false
   ingressClassName: ""
   hosts:
     - api-gateway.example.domain
 
+extraConfigMap: []
+extraSecret: []
+
 configMap:
   VEEGO_SERVER_TIME_ZONE: "Asia/Jerusalem"
   ## VEEGO_KAFKA_HOSTS: "kafka-node-1:9092,kafka-node-2:9092,kafka-node-3:9092,kafka-node-4:9092"
-  VEEGO_KAFKA_HOSTS: ""
+  # VEEGO_KAFKA_HOSTS: ""
   ## VEEGO_REDIS_HOSTS: "redis-node-1:6379,redis-node-2:6379,redis-node-3:6379"
-  VEEGO_REDIS_HOSTS: ""
+  # VEEGO_REDIS_HOSTS: ""
   ## VEEGO_SQL_URL: "jdbc:postgresql://postgresql-master:5424/veegodb"
-  VEEGO_SQL_URL: ""
+  # VEEGO_SQL_URL: ""
   ## AWS_ACCOUNT_ID: "XXXXXXXXXXXX"
   AWS_ACCOUNT_ID: ""
   ## AWS_REGION: "us-west-2"
   AWS_REGION: ""
   ## VEEGO_ZIPKIN_BASE_URL: "http://localhost:9411"
-  VEEGO_ZIPKIN_BASE_URL: ""
+  # VEEGO_ZIPKIN_BASE_URL: ""
   ##   VEEGO_SIGN_OUT_URL: "https://keycloak.example.domain/auth/realms/veego/protocol/openid-connect/logout?redirect_uri=https://dashboard.example.domain/oauth2/sign_out"
   VEEGO_SIGN_OUT_URL: ""
   QUICKSIGHT_ANALYTICS_DASHBOARD_ID: ""
@@ -49,16 +56,16 @@ configMap:
   QUICKSIGHT_MY_SERVICES_DASHBOARD_ID: ""
   QUICKSIGHT_MY_MALFUNCTIONS_DASHBOARD_ID: ""
   ## LOGSTASH_HOST: "logstash-service:8080"
-  LOGSTASH_HOST: ""
+  # LOGSTASH_HOST: ""
 
 secret:
-  VEEGO_KAFKA_USERNAME: ""
-  VEEGO_KAFKA_PASSWORD: ""
-  VEEGO_REDIS_PASSWORD: ""
-  VEEGO_SQL_USERNAME: ""
-  VEEGO_SQL_PASSWORD: ""
-  VEEGO_KAFKA_SASL_USERNAME: ""
-  VEEGO_KAFKA_SASL_PASSWORD: ""
-  VEEGO_KAFKA_SASL_SERVICE_NAME: ""
+  # VEEGO_KAFKA_USERNAME: ""
+  # VEEGO_KAFKA_PASSWORD: ""
+  # VEEGO_REDIS_PASSWORD: ""
+  # VEEGO_SQL_USERNAME: ""
+  # VEEGO_SQL_PASSWORD: ""
+  # VEEGO_KAFKA_SASL_USERNAME: ""
+  # VEEGO_KAFKA_SASL_PASSWORD: ""
+  # VEEGO_KAFKA_SASL_SERVICE_NAME: ""
   AWS_ACCESS_KEY_ID: ""
   AWS_SECRET_ACCESS_KEY: ""

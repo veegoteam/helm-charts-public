@@ -3,5 +3,5 @@ name: doxi-veego-telemetry-aggregations
 description: A Helm chart for Kubernetes
 
 type: application
-version: 0.1.2
+version: 0.1.5
 appVersion: "1.16.0"

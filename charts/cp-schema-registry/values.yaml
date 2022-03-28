@@ -1,3 +1,10 @@
+global:
+  # -- imagePullSecrets
+  # Example --> imagePullSecrets: [ "secret" ]
+  imagePullSecrets: []
+  registry: ""
+  pullPolicy: ""
+
 # Default values for cp-schema-registry.
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
@@ -40,9 +47,9 @@ heapOptions: "-Xms512M -Xmx512M"
 ## bootstrapServers: "PLAINTEXT://dozing-prawn-kafka-headless:9092"
 ## Charts uses Kafka Coordinator Master Election: https://docs.confluent.io/current/schema-registry/docs/design.html#kafka-coordinator-master-election
 kafka:
-  bootstrapServers: "SASL_PLAINTEXT://192.169.93.238:9092"
+  bootstrapServers: "SASL_PLAINTEXT://127.0.0.1:9092"
   securityProtocol: "SASL_PLAINTEXT"
-  saslJaasConfig: org.apache.kafka.common.security.plain.PlainLoginModule required username=\"client\" password=\"p7rAc7xab2p8ozi227ifetlsWocruDej\" serviceName=\"kafka\";
+  saslJaasConfig: org.apache.kafka.common.security.plain.PlainLoginModule required username=\"client\" password=\"password\" serviceName=\"kafka\";
   saslMechanism: "PLAIN"
 
 resources: {}
@@ -80,7 +87,7 @@ prometheus:
   ## JMX Exporter Configuration
   ## ref: https://github.com/prometheus/jmx_exporter
   jmx:
-    enabled: true
+    enabled: false
     image: solsson/kafka-prometheus-jmx-exporter@sha256
     imageTag: 6f82e2b0464f50da8104acd7363fb9b995001ddff77d248379f8788e78946143
     imagePullPolicy: IfNotPresent

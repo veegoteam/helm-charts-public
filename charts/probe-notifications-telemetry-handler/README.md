@@ -1,6 +1,6 @@
 # probe-notifications-telemetry-handler
 
-![Version: 0.1.2](https://img.shields.io/badge/Version-0.1.2-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 1.16.0](https://img.shields.io/badge/AppVersion-1.16.0-informational?style=flat-square)
+![Version: 0.1.5](https://img.shields.io/badge/Version-0.1.5-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 1.16.0](https://img.shields.io/badge/AppVersion-1.16.0-informational?style=flat-square)
 
 A Helm chart for Kubernetes
 
@@ -16,15 +16,13 @@ helm repo add veego https://veegoteam.github.io/helm-charts-public
 
 | Key | Type | Default | Description |
 |-----|------|---------|-------------|
-| configMap.LOGSTASH_HOST | string | `""` |  |
 | configMap.VEEGO_KAFKA_CONSUMER_GROUP_ID | string | `"probe-notifications-telemetry-handler"` |  |
-| configMap.VEEGO_KAFKA_HOSTS | string | `""` |  |
-| configMap.VEEGO_KAFKA_SCHEMA_REGISTRY_URL | string | `""` |  |
 | configMap.VEEGO_KAFKA_TOPIC | string | `"probe_telemetry_collector"` |  |
-| configMap.VEEGO_REDIS_HOSTS | string | `""` |  |
-| configMap.VEEGO_SQL_URL | string | `""` |  |
-| configMap.VEEGO_ZIPKIN_BASE_URL | string | `""` |  |
-| global.imagePullSecrets | list | `[]` |  |
+| extraConfigMap | list | `[]` |  |
+| extraSecret | list | `[]` |  |
+| global.imagePullSecrets | list | `[]` | imagePullSecrets Example --> imagePullSecrets: [ "secret" ] |
+| global.pullPolicy | string | `""` |  |
+| global.registry | string | `""` |  |
 | image.pullPolicy | string | `"Always"` |  |
 | image.registry | string | `"347694409649.dkr.ecr.us-west-2.amazonaws.com"` |  |
 | image.repository | string | `"veego/probe-notifications-telemetry-handler"` |  |
@@ -32,11 +30,3 @@ helm repo add veego https://veegoteam.github.io/helm-charts-public
 | replicaCount | int | `1` |  |
 | secret.AWS_ACCESS_KEY_ID | string | `""` |  |
 | secret.AWS_SECRET_ACCESS_KEY | string | `""` |  |
-| secret.VEEGO_KAFKA_PASSWORD | string | `""` |  |
-| secret.VEEGO_KAFKA_SASL_PASSWORD | string | `""` |  |
-| secret.VEEGO_KAFKA_SASL_SERVICE_NAME | string | `""` |  |
-| secret.VEEGO_KAFKA_SASL_USERNAME | string | `""` |  |
-| secret.VEEGO_KAFKA_USERNAME | string | `""` |  |
-| secret.VEEGO_REDIS_PASSWORD | string | `""` |  |
-| secret.VEEGO_SQL_PASSWORD | string | `""` |  |
-| secret.VEEGO_SQL_USERNAME | string | `""` |  |
