@@ -1,5 +1,9 @@
 global:
+  # -- imagePullSecrets
+  # Example --> imagePullSecrets: [ "secret" ]
   imagePullSecrets: []
+  registry: ""
+  pullPolicy: ""
 
 image:
   registry: 347694409649.dkr.ecr.us-west-2.amazonaws.com
@@ -26,11 +30,14 @@ ingress:
   hosts:
     - api.example.domain
 
+extraConfigMap: []
+extraSecret: []
+
 configMap:
-  REDIS_HOST: "192.168.22.40:6379,192.168.29.184:6379,192.168.3.89:6379"
+  # REDIS_HOST: ""
   ## LOGSTASH_HOST: "logstash-service:8080"
-  LOGSTASH_HOST: ""
+  # LOGSTASH_HOST: ""
 
 
 secret:
-  REDIS_PASSWORD: ""
+  # REDIS_PASSWORD: ""

@@ -35,19 +35,33 @@ spec:
     {{- end }}
       containers:
         - name: {{ $chart_name }}
-          image: {{ .Values.image.registry }}/{{ .Values.image.repository }}:{{ .Values.image.tag }}
-          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          image: {{ or .Values.global.registry .Values.image.registry }}/{{ .Values.image.repository }}:{{ .Values.image.tag }}
+          imagePullPolicy: {{ or .Values.global.pullPolicy .Values.image.pullPolicy }}
           ports:
             - name: http
               containerPort: {{ .Values.containerPort | default 80 }}
               protocol: TCP
           envFrom:
-          {{- if .Values.configMap }}
+          {{- if ( or .Values.configMap .Values.extraConfigMap ) }}
           - configMapRef:
+              {{- if .Values.configMap }}
               name: {{ $chart_name }}-configmap
+              {{- end }}
+              {{- if .Values.extraConfigMap }}
+              {{- range $name := .Values.extraConfigMap }}
+              name: {{ $name }}
+              {{- end }}
+              {{- end }}
           {{- end }}
-          {{- if .Values.secret }}
+          {{- if ( or .Values.secret .Values.extraSecret ) }}
           - secretRef:
+              {{- if .Values.secret }}
               name: {{ $chart_name }}-secret
+              {{- end }}
+              {{- if .Values.extraSecret }}
+              {{- range $name := .Values.extraSecret }}
+              name: {{ $name }}
+              {{- end }}
+              {{- end }}
           {{- end }}
           resources: {}

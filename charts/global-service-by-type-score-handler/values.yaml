@@ -1,5 +1,9 @@
 global:
+  # -- imagePullSecrets
+  # Example --> imagePullSecrets: [ "secret" ]
   imagePullSecrets: []
+  registry: ""
+  pullPolicy: ""
 
 image:
   registry: 347694409649.dkr.ecr.us-west-2.amazonaws.com
@@ -8,6 +12,9 @@ image:
   pullPolicy: Always
 
 replicaCount: 1
+
+extraConfigMap: []
+extraSecret: []
 
 configMap:
   ## VEEGO_REDIS_HOSTS: "redis-node-1:6379,redis-node-2:6379,redis-node-3:6379"

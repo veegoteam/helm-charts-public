@@ -1,5 +1,9 @@
 global:
+  # -- imagePullSecrets
+  # Example --> imagePullSecrets: [ "secret" ]
   imagePullSecrets: []
+  registry: ""
+  pullPolicy: ""
 
 image:
   registry: 347694409649.dkr.ecr.us-west-2.amazonaws.com
@@ -8,6 +12,9 @@ image:
   pullPolicy: Always
 
 replicaCount: 1
+
+extraConfigMap: []
+extraSecret: []
 
 configMap:
   ## VEEGO_KAFKA_HOSTS: "kafka-node-1:9092,kafka-node-2:9092,kafka-node-3:9092,kafka-node-4:9092"

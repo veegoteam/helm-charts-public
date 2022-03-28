@@ -1,0 +1,152 @@
+apiVersion: v2
+name: veego-stack
+description: A Helm chart for Kubernetes
+type: application
+version: 0.0.1
+appVersion: "1.16.0"
+
+dependencies:
+  - name: agent-disconnect-detector
+    version: 0.X.X
+    repository: https://veegoteam.github.io/helm-charts-public
+  - name: agent-event-hooks-handler
+    version: 0.X.X
+    repository: https://veegoteam.github.io/helm-charts-public
+  - name: agent-registration-handler
+    version: 0.X.X
+    repository: https://veegoteam.github.io/helm-charts-public
+  - name: agent-statistics-handler
+    version: 0.X.X
+    repository: https://veegoteam.github.io/helm-charts-public
+  - name: agents-dispatcher
+    version: 0.X.X
+    repository: https://veegoteam.github.io/helm-charts-public
+  - name: aggregated-telemetry-handler
+    version: 0.X.X
+    repository: https://veegoteam.github.io/helm-charts-public
+  - name: aggregation-ignitor
+    version: 0.X.X
+    repository: https://veegoteam.github.io/helm-charts-public
+  - name: api-gateway
+    version: 0.X.X
+    repository: https://veegoteam.github.io/helm-charts-public
+  - name: charter-veego-agents-handler
+    version: 0.X.X
+    repository: https://veegoteam.github.io/helm-charts-public
+  - name: command-result-handler
+    version: 0.X.X
+    repository: https://veegoteam.github.io/helm-charts-public
+  - name: command-topic-creator
+    version: 0.X.X
+    repository: https://veegoteam.github.io/helm-charts-public
+#  - name: cp-schema-registry
+#    version: 0.X.X
+#    repository: https://veegoteam.github.io/helm-charts-public
+  - name: device-collector
+    version: 0.X.X
+    repository: https://veegoteam.github.io/helm-charts-public
+  - name: device-uptime-handler
+    version: 0.X.X
+    repository: https://veegoteam.github.io/helm-charts-public
+  - name: domain-json
+    version: 0.X.X
+    repository: https://veegoteam.github.io/helm-charts-public
+  - name: doxi-veego-agents-disconnect-detector
+    version: 0.X.X
+    repository: https://veegoteam.github.io/helm-charts-public
+  - name: doxi-veego-agents-handler
+    version: 0.X.X
+    repository: https://veegoteam.github.io/helm-charts-public
+  - name: doxi-veego-devices-handler
+    version: 0.X.X
+    repository: https://veegoteam.github.io/helm-charts-public
+  - name: doxi-veego-notifications-handler
+    version: 0.X.X
+    repository: https://veegoteam.github.io/helm-charts-public
+  - name: doxi-veego-service-status-handler
+    version: 0.X.X
+    repository: https://veegoteam.github.io/helm-charts-public
+  - name: doxi-veego-service-usages
+    version: 0.X.X
+    repository: https://veegoteam.github.io/helm-charts-public
+  - name: doxi-veego-services-handler
+    version: 0.X.X
+    repository: https://veegoteam.github.io/helm-charts-public
+  - name: doxi-veego-telemetry-aggregations
+    version: 0.X.X
+    repository: https://veegoteam.github.io/helm-charts-public
+  - name: global-service-by-type-data-collector
+    version: 0.X.X
+    repository: https://veegoteam.github.io/helm-charts-public
+  - name: global-service-by-type-score-handler
+    version: 0.X.X
+    repository: https://veegoteam.github.io/helm-charts-public
+  - name: home-score-devices-data-handler
+    version: 0.X.X
+    repository: https://veegoteam.github.io/helm-charts-public
+  - name: home-score-handler
+    version: 0.X.X
+    repository: https://veegoteam.github.io/helm-charts-public
+  - name: kafka-websocket
+    version: 0.X.X
+    repository: https://veegoteam.github.io/helm-charts-public
+  - name: login
+    version: 0.X.X
+    repository: https://veegoteam.github.io/helm-charts-public
+  - name: malfunctions-counters-cleaner
+    version: 0.X.X
+    repository: https://veegoteam.github.io/helm-charts-public
+  - name: mobile-api
+    version: 0.X.X
+    repository: https://veegoteam.github.io/helm-charts-public
+  - name: monitor-connections
+    version: 0.X.X
+    repository: https://veegoteam.github.io/helm-charts-public
+  - name: notifications-handler
+    version: 0.X.X
+    repository: https://veegoteam.github.io/helm-charts-public
+  - name: notifications-telemetry-collector
+    version: 0.X.X
+    repository: https://veegoteam.github.io/helm-charts-public
+  - name: notifications-telemetry-collector-ignitor
+    version: 0.X.X
+    repository: https://veegoteam.github.io/helm-charts-public
+  - name: probe-notifications-telemetry-handler
+    version: 0.X.X
+    repository: https://veegoteam.github.io/helm-charts-public
+  - name: probe-telemetry-handler
+    version: 0.X.X
+    repository: https://veegoteam.github.io/helm-charts-public
+  - name: services-name-resolver-api-gateway
+    version: 0.X.X
+    repository: https://veegoteam.github.io/helm-charts-public
+  - name: services-name-resolver-cert-resolver
+    version: 0.X.X
+    repository: https://veegoteam.github.io/helm-charts-public
+  - name: services-name-resolver-rdns-resolver
+    version: 0.X.X
+    repository: https://veegoteam.github.io/helm-charts-public
+  - name: speedtest-handler
+    version: 0.X.X
+    repository: https://veegoteam.github.io/helm-charts-public
+  - name: telemetry-aggregator
+    version: 0.X.X
+    repository: https://veegoteam.github.io/helm-charts-public
+  - name: telemetry-handler
+    version: 0.X.X
+    repository: https://veegoteam.github.io/helm-charts-public
+  - name: veeng
+    version: 0.X.X
+    repository: https://veegoteam.github.io/helm-charts-public
+  - name: wifi-global-malfunctions-statistics-builder
+    version: 0.X.X
+    repository: https://veegoteam.github.io/helm-charts-public
+  - name: wifi-malfunctions-counters-cleaner
+    version: 0.X.X
+    repository: https://veegoteam.github.io/helm-charts-public
+  - name: wifi-malfunctions-data-collector
+    version: 0.X.X
+    repository: https://veegoteam.github.io/helm-charts-public
+  - name: wifi-score-handler
+    version: 0.X.X
+    repository: https://veegoteam.github.io/helm-charts-public

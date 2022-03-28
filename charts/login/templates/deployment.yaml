@@ -35,8 +35,8 @@ spec:
     {{- end }}
       containers:
         - name: {{ $chart_name }}
-          image: {{ .Values.image.registry }}/{{ .Values.image.repository }}:{{ .Values.image.tag }}
-          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          image: {{ or .Values.global.registry .Values.image.registry }}/{{ .Values.image.repository }}:{{ .Values.image.tag }}
+          imagePullPolicy: {{ or .Values.global.pullPolicy .Values.image.pullPolicy }}
           ports:
             - name: http
               containerPort: {{ .Values.containerPort | default 80 }}

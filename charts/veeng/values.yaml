@@ -1,5 +1,9 @@
 global:
+  # -- imagePullSecrets
+  # Example --> imagePullSecrets: [ "secret" ]
   imagePullSecrets: []
+  registry: ""
+  pullPolicy: ""
 
 image:
   registry: 347694409649.dkr.ecr.us-west-2.amazonaws.com

@@ -1,0 +1,150 @@
+global:
+  # -- imagePullSecrets
+  # Example --> imagePullSecrets: [ "secret" ]
+  imagePullSecrets: []
+  registry: ""
+  pullPolicy: Always
+
+agent-disconnect-detector:
+  replicaCount: 1
+
+agent-event-hooks-handler:
+  replicaCount: 1
+
+agent-registration-handler:
+  replicaCount: 1
+
+agent-statistics-handler:
+  replicaCount: 1
+
+agents-dispatcher:
+  replicaCount: 1
+
+aggregated-telemetry-handler:
+  replicaCount: 1
+
+aggregation-ignitor:
+  replicaCount: 1
+
+api-gateway:
+  replicaCount: 1
+
+charter-veego-agents-handler:
+  replicaCount: 1
+
+command-result-handler:
+  replicaCount: 1
+
+command-topic-creator:
+  replicaCount: 1
+
+cp-schema-registry:
+  replicaCount: 1
+
+device-collector:
+  replicaCount: 1
+
+device-uptime-handler:
+  replicaCount: 1
+
+domain-json:
+  replicaCount: 1
+
+doxi-veego-agents-disconnect-detector:
+  replicaCount: 1
+
+doxi-veego-agents-handler:
+  replicaCount: 1
+
+doxi-veego-devices-handler:
+  replicaCount: 1
+
+doxi-veego-notifications-handler:
+  replicaCount: 1
+
+doxi-veego-service-status-handler:
+  replicaCount: 1
+
+doxi-veego-service-usages:
+  replicaCount: 1
+
+doxi-veego-services-handler:
+  replicaCount: 1
+
+doxi-veego-telemetry-aggregations:
+  replicaCount: 1
+
+global-service-by-type-data-collector:
+  replicaCount: 1
+
+global-service-by-type-score-handler:
+  replicaCount: 1
+
+home-score-devices-data-handler:
+  replicaCount: 1
+
+home-score-handler:
+  replicaCount: 1
+
+kafka-websocket:
+  replicaCount: 1
+
+login:
+  replicaCount: 1
+
+malfunctions-counters-cleaner:
+  replicaCount: 1
+
+mobile-api:
+  replicaCount: 1
+
+monitor-connections:
+  replicaCount: 1
+
+notifications-handler:
+  replicaCount: 1
+
+notifications-telemetry-collector:
+  replicaCount: 1
+
+notifications-telemetry-collector-ignitor:
+  replicaCount: 1
+
+probe-notifications-telemetry-handler:
+  replicaCount: 1
+
+probe-telemetry-handler:
+  replicaCount: 1
+
+services-name-resolver-api-gateway:
+  replicaCount: 1
+
+services-name-resolver-cert-resolver:
+  replicaCount: 1
+
+services-name-resolver-rdns-resolver:
+  replicaCount: 1
+
+speedtest-handler:
+  replicaCount: 1
+
+telemetry-aggregator:
+  replicaCount: 1
+
+telemetry-handler:
+  replicaCount: 1
+
+veeng:
+  replicaCount: 1
+
+wifi-global-malfunctions-statistics-builder:
+  replicaCount: 1
+
+wifi-malfunctions-counters-cleaner:
+  replicaCount: 1
+
+wifi-malfunctions-data-collector:
+  replicaCount: 1
+
+wifi-score-handler:
+  replicaCount: 1
