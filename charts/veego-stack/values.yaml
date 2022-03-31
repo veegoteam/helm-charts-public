@@ -35,7 +35,7 @@ agent-disconnect-detector:
 
   image:
     repository: veego/agent-disconnect-detector
-    tag: dev
+    tag: stage
 
   extraConfigMap:
     - veego-stack
@@ -53,7 +53,7 @@ agent-event-hooks-handler:
 
   image:
     repository: veego/agent-event-hooks-handler
-    tag: dev
+    tag: stage
 
   extraConfigMap:
     - veego-stack
@@ -69,7 +69,7 @@ agent-registration-handler:
 
   image:
     repository: veego/agent-registration-handler
-    tag: dev
+    tag: stage
 
   extraConfigMap:
     - veego-stack
@@ -88,7 +88,7 @@ agent-statistics-handler:
 
   image:
     repository: veego/agent-statistics-handler
-    tag: dev
+    tag: stage
 
   extraConfigMap:
     - veego-stack
@@ -104,7 +104,7 @@ agents-dispatcher:
 
   image:
     repository: veego/agents-dispatcher
-    tag: dev
+    tag: stage
 
   extraConfigMap:
     - veego-stack
@@ -126,7 +126,7 @@ aggregated-telemetry-handler:
 
   image:
     repository: veego/aggregated-telemetry-handler
-    tag: dev
+    tag: stage
 
   extraConfigMap:
     - veego-stack
@@ -145,7 +145,7 @@ aggregation-ignitor:
 
   image:
     repository: veego/aggregation-ignitor
-    tag: dev
+    tag: stage
 
   extraConfigMap:
     - veego-stack
@@ -160,7 +160,7 @@ api-gateway:
 
   image:
     repository: veego/api-gateway
-    tag: dev
+    tag: stage
 
   extraConfigMap:
     - veego-stack
@@ -195,7 +195,7 @@ charter-veego-agents-handler:
 
   image:
     repository: veego/charter-veego-agents-handler
-    tag: dev
+    tag: stage
 
   extraConfigMap:
     - veego-stack
@@ -213,7 +213,7 @@ command-result-handler:
 
   image:
     repository: veego/command-result-handler
-    tag: dev
+    tag: stage
 
   extraConfigMap:
     - veego-stack
@@ -229,7 +229,7 @@ command-topic-creator:
 
   image:
     repository: veego/command-topic-creator
-    tag: dev
+    tag: stage
 
   extraConfigMap:
     - veego-stack
@@ -254,7 +254,7 @@ device-collector:
 
   image:
     repository: veego/device-collector
-    tag: dev
+    tag: stage
 
   extraConfigMap:
     - veego-stack
@@ -270,7 +270,7 @@ device-uptime-handler:
 
   image:
     repository: veego/device-uptime-handler
-    tag: dev
+    tag: stage
 
   extraConfigMap:
     - veego-stack
@@ -286,7 +286,7 @@ domain-json:
 
   image:
     repository: veego/domain-json
-    tag: dev
+    tag: stage
 
   extraConfigMap:
     BIND: "[::]:80" # for ipv6 support
@@ -296,7 +296,7 @@ doxi-veego-agents-disconnect-detector:
 
   image:
     repository: veego/doxi-veego-agents-disconnect-detector
-    tag: dev
+    tag: stage
 
   extraConfigMap:
     - veego-stack
@@ -313,7 +313,7 @@ doxi-veego-agents-handler:
 
   image:
     repository: veego/doxi-veego-agents-handler
-    tag: dev
+    tag: stage
 
   extraConfigMap:
     - veego-stack
@@ -331,7 +331,7 @@ doxi-veego-devices-handler:
 
   image:
     repository: veego/doxi-veego-devices-handler
-    tag: dev
+    tag: stage
 
   extraConfigMap:
     - veego-stack
@@ -349,7 +349,7 @@ doxi-veego-notifications-handler:
 
   image:
     repository: veego/doxi-veego-notifications-handler
-    tag: dev
+    tag: stage
 
   extraConfigMap:
     - veego-stack
@@ -367,7 +367,7 @@ doxi-veego-service-status-handler:
 
   image:
     repository: veego/doxi-veego-service-status-handler
-    tag: dev
+    tag: stage
 
   extraConfigMap:
     - veego-stack
@@ -385,7 +385,7 @@ doxi-veego-service-usages:
 
   image:
     repository: veego/doxi-veego-service-usages
-    tag: dev
+    tag: stage
 
   extraConfigMap:
     - veego-stack
@@ -403,7 +403,7 @@ doxi-veego-services-handler:
 
   image:
     repository: veego/doxi-veego-services-handler
-    tag: dev
+    tag: stage
 
   extraConfigMap:
     - veego-stack
@@ -421,7 +421,7 @@ doxi-veego-telemetry-aggregations:
 
   image:
     repository: veego/doxi-veego-telemetry-aggregations
-    tag: dev
+    tag: stage
 
   extraConfigMap:
     - veego-stack
@@ -437,7 +437,7 @@ global-service-by-type-data-collector:
 
   image:
     repository: veego/global-service-by-type-data-collector
-    tag: dev
+    tag: stage
 
   extraConfigMap:
     - veego-stack
@@ -453,7 +453,7 @@ global-service-by-type-score-handler:
 
   image:
     repository: veego/global-service-by-type-score-handler
-    tag: dev
+    tag: stage
 
   extraConfigMap:
     - veego-stack
@@ -466,7 +466,7 @@ home-score-devices-data-handler:
 
   image:
     repository: veego/home-score-devices-data-handler
-    tag: dev
+    tag: stage
 
   extraConfigMap:
     - veego-stack
@@ -482,7 +482,7 @@ home-score-handler:
 
   image:
     repository: veego/home-score-handler
-    tag: dev
+    tag: stage
 
   extraConfigMap:
     - veego-stack
@@ -497,14 +497,14 @@ kafka-websocket:
 
   image:
     repository: veego/kafka-websocket
-    tag: dev
+    tag: stage
 
 login:
   replicaCount: 1
 
   image:
     repository: veego/login
-    tag: dev
+    tag: stage
 
   extraConfigMap:
     - veego-stack
@@ -516,7 +516,7 @@ malfunctions-counters-cleaner:
 
   image:
     repository: veego/malfunctions-counters-cleaner
-    tag: dev
+    tag: stage
 
   extraConfigMap:
     - veego-stack
@@ -531,7 +531,7 @@ mobile-api:
 
   image:
     repository: veego/mobile-api
-    tag: dev
+    tag: stage
 
   extraConfigMap:
     - veego-stack
@@ -563,7 +563,7 @@ monitor-connections:
 
   image:
     repository: veego/monitor-connections
-    tag: dev
+    tag: stage
 
   extraConfigMap:
     - veego-stack
@@ -581,7 +581,7 @@ notifications-handler:
 
   image:
     repository: veego/notifications-handler
-    tag: dev
+    tag: stage
 
   extraConfigMap:
     - veego-stack
@@ -598,7 +598,7 @@ notifications-telemetry-collector:
 
   image:
     repository: veego/notifications-telemetry-collector
-    tag: dev
+    tag: stage
 
   extraConfigMap:
     - veego-stack
@@ -616,7 +616,7 @@ notifications-telemetry-collector-ignitor:
 
   image:
     repository: veego/notifications-telemetry-collector-ignitor
-    tag: dev
+    tag: stage
 
   extraConfigMap:
     - veego-stack
@@ -633,7 +633,7 @@ probe-notifications-telemetry-handler:
 
   image:
     repository: veego/probe-notifications-telemetry-handler
-    tag: dev
+    tag: stage
 
   extraConfigMap:
     - veego-stack
@@ -649,7 +649,7 @@ probe-telemetry-handler:
 
   image:
     repository: veego/probe-telemetry-handler
-    tag: dev
+    tag: stage
 
   extraConfigMap:
     - veego-stack
@@ -665,7 +665,7 @@ services-name-resolver-api-gateway:
 
   image:
     repository: veego/services-name-resolver-api-gateway
-    tag: dev
+    tag: stage
 
   extraConfigMap:
     - veego-stack
@@ -677,7 +677,7 @@ services-name-resolver-cert-resolver:
 
   image:
     repository: veego/services-name-resolver-cert-resolver
-    tag: dev
+    tag: stage
 
   extraConfigMap:
     - veego-stack
@@ -689,7 +689,7 @@ services-name-resolver-rdns-resolver:
 
   image:
     repository: veego/services-name-resolver-rdns-resolver
-    tag: dev
+    tag: stage
 
   extraConfigMap:
     - veego-stack
@@ -701,7 +701,7 @@ speedtest-handler:
 
   image:
     repository: veego/speedtest-handler
-    tag: dev
+    tag: stage
 
   extraConfigMap:
     - veego-stack
@@ -717,7 +717,7 @@ telemetry-aggregator:
 
   image:
     repository: veego/telemetry-aggregator
-    tag: dev
+    tag: stage
 
   extraConfigMap:
     - veego-stack
@@ -734,7 +734,7 @@ telemetry-handler:
 
   image:
     repository: veego/telemetry-handler
-    tag: dev
+    tag: stage
 
   extraConfigMap:
     - veego-stack
@@ -751,7 +751,7 @@ veeng:
 
   image:
     repository: veego/veeng
-    tag: dev
+    tag: stage
 
   extraConfigMap:
     - veego-stack
@@ -773,7 +773,7 @@ wifi-global-malfunctions-statistics-builder:
 
   image:
     repository: veego/wifi-global-malfunctions-statistics-builder
-    tag: dev
+    tag: stage
 
   extraConfigMap:
     - veego-stack
@@ -788,7 +788,7 @@ wifi-malfunctions-counters-cleaner:
 
   image:
     repository: veego/wifi-malfunctions-counters-cleaner
-    tag: dev
+    tag: stage
 
   extraConfigMap:
     - veego-stack
@@ -803,7 +803,7 @@ wifi-malfunctions-data-collector:
 
   image:
     repository: veego/wifi-malfunctions-data-collector
-    tag: dev
+    tag: stage
 
   extraConfigMap:
     - veego-stack
@@ -819,7 +819,7 @@ wifi-score-handler:
 
   image:
     repository: veego/wifi-score-handler
-    tag: dev
+    tag: stage
 
   extraConfigMap:
     - veego-stack
@@ -828,3 +828,54 @@ wifi-score-handler:
 
   configMap:
     AGENT_WIFI_SCORE_SCHEDULING: "0 0 0 * * ?"
+
+oauth2-proxy:
+  ## https://github.com/bitnami/charts/blob/master/bitnami/oauth2-proxy/values.yaml
+  service:
+    type: NodePort
+  ingress:
+    enabled: false
+    ingressClassName: "nginx"
+    pathType: ImplementationSpecific
+    apiVersion: ""
+    hostname: oauth.stack.exmpl.io
+    annotations: {}
+  extraArgs:
+    [ "--set-authorization-header=true", "--oidc-jwks-url=https://keycloak.stack.exmpl.io/auth/realms/veego/protocol/openid-connect/certs", "--auth-logging=true", "--profile-url=https://keycloak.stack.exmpl.io/auth/realms/veego/protocol/openid-connect/userinfo", "--skip-jwt-bearer-tokens=true", "--pass-authorization-header=true", "--oidc-issuer-url=https://keycloak.stack.exmpl.io/auth/realms/veego" ]
+  configuration:
+    clientID: "stack"
+    clientSecret: ""
+    cookieSecret: ""
+  extraEnvVars:
+    - name: OAUTH2_PROXY_SCOPE
+      value: "openid roles web-origins email profile"
+    - name: OAUTH2_PROXY_PROVIDER
+      value: "oidc"
+    - name: OAUTH2_PROXY_LOGIN_URL
+      value: "https://keycloak.stack.exmpl.io/auth/realms/veego/protocol/openid-connect/auth"
+    - name: OAUTH2_PROXY_REDEEM_URL
+      value: "https://keycloak.stack.exmpl.io/auth/realms/veego/protocol/openid-connect/token"
+    - name: OAUTH2_PROXY_VALIDATE_URL
+      value: "https://keycloak.stack.exmpl.io/auth/realms/veego/protocol/openid-connect/userinfo"
+    - name: OAUTH2_PROXY_COOKIE_DOMAINS
+      value: ".stack.exmpl.io"
+    - name: OAUTH2_PROXY_WHITELIST_DOMAINS
+      value: ".stack.exmpl.io"
+    - name: OAUTH2_PROXY_COOKIE_HTTPONLY
+      value: "false"
+    - name: OAUTH2_PROXY_EMAIL_DOMAINS
+      value: "*"
+    - name: OAUTH2_PROXY_COOKIE_SAMESITE
+      value: "lax"
+    - name: OAUTH2_PROXY_COOKIE_SECURE
+      value: "true"
+    - name: OAUTH2_PROXY_PASS_ACCESS_TOKEN
+      value: "false"
+    - name: OAUTH2_PROXY_REVERSE_PROXY
+      value: "true"
+    - name: OAUTH2_PROXY_SET_XAUTHREQUEST
+      value: "true"
+    - name: OAUTH2_PROXY_SKIP_AUTH_PREFLIGHT
+      value: "true"
+    - name: OAUTH2_PROXY_SHOW_DEBUG_ON_ERROR
+      value: "true"
