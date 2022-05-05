@@ -1,3 +1,4 @@
+---
 global:
   # -- imagePullSecrets
   # Example --> imagePullSecrets: [ "secret" ]
@@ -289,7 +290,7 @@ domain-json:
     tag: stage
 
   extraConfigMap:
-    BIND: "[::]:80" # for ipv6 support
+    BIND: "[::]:80"  # for ipv6 support
 
 doxi-veego-agents-disconnect-detector:
   replicaCount: 1
@@ -821,7 +822,7 @@ oauth2-proxy:
     hostname: oauth.stack.exmpl.io
     annotations: {}
   extraArgs:
-    [ "--set-authorization-header=true", "--oidc-jwks-url=https://keycloak.stack.exmpl.io/auth/realms/veego/protocol/openid-connect/certs", "--auth-logging=true", "--profile-url=https://keycloak.stack.exmpl.io/auth/realms/veego/protocol/openid-connect/userinfo", "--skip-jwt-bearer-tokens=true", "--pass-authorization-header=true", "--oidc-issuer-url=https://keycloak.stack.exmpl.io/auth/realms/veego" ]
+    ["--set-authorization-header=true", "--oidc-jwks-url=https://keycloak.stack.exmpl.io/auth/realms/veego/protocol/openid-connect/certs", "--auth-logging=true", "--profile-url=https://keycloak.stack.exmpl.io/auth/realms/veego/protocol/openid-connect/userinfo", "--skip-jwt-bearer-tokens=true", "--pass-authorization-header=true", "--oidc-issuer-url=https://keycloak.stack.exmpl.io/auth/realms/veego"]
   configuration:
     clientID: "stack"
     clientSecret: ""
