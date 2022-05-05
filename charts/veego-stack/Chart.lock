@@ -104,15 +104,9 @@ dependencies:
 - name: probe-telemetry-handler
   repository: file://../probe-telemetry-handler
   version: 0.1.5
-- name: services-name-resolver-api-gateway
-  repository: file://../services-name-resolver-api-gateway
-  version: 0.1.5
-- name: services-name-resolver-cert-resolver
-  repository: file://../services-name-resolver-cert-resolver
-  version: 0.1.5
-- name: services-name-resolver-rdns-resolver
-  repository: file://../services-name-resolver-rdns-resolver
-  version: 0.1.5
+- name: services-name-resolver
+  repository: file://../services-name-resolver
+  version: 0.1.0
 - name: speedtest-handler
   repository: file://../speedtest-handler
   version: 0.1.5
@@ -137,5 +131,5 @@ dependencies:
 - name: oauth2-proxy
   repository: https://charts.bitnami.com/bitnami
   version: 2.0.1
-digest: sha256:5c2aa9994ec37813e654ac2938f3de15ed0dd2c9472a995a295eb8de598712a5
-generated: "2022-03-31T08:38:24.850218+02:00"
+digest: sha256:86180fcbdd155ff43ae394dbef3a0a375e492964ee71aca9da06c7caab9f0d9d
+generated: "2022-05-05T16:12:44.271541567+03:00"

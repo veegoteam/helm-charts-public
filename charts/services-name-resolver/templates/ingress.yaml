@@ -1,4 +1,3 @@
-apiVersion: networking.k8s.io/v1
 {{- $chart_name := .Chart.Name }}
 {{- $release_name := .Release.Name }}
 {{- $release_namespace := .Release.Namespace }}
