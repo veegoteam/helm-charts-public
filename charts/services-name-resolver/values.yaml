@@ -38,10 +38,10 @@ ingress:
 
 configMap:
   MONGODB_HOST: "mongodb.mongodb:27017"
-  MONGODB_USER: veegouser # valid mongo user
+  MONGODB_USER: veegouser  # valid mongo user
   MONGODB_DATABASE: services-name-resolver
   MONGODB_COLLECTION: records
 
 secret:
   REDIS_PASSWORD: ""
-  MONGODB_PASSWORD: "cGFzc3dvcmQ=" # base64 password for MONGODB_USER
+  MONGODB_PASSWORD: "cGFzc3dvcmQ="  # base64 password for MONGODB_USER
