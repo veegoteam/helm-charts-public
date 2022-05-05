@@ -23,7 +23,7 @@ service:
 ingress:
   enabled: true
   className: nginx
-  annotations:
+  annotations: {}
     # kubernetes.io/tls-acme: "true"
     # cert-manager.io/cluster-issuer: "letsencrypt"
   tls:
