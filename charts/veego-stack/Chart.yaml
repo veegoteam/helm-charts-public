@@ -117,15 +117,9 @@ dependencies:
   - name: probe-telemetry-handler
     version: 0.X.X
     repository: file://../probe-telemetry-handler
-  - name: services-name-resolver-api-gateway
+  - name: services-name-resolver
     version: 0.X.X
-    repository: file://../services-name-resolver-api-gateway
-  - name: services-name-resolver-cert-resolver
-    version: 0.X.X
-    repository: file://../services-name-resolver-cert-resolver
-  - name: services-name-resolver-rdns-resolver
-    version: 0.X.X
-    repository: file://../services-name-resolver-rdns-resolver
+    repository: file://../services-name-resolver
   - name: speedtest-handler
     version: 0.X.X
     repository: file://../speedtest-handler
