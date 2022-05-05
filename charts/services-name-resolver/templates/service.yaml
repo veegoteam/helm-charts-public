@@ -3,7 +3,6 @@
 {{- $release_name := .Release.Name }}
 {{- $release_namespace := .Release.Namespace }}
 {{- if .Values.service -}}
----
 apiVersion: v1
 kind: Service
 metadata:
