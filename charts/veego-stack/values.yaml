@@ -660,36 +660,12 @@ probe-telemetry-handler:
     VEEGO_KAFKA_TOPIC: "telemetry"
     VEEGO_KAFKA_CONSUMER_GROUP_ID: "probe-telemetry-handler"
 
-services-name-resolver-api-gateway:
+services-name-resolver:
   replicaCount: 1
 
   image:
-    repository: veego/services-name-resolver-api-gateway
-    tag: stage
-
-  extraConfigMap:
-    - veego-stack
-  extraSecret:
-    - veego-stack
-
-services-name-resolver-cert-resolver:
-  replicaCount: 1
-
-  image:
-    repository: veego/services-name-resolver-cert-resolver
-    tag: stage
-
-  extraConfigMap:
-    - veego-stack
-  extraSecret:
-    - veego-stack
-
-services-name-resolver-rdns-resolver:
-  replicaCount: 1
-
-  image:
-    repository: veego/services-name-resolver-rdns-resolver
-    tag: stage
+    repository: veego/services-name-resolver
+    tag: v0.1.0
 
   extraConfigMap:
     - veego-stack
