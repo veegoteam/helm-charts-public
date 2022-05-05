@@ -27,9 +27,9 @@ ingress:
     # kubernetes.io/tls-acme: "true"
     # cert-manager.io/cluster-issuer: "letsencrypt"
   tls:
-  - hosts:
-      - api.example.domain
-    secretName: api-services-name-resolver-tls
+    - hosts:
+        - api.example.domain
+      secretName: api-services-name-resolver-tls
   hosts:
     - host: api.example.domain
       paths:
