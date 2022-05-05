@@ -43,9 +43,7 @@ A Helm chart for Kubernetes
 | file://../notifications-telemetry-collector | notifications-telemetry-collector | 0.X.X |
 | file://../probe-notifications-telemetry-handler | probe-notifications-telemetry-handler | 0.X.X |
 | file://../probe-telemetry-handler | probe-telemetry-handler | 0.X.X |
-| file://../services-name-resolver-api-gateway | services-name-resolver-api-gateway | 0.X.X |
-| file://../services-name-resolver-cert-resolver | services-name-resolver-cert-resolver | 0.X.X |
-| file://../services-name-resolver-rdns-resolver | services-name-resolver-rdns-resolver | 0.X.X |
+| file://../services-name-resolver | services-name-resolver | 0.X.X |
 | file://../speedtest-handler | speedtest-handler | 0.X.X |
 | file://../telemetry-aggregator | telemetry-aggregator | 0.X.X |
 | file://../telemetry-handler | telemetry-handler | 0.X.X |
@@ -401,21 +399,16 @@ helm repo add veego https://veegoteam.github.io/helm-charts-public
 | secret.VEEGO_REDIS_PASSWORD | string | `""` |  |
 | secret.VEEGO_SQL_PASSWORD | string | `""` |  |
 | secret.VEEGO_SQL_USERNAME | string | `""` |  |
-| services-name-resolver-api-gateway.extraConfigMap[0] | string | `"veego-stack"` |  |
-| services-name-resolver-api-gateway.extraSecret[0] | string | `"veego-stack"` |  |
-| services-name-resolver-api-gateway.image.repository | string | `"veego/services-name-resolver-api-gateway"` |  |
-| services-name-resolver-api-gateway.image.tag | string | `"dev"` |  |
-| services-name-resolver-api-gateway.replicaCount | int | `1` |  |
-| services-name-resolver-cert-resolver.extraConfigMap[0] | string | `"veego-stack"` |  |
-| services-name-resolver-cert-resolver.extraSecret[0] | string | `"veego-stack"` |  |
-| services-name-resolver-cert-resolver.image.repository | string | `"veego/services-name-resolver-cert-resolver"` |  |
-| services-name-resolver-cert-resolver.image.tag | string | `"dev"` |  |
-| services-name-resolver-cert-resolver.replicaCount | int | `1` |  |
-| services-name-resolver-rdns-resolver.extraConfigMap[0] | string | `"veego-stack"` |  |
-| services-name-resolver-rdns-resolver.extraSecret[0] | string | `"veego-stack"` |  |
-| services-name-resolver-rdns-resolver.image.repository | string | `"veego/services-name-resolver-rdns-resolver"` |  |
-| services-name-resolver-rdns-resolver.image.tag | string | `"dev"` |  |
-| services-name-resolver-rdns-resolver.replicaCount | int | `1` |  |
+| services-name-resolver.configMap.MONGODB_HOST | string | `"mongodb:27017"` |  |
+| services-name-resolver.configMap.MONGODB_USER | string | `"veegouser"` |  |
+| services-name-resolver.configMap.MONGODB_DATABASE | string | `"services-name-resolver"` |  |
+| services-name-resolver.configMap.MONGODB_COLLECTION | string | `"records"` |  |
+| services-name-resolver.extraConfigMap[0] | string | `"veego-stack"` |  |
+| services-name-resolver.secret.MONGODB_PASSWORD | string | `""` |  |
+| services-name-resolver.extraSecret[0] | string | `"veego-stack"` |  |
+| services-name-resolver.image.repository | string | `"veego/services-name-resolver-api-gateway"` |  |
+| services-name-resolver.image.tag | string | `"dev"` |  |
+| services-name-resolver.replicaCount | int | `1` |  |
 | speedtest-handler.configMap.VEEGO_KAFKA_CONSUMER_GROUP_ID | string | `"speedtest-handler-main"` |  |
 | speedtest-handler.configMap.VEEGO_KAFKA_TOPIC | string | `"speedtest"` |  |
 | speedtest-handler.extraConfigMap[0] | string | `"veego-stack"` |  |
