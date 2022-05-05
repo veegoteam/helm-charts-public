@@ -449,6 +449,8 @@ helm repo add veego https://veegoteam.github.io/helm-charts-public
 | secret.VEEGO_REDIS_PASSWORD | string | `""` |  |
 | secret.VEEGO_SQL_PASSWORD | string | `""` |  |
 | secret.VEEGO_SQL_USERNAME | string | `""` |  |
+| services-name-resolver.configMap.MONGODB_COLLECTION | string | `"records"` |  |
+| services-name-resolver.configMap.MONGODB_DATABASE | string | `"services-name-resolver"` |  |
 | services-name-resolver.extraConfigMap[0] | string | `"veego-stack"` |  |
 | services-name-resolver.extraSecret[0] | string | `"veego-stack"` |  |
 | services-name-resolver.image.repository | string | `"veego/services-name-resolver"` |  |

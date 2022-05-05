@@ -672,6 +672,10 @@ services-name-resolver:
   extraSecret:
     - veego-stack
 
+  configMap:
+    MONGODB_DATABASE: services-name-resolver
+    MONGODB_COLLECTION: records
+
 speedtest-handler:
   replicaCount: 1
 
