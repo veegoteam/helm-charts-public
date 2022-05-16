@@ -1,0 +1,47 @@
+global:
+  imagePullSecrets: []
+
+image:
+  registry: 347694409649.dkr.ecr.us-west-2.amazonaws.com
+  repository: veego/services-name-resolver
+  tag: v0.1.0
+  pullPolicy: Always
+
+replicaCount: 1
+
+containerPort: 8080
+
+service:
+  name: services-name-resolver
+  port: 80
+  targetPort: 8080
+  protocol: TCP
+  type: ClusterIP
+  selector:
+    app: services-name-resolver
+
+ingress:
+  enabled: true
+  className: nginx
+  annotations: {}
+    # kubernetes.io/tls-acme: "true"
+    # cert-manager.io/cluster-issuer: "letsencrypt"
+  tls:
+    - hosts:
+        - api.example.domain
+      secretName: api-services-name-resolver-tls
+  hosts:
+    - host: api.example.domain
+      paths:
+        - path: /v1/resolve-name-service
+          pathType: Prefix
+
+configMap:
+  MONGODB_HOST: "mongodb.mongodb:27017"
+  MONGODB_USER: veegouser  # valid mongo user
+  MONGODB_DATABASE: services-name-resolver
+  MONGODB_COLLECTION: records
+
+secret:
+  REDIS_PASSWORD: ""
+  MONGODB_PASSWORD: "cGFzc3dvcmQ="  # base64 password for MONGODB_USER

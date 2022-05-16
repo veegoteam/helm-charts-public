@@ -117,13 +117,7 @@ dependencies:
   - name: probe-telemetry-handler
     version: 0.X.X
     repository: https://veegoteam.github.io/helm-charts-public
-  - name: services-name-resolver-api-gateway
-    version: 0.X.X
-    repository: https://veegoteam.github.io/helm-charts-public
-  - name: services-name-resolver-cert-resolver
-    version: 0.X.X
-    repository: https://veegoteam.github.io/helm-charts-public
-  - name: services-name-resolver-rdns-resolver
+  - name: services-name-resolver
     version: 0.X.X
     repository: https://veegoteam.github.io/helm-charts-public
   - name: speedtest-handler

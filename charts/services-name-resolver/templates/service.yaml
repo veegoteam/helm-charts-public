@@ -1,0 +1,40 @@
+---
+{{- $chart_name := .Chart.Name }}
+{{- $release_name := .Release.Name }}
+{{- $release_namespace := .Release.Namespace }}
+{{- if .Values.service -}}
+apiVersion: v1
+kind: Service
+metadata:
+  {{- if .Values.service.annotations -}}
+  {{- with .Values.service.annotations }}
+  annotations:
+    {{- toYaml . | nindent 4 }}
+  {{- end }}
+  {{- end }}
+  name: {{ $chart_name }}
+  namespace: {{ $release_namespace }}
+  {{- if .Values.service.labels -}}
+  {{- with .Values.service.labels }}
+  labels:
+    {{- toYaml . | nindent 4 }}
+  {{- end }}
+  {{- end }}
+spec:
+  {{- if .Values.service.selector -}}
+  {{- with .Values.service.selector }}
+  selector:
+    {{- toYaml . | nindent 4 }}
+  {{- end }}
+  {{- end }}
+  type: {{ .Values.service.type | default "NodePort" }}
+  ports:
+    - port: {{ .Values.service.port | default "80" }}
+      protocol: {{ .Values.service.protocol | default "TCP" }}
+      {{- if .Values.service.targetPort }}
+      targetPort: {{ .Values.service.targetPort }}
+      {{ end }}
+      {{- if .Values.service.nodePort }}
+      nodePort: {{ .Values.service.nodePort }}
+      {{ end }}
+{{ end }}

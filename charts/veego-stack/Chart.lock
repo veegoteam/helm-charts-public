@@ -32,14 +32,14 @@ dependencies:
 - name: command-topic-creator
   repository: file://../command-topic-creator
   version: 0.1.5
+- name: cp-schema-registry
+  repository: file://../cp-schema-registry
+  version: 0.1.5
 - name: device-collector
   repository: file://../device-collector
   version: 0.1.5
 - name: device-uptime-handler
   repository: file://../device-uptime-handler
-  version: 0.1.5
-- name: domain-json
-  repository: file://../domain-json
   version: 0.1.5
 - name: doxi-veego-agents-disconnect-detector
   repository: file://../doxi-veego-agents-disconnect-detector
@@ -104,15 +104,9 @@ dependencies:
 - name: probe-telemetry-handler
   repository: file://../probe-telemetry-handler
   version: 0.1.5
-- name: services-name-resolver-api-gateway
-  repository: file://../services-name-resolver-api-gateway
-  version: 0.1.5
-- name: services-name-resolver-cert-resolver
-  repository: file://../services-name-resolver-cert-resolver
-  version: 0.1.5
-- name: services-name-resolver-rdns-resolver
-  repository: file://../services-name-resolver-rdns-resolver
-  version: 0.1.5
+- name: services-name-resolver
+  repository: file://../services-name-resolver
+  version: 0.1.0
 - name: speedtest-handler
   repository: file://../speedtest-handler
   version: 0.1.5
@@ -134,5 +128,8 @@ dependencies:
 - name: wifi-score-handler
   repository: file://../wifi-score-handler
   version: 0.1.5
-digest: sha256:2d6077d3e50d78e87ce5d17b71f221bad4311c418beab3c19218c59a1dd72804
-generated: "2022-03-28T16:12:12.523652+02:00"
+- name: oauth2-proxy
+  repository: https://charts.bitnami.com/bitnami
+  version: 2.0.1
+digest: sha256:86180fcbdd155ff43ae394dbef3a0a375e492964ee71aca9da06c7caab9f0d9d
+generated: "2022-05-05T16:26:20.70302904+03:00"
