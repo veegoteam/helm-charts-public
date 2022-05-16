@@ -1,0 +1,65 @@
+---
+{{- $chart_name := .Chart.Name }}
+{{- $release_name := .Release.Name }}
+{{- $release_namespace := .Release.Namespace }}
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ $chart_name }}
+  namespace: {{ $release_namespace }}
+  labels:
+    app: {{ $chart_name }}
+    release: {{ $release_name }}
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app: {{ $chart_name }}
+      release: {{ $release_name }}
+  template:
+    metadata:
+      labels:
+        app: {{ $chart_name | quote }}
+        app.kubernetes.io/name: {{ $chart_name | quote }}
+        app.kubernetes.io/managed-by: {{ .Release.Service | quote }}
+        meta.helm.sh/release-name: {{ $release_name | quote }}
+        meta.helm.sh/release-namespace: {{ $release_namespace | quote }}
+        release: {{ $release_name }}
+    spec:
+    {{- if .Values.global.imagePullSecrets }}
+      imagePullSecrets:
+      {{- range $pullSecret := .Values.global.imagePullSecrets }}
+        - name: {{ $pullSecret }}
+      {{- end }}
+    {{- end }}
+      containers:
+        - name: {{ $chart_name }}
+          image: {{ or .Values.global.registry .Values.image.registry }}/{{ .Values.image.repository }}:{{ .Values.image.tag }}
+          imagePullPolicy: {{ or .Values.global.pullPolicy .Values.image.pullPolicy }}
+          ports:
+            - name: http
+              containerPort: {{ .Values.containerPort | default 80 }}
+              protocol: TCP
+          envFrom:
+          {{- if .Values.configMap }}
+          - configMapRef:
+              name: {{ $chart_name }}-configmap
+          {{- end }}
+          {{- if .Values.extraConfigMap }}
+          {{- range $name := .Values.extraConfigMap }}
+          - configMapRef:
+              name: {{ $name }}
+          {{- end }}
+          {{- end }}
+          {{- if .Values.secret }}
+          - secretRef:
+              name: {{ $chart_name }}-secret
+          {{- end }}
+          {{- if .Values.extraSecret }}
+          {{- range $name := .Values.extraSecret }}
+          - secretRef:
+              name: {{ $name }}
+          {{- end }}
+          {{- end }}
+          resources: {}
